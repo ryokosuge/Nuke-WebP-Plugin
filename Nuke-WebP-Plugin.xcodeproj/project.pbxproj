@@ -11,6 +11,9 @@
 		F8146583200EE4D700364146 /* WebPImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8146582200EE4D700364146 /* WebPImage.swift */; };
 		F8146584200EE55200364146 /* Nuke_WebP_PluginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8146576200EE3C700364146 /* Nuke_WebP_PluginTests.swift */; };
 		F8BAAEC9200EDE100001110D /* NukeWebPPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BAAEBF200EDE100001110D /* NukeWebPPlugin.framework */; };
+		F8FAA4D4200EF08400DD0BED /* sample.webp in Resources */ = {isa = PBXBuildFile; fileRef = F8FAA4D3200EF08400DD0BED /* sample.webp */; };
+		F8FAA4D7200EF1FD00DD0BED /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FAA4D6200EF1FD00DD0BED /* Nuke.framework */; };
+		F8FAA4D9200EF2FA00DD0BED /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FAA4D6200EF1FD00DD0BED /* Nuke.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +34,8 @@
 		F8146582200EE4D700364146 /* WebPImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPImage.swift; sourceTree = "<group>"; };
 		F8BAAEBF200EDE100001110D /* NukeWebPPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeWebPPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BAAEC8200EDE100001110D /* Nuke-WebP-PluginTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nuke-WebP-PluginTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8FAA4D3200EF08400DD0BED /* sample.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.webp; sourceTree = "<group>"; };
+		F8FAA4D6200EF1FD00DD0BED /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8FAA4D7200EF1FD00DD0BED /* Nuke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +52,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8BAAEC9200EDE100001110D /* NukeWebPPlugin.framework in Frameworks */,
+				F8FAA4D9200EF2FA00DD0BED /* Nuke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +62,7 @@
 		F8146575200EE39C00364146 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				F8FAA4D2200EF07300DD0BED /* Resource */,
 				F8146577200EE3C700364146 /* Info.plist */,
 				F8146576200EE3C700364146 /* Nuke_WebP_PluginTests.swift */,
 			);
@@ -86,6 +94,7 @@
 				F814657B200EE3E000364146 /* Supporting Files */,
 				F8146575200EE39C00364146 /* Tests */,
 				F8BAAEC0200EDE100001110D /* Products */,
+				F8FAA4D5200EF1FD00DD0BED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +105,22 @@
 				F8BAAEC8200EDE100001110D /* Nuke-WebP-PluginTests iOS.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F8FAA4D2200EF07300DD0BED /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F8FAA4D3200EF08400DD0BED /* sample.webp */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F8FAA4D5200EF1FD00DD0BED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8FAA4D6200EF1FD00DD0BED /* Nuke.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +145,7 @@
 				F8BAAEBB200EDE100001110D /* Frameworks */,
 				F8BAAEBC200EDE100001110D /* Headers */,
 				F8BAAEBD200EDE100001110D /* Resources */,
+				F8FAA4D8200EF20B00DD0BED /* [Carthage] copy-framework */,
 			);
 			buildRules = (
 			);
@@ -137,6 +163,7 @@
 				F8BAAEC4200EDE100001110D /* Sources */,
 				F8BAAEC5200EDE100001110D /* Frameworks */,
 				F8BAAEC6200EDE100001110D /* Resources */,
+				F8FAA4DA200EF4FA00DD0BED /* [carthage] copy framework */,
 			);
 			buildRules = (
 			);
@@ -199,10 +226,46 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8FAA4D4200EF08400DD0BED /* sample.webp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F8FAA4D8200EF20B00DD0BED /* [Carthage] copy-framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Nuke.framework",
+			);
+			name = "[Carthage] copy-framework";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nuke.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		F8FAA4DA200EF4FA00DD0BED /* [carthage] copy framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Nuke.framework",
+			);
+			name = "[carthage] copy framework";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nuke.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F8BAAEBA200EDE100001110D /* Sources */ = {
@@ -356,6 +419,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -379,6 +446,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -396,6 +467,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C2F2YEZ5BG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Nuke-WebP-PluginTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ryokosuge.Nuke-WebP-PluginTests";
@@ -411,6 +486,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C2F2YEZ5BG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Nuke-WebP-PluginTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ryokosuge.Nuke-WebP-PluginTests";
