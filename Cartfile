@@ -1,1 +1,3 @@
 github "kean/Nuke" ~> 6.0
+git "https://chromium.googlesource.com/webm/libwebp" "v0.6.0"
+
