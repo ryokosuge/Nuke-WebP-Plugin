@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9CEC29ED716AD5DFAAC94884 /* Pods_Nuke_WebP_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 476E64F26A2B3FBAC6476A83 /* Pods_Nuke_WebP_Demo.framework */; };
 		F8F20D17200F4D1300A3E8E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F20D16200F4D1300A3E8E1 /* AppDelegate.swift */; };
 		F8F20D19200F4D1300A3E8E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F20D18200F4D1300A3E8E1 /* ViewController.swift */; };
 		F8F20D1C200F4D1300A3E8E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8F20D1A200F4D1300A3E8E1 /* Main.storyboard */; };
@@ -15,7 +16,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F8F20D13200F4D1300A3E8E1 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09CF65C40DC2F00D52FA182A /* Pods-Nuke-WebP-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nuke-WebP-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nuke-WebP-Demo/Pods-Nuke-WebP-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		476E64F26A2B3FBAC6476A83 /* Pods_Nuke_WebP_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nuke_WebP_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6149C693518EBC5D5800B31 /* Pods-Nuke-WebP-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nuke-WebP-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nuke-WebP-Demo/Pods-Nuke-WebP-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		F8F20D13200F4D1300A3E8E1 /* Nuke-WebP-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nuke-WebP-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F20D16200F4D1300A3E8E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8F20D18200F4D1300A3E8E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F8F20D1B200F4D1300A3E8E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,24 +33,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CEC29ED716AD5DFAAC94884 /* Pods_Nuke_WebP_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D5E90BD4F574DE85F51DD2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				476E64F26A2B3FBAC6476A83 /* Pods_Nuke_WebP_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F8F20D0A200F4D1300A3E8E1 = {
 			isa = PBXGroup;
 			children = (
 				F8F20D15200F4D1300A3E8E1 /* Source */,
 				F8F20D14200F4D1300A3E8E1 /* Products */,
+				FBBAAE1954CF24D37AAD5D64 /* Pods */,
+				1D5E90BD4F574DE85F51DD2B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		F8F20D14200F4D1300A3E8E1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F8F20D13200F4D1300A3E8E1 /* Demo.app */,
+				F8F20D13200F4D1300A3E8E1 /* Nuke-WebP-Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,24 +79,36 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		FBBAAE1954CF24D37AAD5D64 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B6149C693518EBC5D5800B31 /* Pods-Nuke-WebP-Demo.debug.xcconfig */,
+				09CF65C40DC2F00D52FA182A /* Pods-Nuke-WebP-Demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F8F20D12200F4D1300A3E8E1 /* Demo */ = {
+		F8F20D12200F4D1300A3E8E1 /* Nuke-WebP-Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8F20D25200F4D1300A3E8E1 /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildConfigurationList = F8F20D25200F4D1300A3E8E1 /* Build configuration list for PBXNativeTarget "Nuke-WebP-Demo" */;
 			buildPhases = (
+				1C38FDE775A2C134790408D1 /* [CP] Check Pods Manifest.lock */,
 				F8F20D0F200F4D1300A3E8E1 /* Sources */,
 				F8F20D10200F4D1300A3E8E1 /* Frameworks */,
 				F8F20D11200F4D1300A3E8E1 /* Resources */,
+				75926CA0E7DFD7A40B19054B /* [CP] Embed Pods Frameworks */,
+				96496A4197A45A303072EE95 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Demo;
+			name = "Nuke-WebP-Demo";
 			productName = Demo;
-			productReference = F8F20D13200F4D1300A3E8E1 /* Demo.app */;
+			productReference = F8F20D13200F4D1300A3E8E1 /* Nuke-WebP-Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -113,7 +140,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F8F20D12200F4D1300A3E8E1 /* Demo */,
+				F8F20D12200F4D1300A3E8E1 /* Nuke-WebP-Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +157,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C38FDE775A2C134790408D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nuke-WebP-Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75926CA0E7DFD7A40B19054B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Nuke-WebP-Demo/Pods-Nuke-WebP-Demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
+				"${BUILT_PRODUCTS_DIR}/Nuke-WebP-Plugin/Nuke_WebP_Plugin.framework",
+				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke_WebP_Plugin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nuke-WebP-Demo/Pods-Nuke-WebP-Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96496A4197A45A303072EE95 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nuke-WebP-Demo/Pods-Nuke-WebP-Demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F8F20D0F200F4D1300A3E8E1 /* Sources */ = {
@@ -272,13 +357,14 @@
 		};
 		F8F20D26200F4D1300A3E8E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6149C693518EBC5D5800B31 /* Pods-Nuke-WebP-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C2F2YEZ5BG;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ryokosuge.Nuke-WebP-Plugin.Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ryokosuge.Nuke-WebP-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -287,13 +373,14 @@
 		};
 		F8F20D27200F4D1300A3E8E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09CF65C40DC2F00D52FA182A /* Pods-Nuke-WebP-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C2F2YEZ5BG;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ryokosuge.Nuke-WebP-Plugin.Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ryokosuge.Nuke-WebP-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -312,7 +399,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8F20D25200F4D1300A3E8E1 /* Build configuration list for PBXNativeTarget "Demo" */ = {
+		F8F20D25200F4D1300A3E8E1 /* Build configuration list for PBXNativeTarget "Nuke-WebP-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8F20D26200F4D1300A3E8E1 /* Debug */,

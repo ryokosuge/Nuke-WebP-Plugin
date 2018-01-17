@@ -1,0 +1,8 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'Nuke-WebP-Demo' do
+	pod 'Nuke-WebP-Plugin', :path => '../'
+end
