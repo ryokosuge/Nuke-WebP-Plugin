@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F814657E200EE40500364146 /* Nuke_WebP_Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = F814657C200EE40500364146 /* Nuke_WebP_Plugin.h */; };
+		F814657E200EE40500364146 /* Nuke_WebP_Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = F814657C200EE40500364146 /* Nuke_WebP_Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8146583200EE4D700364146 /* WebPImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8146582200EE4D700364146 /* WebPImage.swift */; };
 		F8146584200EE55200364146 /* Nuke_WebP_PluginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8146576200EE3C700364146 /* Nuke_WebP_PluginTests.swift */; };
 		F8BAAEC9200EDE100001110D /* NukeWebPPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BAAEBF200EDE100001110D /* NukeWebPPlugin.framework */; };
@@ -170,8 +170,8 @@
 		F8FAA781200EF7EE00DD0BED /* decode.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA77A200EF7EE00DD0BED /* decode.h */; };
 		F8FAA782200EF7EE00DD0BED /* mux_types.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA77B200EF7EE00DD0BED /* mux_types.h */; };
 		F8FAA785200EF85800DD0BED /* WebPImageMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA784200EF85800DD0BED /* WebPImageMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8FAA788200EF8A000DD0BED /* WebPDataDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA786200EF8A000DD0BED /* WebPDataDecoder.h */; };
-		F8FAA789200EF8A000DD0BED /* WebPDataDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA787200EF8A000DD0BED /* WebPDataDecoder.m */; };
+		F8FAA788200EF8A000DD0BED /* WebPImageDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA786200EF8A000DD0BED /* WebPImageDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8FAA789200EF8A000DD0BED /* WebPImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA787200EF8A000DD0BED /* WebPImageDecoder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,6 +190,7 @@
 		F814657C200EE40500364146 /* Nuke_WebP_Plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nuke_WebP_Plugin.h; sourceTree = "<group>"; };
 		F814657D200EE40500364146 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8146582200EE4D700364146 /* WebPImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPImage.swift; sourceTree = "<group>"; };
+		F8766311200F0E48004A8A23 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		F8BAAEBF200EDE100001110D /* NukeWebPPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeWebPPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BAAEC8200EDE100001110D /* Nuke-WebP-PluginTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nuke-WebP-PluginTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8FAA4D3200EF08400DD0BED /* sample.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.webp; sourceTree = "<group>"; };
@@ -349,9 +350,9 @@
 		F8FAA779200EF7EE00DD0BED /* format_constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = format_constants.h; path = Carthage/Checkouts/libwebp/src/webp/format_constants.h; sourceTree = "<group>"; };
 		F8FAA77A200EF7EE00DD0BED /* decode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = decode.h; path = Carthage/Checkouts/libwebp/src/webp/decode.h; sourceTree = "<group>"; };
 		F8FAA77B200EF7EE00DD0BED /* mux_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mux_types.h; path = Carthage/Checkouts/libwebp/src/webp/mux_types.h; sourceTree = "<group>"; };
-		F8FAA784200EF85800DD0BED /* WebPImageMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebPImageMacros.h; sourceTree = "<group>"; };
-		F8FAA786200EF8A000DD0BED /* WebPDataDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebPDataDecoder.h; sourceTree = "<group>"; };
-		F8FAA787200EF8A000DD0BED /* WebPDataDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebPDataDecoder.m; sourceTree = "<group>"; };
+		F8FAA784200EF85800DD0BED /* WebPImageMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPImageMacros.h; sourceTree = "<group>"; };
+		F8FAA786200EF8A000DD0BED /* WebPImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPImageDecoder.h; sourceTree = "<group>"; };
+		F8FAA787200EF8A000DD0BED /* WebPImageDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebPImageDecoder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -391,6 +392,7 @@
 			children = (
 				F814657D200EE40500364146 /* Info.plist */,
 				F814657C200EE40500364146 /* Nuke_WebP_Plugin.h */,
+				F8766311200F0E48004A8A23 /* module.modulemap */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -671,8 +673,8 @@
 			isa = PBXGroup;
 			children = (
 				F8FAA784200EF85800DD0BED /* WebPImageMacros.h */,
-				F8FAA786200EF8A000DD0BED /* WebPDataDecoder.h */,
-				F8FAA787200EF8A000DD0BED /* WebPDataDecoder.m */,
+				F8FAA786200EF8A000DD0BED /* WebPImageDecoder.h */,
+				F8FAA787200EF8A000DD0BED /* WebPImageDecoder.m */,
 			);
 			path = WebP;
 			sourceTree = "<group>";
@@ -685,7 +687,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8FAA76D200EF7DD00DD0BED /* huffman_utils.h in Headers */,
-				F8FAA788200EF8A000DD0BED /* WebPDataDecoder.h in Headers */,
+				F8FAA788200EF8A000DD0BED /* WebPImageDecoder.h in Headers */,
 				F8FAA668200EF71900DD0BED /* vp8_dec.h in Headers */,
 				F8FAA77F200EF7EE00DD0BED /* encode.h in Headers */,
 				F8FAA669200EF71900DD0BED /* vp8i_dec.h in Headers */,
@@ -914,7 +916,7 @@
 				F8FAA717200EF7A200DD0BED /* vp8l_enc.c in Sources */,
 				F8FAA66A200EF71900DD0BED /* vp8l_dec.c in Sources */,
 				F8FAA71C200EF7A200DD0BED /* syntax_enc.c in Sources */,
-				F8FAA789200EF8A000DD0BED /* WebPDataDecoder.m in Sources */,
+				F8FAA789200EF8A000DD0BED /* WebPImageDecoder.m in Sources */,
 				F8FAA6C6200EF75000DD0BED /* yuv.c in Sources */,
 				F8FAA721200EF7A200DD0BED /* frame_enc.c in Sources */,
 				F8FAA6BE200EF75000DD0BED /* argb_sse2.c in Sources */,
@@ -1124,7 +1126,6 @@
 		F8BAAED4200EDE100001110D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -1140,10 +1141,10 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "$(SRCROOT)/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ryokosuge.Nuke-WebP-Plugin";
 				PRODUCT_NAME = NukeWebPPlugin;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1152,7 +1153,6 @@
 		F8BAAED5200EDE100001110D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -1168,6 +1168,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "$(SRCROOT)/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ryokosuge.Nuke-WebP-Plugin";
 				PRODUCT_NAME = NukeWebPPlugin;
 				SKIP_INSTALL = YES;

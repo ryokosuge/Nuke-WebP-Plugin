@@ -2,11 +2,11 @@
 //  WebPDataDecoder.m
 //  Nuke-WebP-Plugin iOS
 //
-//  Created by nagisa-kosuge on 2018/01/17.
+//  Created by ryokosuge on 2018/01/17.
 //  Copyright © 2018年 RyoKosuge. All rights reserved.
 //
 
-#import "WebPDataDecoder.h"
+#import "WebPImageDecoder.h"
 #import "webp/decode.h"
 
 void free_image_data(void *info, const void *data, size_t size) {
@@ -18,7 +18,7 @@ void free_image_data(void *info, const void *data, size_t size) {
     WebPFree((void *)data);
 }
 
-@implementation WebPDataDecoder
+@implementation WebPImageDecoder
 
 + (Image *)decodeData:(NSData *)data {
     WebPBitstreamFeatures features;

@@ -2,7 +2,7 @@
 //  Nuke_WebP_PluginTests.swift
 //  Nuke-WebP-PluginTests
 //
-//  Created by nagisa-kosuge on 2018/01/17.
+//  Created by ryokosuge on 2018/01/17.
 //  Copyright © 2018年 RyoKosuge. All rights reserved.
 //
 
@@ -44,6 +44,12 @@ class Nuke_WebP_PluginTests: XCTestCase {
         
         do {
             let webpData = try Data(contentsOf: webpImagePath)
+            let image: UIImage? = UIImage(data: webpData)
+            XCTAssertNil(image)
+
+            let webpImage: Image? = NukeWebPPlugin.WebPImageDecoder.decode(webpData)
+            XCTAssertNotNil(webpImage)
+
         } catch let e {
             XCTFail(e.localizedDescription)
         }

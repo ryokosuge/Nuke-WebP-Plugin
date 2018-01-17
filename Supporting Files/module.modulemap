@@ -1,0 +1,7 @@
+framework module NukeWebPPlugin {
+    umbrella header "Nuke_WebP_Plugin.h"
+
+    export *
+    module * { export * }
+}
+
