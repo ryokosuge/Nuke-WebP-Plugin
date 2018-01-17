@@ -169,6 +169,9 @@
 		F8FAA780200EF7EE00DD0BED /* format_constants.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA779200EF7EE00DD0BED /* format_constants.h */; };
 		F8FAA781200EF7EE00DD0BED /* decode.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA77A200EF7EE00DD0BED /* decode.h */; };
 		F8FAA782200EF7EE00DD0BED /* mux_types.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA77B200EF7EE00DD0BED /* mux_types.h */; };
+		F8FAA785200EF85800DD0BED /* WebPImageMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA784200EF85800DD0BED /* WebPImageMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8FAA788200EF8A000DD0BED /* WebPDataDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA786200EF8A000DD0BED /* WebPDataDecoder.h */; };
+		F8FAA789200EF8A000DD0BED /* WebPDataDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA787200EF8A000DD0BED /* WebPDataDecoder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -346,6 +349,9 @@
 		F8FAA779200EF7EE00DD0BED /* format_constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = format_constants.h; path = Carthage/Checkouts/libwebp/src/webp/format_constants.h; sourceTree = "<group>"; };
 		F8FAA77A200EF7EE00DD0BED /* decode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = decode.h; path = Carthage/Checkouts/libwebp/src/webp/decode.h; sourceTree = "<group>"; };
 		F8FAA77B200EF7EE00DD0BED /* mux_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mux_types.h; path = Carthage/Checkouts/libwebp/src/webp/mux_types.h; sourceTree = "<group>"; };
+		F8FAA784200EF85800DD0BED /* WebPImageMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebPImageMacros.h; sourceTree = "<group>"; };
+		F8FAA786200EF8A000DD0BED /* WebPDataDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebPDataDecoder.h; sourceTree = "<group>"; };
+		F8FAA787200EF8A000DD0BED /* WebPDataDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebPDataDecoder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,6 +398,7 @@
 		F8146581200EE42B00364146 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F8FAA783200EF84600DD0BED /* WebP */,
 				F8146582200EE4D700364146 /* WebPImage.swift */,
 			);
 			path = Source;
@@ -660,6 +667,16 @@
 			name = webp;
 			sourceTree = "<group>";
 		};
+		F8FAA783200EF84600DD0BED /* WebP */ = {
+			isa = PBXGroup;
+			children = (
+				F8FAA784200EF85800DD0BED /* WebPImageMacros.h */,
+				F8FAA786200EF8A000DD0BED /* WebPDataDecoder.h */,
+				F8FAA787200EF8A000DD0BED /* WebPDataDecoder.m */,
+			);
+			path = WebP;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -668,6 +685,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8FAA76D200EF7DD00DD0BED /* huffman_utils.h in Headers */,
+				F8FAA788200EF8A000DD0BED /* WebPDataDecoder.h in Headers */,
 				F8FAA668200EF71900DD0BED /* vp8_dec.h in Headers */,
 				F8FAA77F200EF7EE00DD0BED /* encode.h in Headers */,
 				F8FAA669200EF71900DD0BED /* vp8i_dec.h in Headers */,
@@ -685,6 +703,7 @@
 				F8FAA6DE200EF75000DD0BED /* mips_macro.h in Headers */,
 				F8FAA6C1200EF75000DD0BED /* yuv.h in Headers */,
 				F8FAA781200EF7EE00DD0BED /* decode.h in Headers */,
+				F8FAA785200EF85800DD0BED /* WebPImageMacros.h in Headers */,
 				F8FAA724200EF7A200DD0BED /* backward_references_enc.h in Headers */,
 				F8FAA76C200EF7DD00DD0BED /* bit_reader_utils.h in Headers */,
 				F8FAA77E200EF7EE00DD0BED /* types.h in Headers */,
@@ -895,6 +914,7 @@
 				F8FAA717200EF7A200DD0BED /* vp8l_enc.c in Sources */,
 				F8FAA66A200EF71900DD0BED /* vp8l_dec.c in Sources */,
 				F8FAA71C200EF7A200DD0BED /* syntax_enc.c in Sources */,
+				F8FAA789200EF8A000DD0BED /* WebPDataDecoder.m in Sources */,
 				F8FAA6C6200EF75000DD0BED /* yuv.c in Sources */,
 				F8FAA721200EF7A200DD0BED /* frame_enc.c in Sources */,
 				F8FAA6BE200EF75000DD0BED /* argb_sse2.c in Sources */,
