@@ -8,7 +8,7 @@
 
 import UIKit
 import Nuke
-import Nuke_WebP_Plugin
+import NukeWebPPlugin
 
 class ViewController: UIViewController {
 
@@ -17,14 +17,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
 
         if let url = URL(string: "https://www.gstatic.com/webp/gallery/5.sm.webp"), let imageView = self.imageView {
             WebPImage.manager.loadImage(with: url, into: imageView)
         }
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
 
     override func didReceiveMemoryWarning() {

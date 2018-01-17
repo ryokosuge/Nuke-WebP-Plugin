@@ -112,6 +112,7 @@ Pod::Spec.new do |s|
   #  you can include multiple dependencies to ensure it works.
 
   s.requires_arc = true
+  s.module_name = 'NukeWebPPlugin'
 
   s.dependency 'libwebp', '0.6.0'
   s.dependency 'Nuke', '~> 6.0'
