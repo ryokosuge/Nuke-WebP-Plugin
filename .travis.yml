@@ -4,7 +4,7 @@ osx_image: xcode9
 
 env:
   global:
-  - IOS_SCHEME="NukeWebPPlugin iOS"
+  - IOS_SCHEME="Nuke-WebP-Plugin iOS"
     # - MACOS_SCHEME="NukeWebP macOS"
     # - TVOS_SCHEME="NukeWebP tvOS"
     # - WATCHOS_SCHEME="NukeWebP watchOS"
