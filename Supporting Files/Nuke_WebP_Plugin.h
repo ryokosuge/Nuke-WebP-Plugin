@@ -5,7 +5,7 @@
 //  Created by ryokosuge on 2018/01/17.
 //  Copyright © 2018年 RyoKosuge. All rights reserved.
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for Nuke_WebP_Plugin.
 FOUNDATION_EXPORT double Nuke_WebP_PluginVersionNumber;

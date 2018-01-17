@@ -1,12 +1,12 @@
 //
 //  WebPImage.swift
-//  Nuke-WebP-Plugin iOS
+//  Nuke-WebP-Plugin
 //
 //  Created by ryokosuge on 2018/01/17.
 //  Copyright © 2018年 RyoKosuge. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import Nuke
 
 public class WebPImage: NSObject {

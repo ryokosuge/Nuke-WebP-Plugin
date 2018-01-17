@@ -34,7 +34,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F8BAAEC7200EDE100001110D"
-               BuildableName = "Nuke-WebP-PluginTests iOS.xctest"
+               BuildableName = "NukeWebPPlugin Tests iOS.xctest"
                BlueprintName = "Nuke-WebP-PluginTests iOS"
                ReferencedContainer = "container:Nuke-WebP-Plugin.xcodeproj">
             </BuildableReference>

@@ -191,8 +191,9 @@
 		F814657D200EE40500364146 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8146582200EE4D700364146 /* WebPImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPImage.swift; sourceTree = "<group>"; };
 		F8766311200F0E48004A8A23 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		F87663D7200F1659004A8A23 /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/Mac/Nuke.framework; sourceTree = "<group>"; };
 		F8BAAEBF200EDE100001110D /* NukeWebPPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeWebPPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8BAAEC8200EDE100001110D /* Nuke-WebP-PluginTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nuke-WebP-PluginTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8BAAEC8200EDE100001110D /* NukeWebPPlugin Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NukeWebPPlugin Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8FAA4D3200EF08400DD0BED /* sample.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.webp; sourceTree = "<group>"; };
 		F8FAA4D6200EF1FD00DD0BED /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
 		F8FAA62E200EF6D800DD0BED /* alpha_dec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = alpha_dec.c; path = Carthage/Checkouts/libwebp/src/dec/alpha_dec.c; sourceTree = "<group>"; };
@@ -422,7 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				F8BAAEBF200EDE100001110D /* NukeWebPPlugin.framework */,
-				F8BAAEC8200EDE100001110D /* Nuke-WebP-PluginTests iOS.xctest */,
+				F8BAAEC8200EDE100001110D /* NukeWebPPlugin Tests iOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -438,6 +439,7 @@
 		F8FAA4D5200EF1FD00DD0BED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F87663D7200F1659004A8A23 /* Nuke.framework */,
 				F8FAA4D6200EF1FD00DD0BED /* Nuke.framework */,
 			);
 			name = Frameworks;
@@ -773,7 +775,7 @@
 			);
 			name = "Nuke-WebP-PluginTests iOS";
 			productName = "Nuke-WebP-PluginTests";
-			productReference = F8BAAEC8200EDE100001110D /* Nuke-WebP-PluginTests iOS.xctest */;
+			productReference = F8BAAEC8200EDE100001110D /* NukeWebPPlugin Tests iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -1191,7 +1193,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Nuke-WebP-PluginTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ryokosuge.Nuke-WebP-PluginTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "NukeWebPPlugin Tests iOS";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1212,7 +1214,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Nuke-WebP-PluginTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ryokosuge.Nuke-WebP-PluginTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "NukeWebPPlugin Tests iOS";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
