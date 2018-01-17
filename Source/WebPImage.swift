@@ -17,6 +17,18 @@ public class WebPImage: NSObject {
 
 }
 
+public extension WebPImage {
+
+    public static let manager: Nuke.Manager = {
+        let dataDecoder = Nuke.DataDecoder()
+        let webpDataDecoder = WebPDataDecoder()
+        let decoder = Nuke.DataDecoderComposition(decoders: [dataDecoder, webpDataDecoder])
+        let loader = Nuke.Loader(loader: DataLoader(), decoder: decoder)
+        return Nuke.Manager(loader: loader)
+    }()
+
+}
+
 public struct WebPDataDecoder: Nuke.DataDecoding {
 
     public func decode(data: Data, response: URLResponse) -> Image? {

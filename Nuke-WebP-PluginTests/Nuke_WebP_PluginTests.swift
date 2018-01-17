@@ -55,4 +55,22 @@ class Nuke_WebP_PluginTests: XCTestCase {
         }
     }
 
+    func testsDecodeLoadedWebPImage() {
+        guard let url = URL(string: "https://www.gstatic.com/webp/gallery/1.sm.webp") else {
+            XCTFail("not support url format.")
+            return
+        }
+        
+        let exception = XCTestExpectation(description: "not decode webp image")
+        NukeWebPPlugin.WebPImage.manager.loadImage(with: url) { (result) in
+            switch result {
+            case .success:
+                exception.fulfill()
+            case .failure(let error):
+                XCTFail(error.localizedDescription)
+            }
+        }
+        self.wait(for: [exception], timeout: 1)
+    }
+
 }
