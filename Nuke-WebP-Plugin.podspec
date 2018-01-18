@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
   #
 
   s.author             = { "ryokosuge" => "ryo.kosuge@gmail.com" }
-  s.social_media_url   = "https://twitter.com/ryo_kosuge"
+  s.social_media_url   = 'https://twitter.com/ryo_kosuge'
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
