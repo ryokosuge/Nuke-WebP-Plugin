@@ -10,11 +10,6 @@ import Foundation
 import Nuke
 
 public class WebPImage: NSObject {
-
-    public override init() {
-        super.init()
-    }
-
 }
 
 public extension WebPImage {
