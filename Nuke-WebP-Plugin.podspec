@@ -15,12 +15,14 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "Nuke-WebP-Plugin"
-  s.version      = "1.0.0"
-  s.summary      = "Nuke's WebP plugin which can load and display WebP"
+  s.name                = "Nuke-WebP-Plugin"
+  s.version             = "1.0.0"
+  s.summary             = "Nuke's WebP plugin which can load and display WebP"
 
-  s.homepage     = "https://github.com/ryokosuge/Nuke-WebP-Plugin"
+  s.homepage            = "https://github.com/ryokosuge/Nuke-WebP-Plugin"
 
+  s.swift_version       = "4.0"
+  s.cocoapods_version   = ">= 1.3.1"
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -29,8 +31,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = { :type => "MIT", :file => "LICENSE" }
-
+  s.license             = 'MIT'
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -42,8 +43,8 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "ryokosuge" => "ryo.kosuge@gmail.com" }
-  s.social_media_url   = 'https://twitter.com/ryo_kosuge'
+  s.author              = { "ryokosuge" => "ryo.kosuge@gmail.com" }
+  s.social_media_url    = 'https://twitter.com/ryo_kosuge'
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -51,10 +52,10 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform     = :ios, "9.0"
+  s.platform            = :ios, "9.0"
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
+  s.ios.deployment_target = "9.0"
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
@@ -66,7 +67,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/ryokosuge/Nuke-WebP-Plugin.git", :tag => "v#{s.version}" }
+  s.source              = { :git => "https://github.com/ryokosuge/Nuke-WebP-Plugin.git", :tag => "v#{s.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -75,7 +76,7 @@ Pod::Spec.new do |s|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-  s.source_files = "Source/**/*"
+  s.source_files        = "Source/**/*"
   s.public_header_files = "Source/**/*.h"
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -111,13 +112,11 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  s.requires_arc = true
-  s.module_name = 'NukeWebPPlugin'
+  s.requires_arc      = true
+  s.module_name       = 'NukeWebPPlugin'
 
   s.dependency 'libwebp', '0.6.0'
   s.dependency 'Nuke', '~> 6.0'
-  s.xcconfig = {
-        'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src'
-  }
+  s.xcconfig          = { 'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src' }
 
 end
