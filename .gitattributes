@@ -1,0 +1,13 @@
+## Demo
+Demo/Source/** linguist-documentation
+
+## XML
+**/Info.plist linguist-documentation
+Nuke-WebP-PluginTests/Info.plist linguist-documentation
+
+## Ruby
+### Podspec
+Nuke-WebP-Plugin.podspec linguist-documentation
+
+### Podfile && Podfile.lock
+Demo/Podfile linguist-documentation
