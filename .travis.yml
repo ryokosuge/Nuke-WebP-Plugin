@@ -29,14 +29,16 @@ env:
 before_install:
   - brew update
   - brew outdated carthage || brew upgrade carthage
+  - carthage bootstrap --no-use-binaries
+  - xcodebuild -version
+  - xcodebuild -showsdks
 
 script:
   - set -o pipefail
-  - carthage update --no-use-binaries --verbose
-  - xcodebuild -version
-  - xcodebuild -showsdks
   - if [ $RUN_TESTS == "YES" ]; then
-      xcodebuild test -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug
+      xcodebuild test -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug | bundle exec xcpretty -c;
     else
-      xcodebuild build -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug
+      xcodebuild build -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug | bundle exec xcpretty -c;
     fi
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

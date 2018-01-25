@@ -27,6 +27,7 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
+*.xccoverage.plist
 
 ## Playgrounds
 timeline.xctimeline
@@ -65,3 +66,8 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+
+# Bundler
+#
+.bundle
+vendor
