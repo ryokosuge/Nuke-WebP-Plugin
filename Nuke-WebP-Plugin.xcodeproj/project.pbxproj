@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F80A457F20197CE200825C6D /* WebPDecodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A457E20197CE200825C6D /* WebPDecodeTests.swift */; };
+		F80A458120197DB600825C6D /* LoadWebPImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A458020197DB600825C6D /* LoadWebPImageTests.swift */; };
 		F814657E200EE40500364146 /* Nuke_WebP_Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = F814657C200EE40500364146 /* Nuke_WebP_Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8146583200EE4D700364146 /* WebPImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8146582200EE4D700364146 /* WebPImage.swift */; };
-		F8146584200EE55200364146 /* Nuke_WebP_PluginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8146576200EE3C700364146 /* Nuke_WebP_PluginTests.swift */; };
 		F8BAAEC9200EDE100001110D /* NukeWebPPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BAAEBF200EDE100001110D /* NukeWebPPlugin.framework */; };
 		F8FAA4D4200EF08400DD0BED /* sample.webp in Resources */ = {isa = PBXBuildFile; fileRef = F8FAA4D3200EF08400DD0BED /* sample.webp */; };
 		F8FAA4D7200EF1FD00DD0BED /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FAA4D6200EF1FD00DD0BED /* Nuke.framework */; };
@@ -185,13 +186,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F8146576200EE3C700364146 /* Nuke_WebP_PluginTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nuke_WebP_PluginTests.swift; sourceTree = "<group>"; };
+		F80A457E20197CE200825C6D /* WebPDecodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPDecodeTests.swift; sourceTree = "<group>"; };
+		F80A458020197DB600825C6D /* LoadWebPImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadWebPImageTests.swift; sourceTree = "<group>"; };
 		F8146577200EE3C700364146 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F814657C200EE40500364146 /* Nuke_WebP_Plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nuke_WebP_Plugin.h; sourceTree = "<group>"; };
 		F814657D200EE40500364146 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8146582200EE4D700364146 /* WebPImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPImage.swift; sourceTree = "<group>"; };
 		F8766311200F0E48004A8A23 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		F87663D7200F1659004A8A23 /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/Mac/Nuke.framework; sourceTree = "<group>"; };
 		F8BAAEBF200EDE100001110D /* NukeWebPPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeWebPPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BAAEC8200EDE100001110D /* NukeWebPPlugin Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NukeWebPPlugin Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8FAA4D3200EF08400DD0BED /* sample.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.webp; sourceTree = "<group>"; };
@@ -382,7 +383,8 @@
 			children = (
 				F8FAA4D2200EF07300DD0BED /* Resource */,
 				F8146577200EE3C700364146 /* Info.plist */,
-				F8146576200EE3C700364146 /* Nuke_WebP_PluginTests.swift */,
+				F80A457E20197CE200825C6D /* WebPDecodeTests.swift */,
+				F80A458020197DB600825C6D /* LoadWebPImageTests.swift */,
 			);
 			name = Tests;
 			path = "Nuke-WebP-PluginTests";
@@ -439,7 +441,6 @@
 		F8FAA4D5200EF1FD00DD0BED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F87663D7200F1659004A8A23 /* Nuke.framework */,
 				F8FAA4D6200EF1FD00DD0BED /* Nuke.framework */,
 			);
 			name = Frameworks;
@@ -997,7 +998,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8146584200EE55200364146 /* Nuke_WebP_PluginTests.swift in Sources */,
+				F80A458120197DB600825C6D /* LoadWebPImageTests.swift in Sources */,
+				F80A457F20197CE200825C6D /* WebPDecodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
