@@ -17,36 +17,36 @@
 		F8FAA652200EF70E00DD0BED /* demux.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA649200EF6ED00DD0BED /* demux.c */; };
 		F8FAA653200EF71200DD0BED /* anim_decode.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA648200EF6ED00DD0BED /* anim_decode.c */; };
 		F8FAA65E200EF71900DD0BED /* alpha_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA62E200EF6D800DD0BED /* alpha_dec.c */; };
-		F8FAA65F200EF71900DD0BED /* alphai_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA633200EF6D900DD0BED /* alphai_dec.h */; };
+		F8FAA65F200EF71900DD0BED /* alphai_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA633200EF6D900DD0BED /* alphai_dec.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA660200EF71900DD0BED /* buffer_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA634200EF6D900DD0BED /* buffer_dec.c */; };
-		F8FAA661200EF71900DD0BED /* common_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA632200EF6D900DD0BED /* common_dec.h */; };
+		F8FAA661200EF71900DD0BED /* common_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA632200EF6D900DD0BED /* common_dec.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA662200EF71900DD0BED /* frame_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA63D200EF6D900DD0BED /* frame_dec.c */; };
 		F8FAA663200EF71900DD0BED /* idec_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA630200EF6D900DD0BED /* idec_dec.c */; };
 		F8FAA664200EF71900DD0BED /* io_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA635200EF6D900DD0BED /* io_dec.c */; };
 		F8FAA665200EF71900DD0BED /* quant_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA636200EF6D900DD0BED /* quant_dec.c */; };
 		F8FAA666200EF71900DD0BED /* tree_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA63B200EF6D900DD0BED /* tree_dec.c */; };
 		F8FAA667200EF71900DD0BED /* vp8_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA637200EF6D900DD0BED /* vp8_dec.c */; };
-		F8FAA668200EF71900DD0BED /* vp8_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA638200EF6D900DD0BED /* vp8_dec.h */; };
-		F8FAA669200EF71900DD0BED /* vp8i_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA631200EF6D900DD0BED /* vp8i_dec.h */; };
+		F8FAA668200EF71900DD0BED /* vp8_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA638200EF6D900DD0BED /* vp8_dec.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8FAA669200EF71900DD0BED /* vp8i_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA631200EF6D900DD0BED /* vp8i_dec.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA66A200EF71900DD0BED /* vp8l_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA639200EF6D900DD0BED /* vp8l_dec.c */; };
-		F8FAA66B200EF71900DD0BED /* vp8li_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA63A200EF6D900DD0BED /* vp8li_dec.h */; };
+		F8FAA66B200EF71900DD0BED /* vp8li_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA63A200EF6D900DD0BED /* vp8li_dec.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA66C200EF71900DD0BED /* webp_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA62F200EF6D800DD0BED /* webp_dec.c */; };
-		F8FAA66D200EF71900DD0BED /* webpi_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA63C200EF6D900DD0BED /* webpi_dec.h */; };
+		F8FAA66D200EF71900DD0BED /* webpi_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA63C200EF6D900DD0BED /* webpi_dec.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA6B3200EF75000DD0BED /* filters.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA66E200EF74A00DD0BED /* filters.c */; };
 		F8FAA6B4200EF75000DD0BED /* upsampling_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA66F200EF74A00DD0BED /* upsampling_sse2.c */; };
 		F8FAA6B5200EF75000DD0BED /* upsampling.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA670200EF74A00DD0BED /* upsampling.c */; };
 		F8FAA6B6200EF75000DD0BED /* enc_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA671200EF74A00DD0BED /* enc_sse41.c */; };
-		F8FAA6B7200EF75000DD0BED /* lossless_common.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA672200EF74A00DD0BED /* lossless_common.h */; };
+		F8FAA6B7200EF75000DD0BED /* lossless_common.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA672200EF74A00DD0BED /* lossless_common.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA6B8200EF75000DD0BED /* filters_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA673200EF74A00DD0BED /* filters_sse2.c */; };
 		F8FAA6B9200EF75000DD0BED /* upsampling_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA674200EF74A00DD0BED /* upsampling_msa.c */; };
 		F8FAA6BA200EF75000DD0BED /* dec_mips32.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA675200EF74A00DD0BED /* dec_mips32.c */; };
 		F8FAA6BB200EF75000DD0BED /* enc_avx2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA676200EF74B00DD0BED /* enc_avx2.c */; };
-		F8FAA6BC200EF75000DD0BED /* dsp.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA677200EF74B00DD0BED /* dsp.h */; };
-		F8FAA6BD200EF75000DD0BED /* msa_macro.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA678200EF74B00DD0BED /* msa_macro.h */; };
+		F8FAA6BC200EF75000DD0BED /* dsp.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA677200EF74B00DD0BED /* dsp.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8FAA6BD200EF75000DD0BED /* msa_macro.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA678200EF74B00DD0BED /* msa_macro.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA6BE200EF75000DD0BED /* argb_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA679200EF74B00DD0BED /* argb_sse2.c */; };
 		F8FAA6BF200EF75000DD0BED /* lossless_enc_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA67A200EF74B00DD0BED /* lossless_enc_msa.c */; };
 		F8FAA6C0200EF75000DD0BED /* alpha_processing_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA67B200EF74B00DD0BED /* alpha_processing_mips_dsp_r2.c */; };
-		F8FAA6C1200EF75000DD0BED /* yuv.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA67C200EF74B00DD0BED /* yuv.h */; };
+		F8FAA6C1200EF75000DD0BED /* yuv.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA67C200EF74B00DD0BED /* yuv.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA6C2200EF75000DD0BED /* dec.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA67D200EF74B00DD0BED /* dec.c */; };
 		F8FAA6C3200EF75000DD0BED /* lossless_enc_mips32.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA67E200EF74B00DD0BED /* lossless_enc_mips32.c */; };
 		F8FAA6C4200EF75000DD0BED /* cost_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA67F200EF74B00DD0BED /* cost_mips_dsp_r2.c */; };
@@ -66,7 +66,7 @@
 		F8FAA6D2200EF75000DD0BED /* lossless_enc_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA68D200EF74C00DD0BED /* lossless_enc_sse41.c */; };
 		F8FAA6D3200EF75000DD0BED /* dec_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA68E200EF74C00DD0BED /* dec_sse41.c */; };
 		F8FAA6D4200EF75000DD0BED /* cost_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA68F200EF74C00DD0BED /* cost_sse2.c */; };
-		F8FAA6D5200EF75000DD0BED /* lossless.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA690200EF74C00DD0BED /* lossless.h */; };
+		F8FAA6D5200EF75000DD0BED /* lossless.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA690200EF74C00DD0BED /* lossless.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA6D6200EF75000DD0BED /* lossless_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA691200EF74C00DD0BED /* lossless_enc.c */; };
 		F8FAA6D7200EF75000DD0BED /* argb.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA692200EF74C00DD0BED /* argb.c */; };
 		F8FAA6D8200EF75000DD0BED /* rescaler_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA693200EF74D00DD0BED /* rescaler_neon.c */; };
@@ -75,7 +75,7 @@
 		F8FAA6DB200EF75000DD0BED /* lossless_enc_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA696200EF74D00DD0BED /* lossless_enc_neon.c */; };
 		F8FAA6DC200EF75000DD0BED /* argb_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA697200EF74D00DD0BED /* argb_mips_dsp_r2.c */; };
 		F8FAA6DD200EF75000DD0BED /* lossless.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA698200EF74D00DD0BED /* lossless.c */; };
-		F8FAA6DE200EF75000DD0BED /* mips_macro.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA699200EF74D00DD0BED /* mips_macro.h */; };
+		F8FAA6DE200EF75000DD0BED /* mips_macro.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA699200EF74D00DD0BED /* mips_macro.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA6DF200EF75000DD0BED /* rescaler.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA69A200EF74D00DD0BED /* rescaler.c */; };
 		F8FAA6E0200EF75000DD0BED /* upsampling_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA69B200EF74D00DD0BED /* upsampling_neon.c */; };
 		F8FAA6E1200EF75000DD0BED /* alpha_processing_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA69C200EF74D00DD0BED /* alpha_processing_neon.c */; };
@@ -83,7 +83,7 @@
 		F8FAA6E3200EF75000DD0BED /* enc_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA69E200EF74E00DD0BED /* enc_mips_dsp_r2.c */; };
 		F8FAA6E4200EF75000DD0BED /* lossless_enc_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA69F200EF74E00DD0BED /* lossless_enc_mips_dsp_r2.c */; };
 		F8FAA6E5200EF75000DD0BED /* cost.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA6A0200EF74E00DD0BED /* cost.c */; };
-		F8FAA6E6200EF75000DD0BED /* neon.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA6A1200EF74E00DD0BED /* neon.h */; };
+		F8FAA6E6200EF75000DD0BED /* neon.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA6A1200EF74E00DD0BED /* neon.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA6E7200EF75000DD0BED /* rescaler_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA6A2200EF74E00DD0BED /* rescaler_mips_dsp_r2.c */; };
 		F8FAA6E8200EF75000DD0BED /* rescaler_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA6A3200EF74E00DD0BED /* rescaler_msa.c */; };
 		F8FAA6E9200EF75000DD0BED /* rescaler_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA6A4200EF74E00DD0BED /* rescaler_sse2.c */; };
@@ -91,7 +91,7 @@
 		F8FAA6EB200EF75000DD0BED /* yuv_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA6A6200EF74E00DD0BED /* yuv_mips_dsp_r2.c */; };
 		F8FAA6EC200EF75000DD0BED /* lossless_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA6A7200EF74F00DD0BED /* lossless_mips_dsp_r2.c */; };
 		F8FAA6ED200EF75000DD0BED /* enc_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA6A8200EF74F00DD0BED /* enc_sse2.c */; };
-		F8FAA6EE200EF75000DD0BED /* common_sse2.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA6A9200EF74F00DD0BED /* common_sse2.h */; };
+		F8FAA6EE200EF75000DD0BED /* common_sse2.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA6A9200EF74F00DD0BED /* common_sse2.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA6EF200EF75000DD0BED /* lossless_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA6AA200EF74F00DD0BED /* lossless_sse2.c */; };
 		F8FAA6F0200EF75000DD0BED /* filters_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA6AB200EF74F00DD0BED /* filters_neon.c */; };
 		F8FAA6F1200EF75000DD0BED /* lossless_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA6AC200EF74F00DD0BED /* lossless_msa.c */; };
@@ -108,15 +108,15 @@
 		F8FAA71A200EF7A200DD0BED /* cost_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA6FC200EF7A000DD0BED /* cost_enc.c */; };
 		F8FAA71B200EF7A200DD0BED /* picture_tools_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA6FD200EF7A000DD0BED /* picture_tools_enc.c */; };
 		F8FAA71C200EF7A200DD0BED /* syntax_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA6FE200EF7A100DD0BED /* syntax_enc.c */; };
-		F8FAA71D200EF7A200DD0BED /* histogram_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA6FF200EF7A100DD0BED /* histogram_enc.h */; };
+		F8FAA71D200EF7A200DD0BED /* histogram_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA6FF200EF7A100DD0BED /* histogram_enc.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA71E200EF7A200DD0BED /* webp_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA700200EF7A100DD0BED /* webp_enc.c */; };
 		F8FAA71F200EF7A200DD0BED /* iterator_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA701200EF7A100DD0BED /* iterator_enc.c */; };
-		F8FAA720200EF7A200DD0BED /* cost_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA702200EF7A100DD0BED /* cost_enc.h */; };
+		F8FAA720200EF7A200DD0BED /* cost_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA702200EF7A100DD0BED /* cost_enc.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA721200EF7A200DD0BED /* frame_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA703200EF7A100DD0BED /* frame_enc.c */; };
-		F8FAA722200EF7A200DD0BED /* vp8i_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA704200EF7A100DD0BED /* vp8i_enc.h */; };
-		F8FAA723200EF7A200DD0BED /* vp8li_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA705200EF7A100DD0BED /* vp8li_enc.h */; };
-		F8FAA724200EF7A200DD0BED /* backward_references_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA706200EF7A100DD0BED /* backward_references_enc.h */; };
-		F8FAA725200EF7A200DD0BED /* delta_palettization_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA707200EF7A100DD0BED /* delta_palettization_enc.h */; };
+		F8FAA722200EF7A200DD0BED /* vp8i_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA704200EF7A100DD0BED /* vp8i_enc.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8FAA723200EF7A200DD0BED /* vp8li_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA705200EF7A100DD0BED /* vp8li_enc.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8FAA724200EF7A200DD0BED /* backward_references_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA706200EF7A100DD0BED /* backward_references_enc.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8FAA725200EF7A200DD0BED /* delta_palettization_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA707200EF7A100DD0BED /* delta_palettization_enc.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA726200EF7A200DD0BED /* picture_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA708200EF7A100DD0BED /* picture_enc.c */; };
 		F8FAA727200EF7A200DD0BED /* quant_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA709200EF7A100DD0BED /* quant_enc.c */; };
 		F8FAA728200EF7A200DD0BED /* picture_rescale_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA70A200EF7A100DD0BED /* picture_rescale_enc.c */; };
@@ -132,8 +132,8 @@
 		F8FAA733200EF7A200DD0BED /* predictor_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA715200EF7A200DD0BED /* predictor_enc.c */; };
 		F8FAA73B200EF7C500DD0BED /* muxinternal.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA735200EF7C400DD0BED /* muxinternal.c */; };
 		F8FAA73C200EF7C500DD0BED /* muxedit.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA736200EF7C400DD0BED /* muxedit.c */; };
-		F8FAA73D200EF7C500DD0BED /* animi.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA737200EF7C400DD0BED /* animi.h */; };
-		F8FAA73E200EF7C500DD0BED /* muxi.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA738200EF7C400DD0BED /* muxi.h */; };
+		F8FAA73D200EF7C500DD0BED /* animi.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA737200EF7C400DD0BED /* animi.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8FAA73E200EF7C500DD0BED /* muxi.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA738200EF7C400DD0BED /* muxi.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA73F200EF7C500DD0BED /* anim_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA739200EF7C500DD0BED /* anim_encode.c */; };
 		F8FAA740200EF7C500DD0BED /* muxread.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA73A200EF7C500DD0BED /* muxread.c */; };
 		F8FAA75B200EF7DD00DD0BED /* quant_levels_dec_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA741200EF7DC00DD0BED /* quant_levels_dec_utils.c */; };
@@ -141,34 +141,34 @@
 		F8FAA75D200EF7DD00DD0BED /* bit_reader_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA743200EF7DC00DD0BED /* bit_reader_utils.c */; };
 		F8FAA75E200EF7DD00DD0BED /* quant_levels_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA744200EF7DC00DD0BED /* quant_levels_utils.c */; };
 		F8FAA75F200EF7DD00DD0BED /* thread_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA745200EF7DC00DD0BED /* thread_utils.c */; };
-		F8FAA760200EF7DD00DD0BED /* huffman_encode_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA746200EF7DC00DD0BED /* huffman_encode_utils.h */; };
-		F8FAA761200EF7DD00DD0BED /* quant_levels_dec_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA747200EF7DC00DD0BED /* quant_levels_dec_utils.h */; };
+		F8FAA760200EF7DD00DD0BED /* huffman_encode_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA746200EF7DC00DD0BED /* huffman_encode_utils.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8FAA761200EF7DD00DD0BED /* quant_levels_dec_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA747200EF7DC00DD0BED /* quant_levels_dec_utils.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA762200EF7DD00DD0BED /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA748200EF7DC00DD0BED /* utils.c */; };
-		F8FAA763200EF7DD00DD0BED /* quant_levels_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA749200EF7DC00DD0BED /* quant_levels_utils.h */; };
-		F8FAA764200EF7DD00DD0BED /* rescaler_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA74A200EF7DC00DD0BED /* rescaler_utils.h */; };
-		F8FAA765200EF7DD00DD0BED /* random_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA74B200EF7DC00DD0BED /* random_utils.h */; };
+		F8FAA763200EF7DD00DD0BED /* quant_levels_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA749200EF7DC00DD0BED /* quant_levels_utils.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8FAA764200EF7DD00DD0BED /* rescaler_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA74A200EF7DC00DD0BED /* rescaler_utils.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8FAA765200EF7DD00DD0BED /* random_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA74B200EF7DC00DD0BED /* random_utils.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA766200EF7DD00DD0BED /* filters_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA74C200EF7DC00DD0BED /* filters_utils.c */; };
-		F8FAA767200EF7DD00DD0BED /* endian_inl_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA74D200EF7DC00DD0BED /* endian_inl_utils.h */; };
-		F8FAA768200EF7DD00DD0BED /* filters_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA74E200EF7DC00DD0BED /* filters_utils.h */; };
+		F8FAA767200EF7DD00DD0BED /* endian_inl_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA74D200EF7DC00DD0BED /* endian_inl_utils.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8FAA768200EF7DD00DD0BED /* filters_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA74E200EF7DC00DD0BED /* filters_utils.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA769200EF7DD00DD0BED /* color_cache_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA74F200EF7DC00DD0BED /* color_cache_utils.c */; };
-		F8FAA76A200EF7DD00DD0BED /* bit_reader_inl_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA750200EF7DC00DD0BED /* bit_reader_inl_utils.h */; };
-		F8FAA76B200EF7DD00DD0BED /* color_cache_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA751200EF7DD00DD0BED /* color_cache_utils.h */; };
-		F8FAA76C200EF7DD00DD0BED /* bit_reader_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA752200EF7DD00DD0BED /* bit_reader_utils.h */; };
-		F8FAA76D200EF7DD00DD0BED /* huffman_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA753200EF7DD00DD0BED /* huffman_utils.h */; };
-		F8FAA76E200EF7DD00DD0BED /* utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA754200EF7DD00DD0BED /* utils.h */; };
+		F8FAA76A200EF7DD00DD0BED /* bit_reader_inl_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA750200EF7DC00DD0BED /* bit_reader_inl_utils.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8FAA76B200EF7DD00DD0BED /* color_cache_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA751200EF7DD00DD0BED /* color_cache_utils.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8FAA76C200EF7DD00DD0BED /* bit_reader_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA752200EF7DD00DD0BED /* bit_reader_utils.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8FAA76D200EF7DD00DD0BED /* huffman_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA753200EF7DD00DD0BED /* huffman_utils.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8FAA76E200EF7DD00DD0BED /* utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA754200EF7DD00DD0BED /* utils.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA76F200EF7DD00DD0BED /* huffman_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA755200EF7DD00DD0BED /* huffman_utils.c */; };
 		F8FAA770200EF7DD00DD0BED /* rescaler_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA756200EF7DD00DD0BED /* rescaler_utils.c */; };
 		F8FAA771200EF7DD00DD0BED /* bit_writer_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA757200EF7DD00DD0BED /* bit_writer_utils.c */; };
-		F8FAA772200EF7DD00DD0BED /* bit_writer_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA758200EF7DD00DD0BED /* bit_writer_utils.h */; };
+		F8FAA772200EF7DD00DD0BED /* bit_writer_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA758200EF7DD00DD0BED /* bit_writer_utils.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA773200EF7DD00DD0BED /* random_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA759200EF7DD00DD0BED /* random_utils.c */; };
-		F8FAA774200EF7DD00DD0BED /* thread_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA75A200EF7DD00DD0BED /* thread_utils.h */; };
-		F8FAA77C200EF7EE00DD0BED /* demux.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA775200EF7EE00DD0BED /* demux.h */; };
-		F8FAA77D200EF7EE00DD0BED /* mux.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA776200EF7EE00DD0BED /* mux.h */; };
-		F8FAA77E200EF7EE00DD0BED /* types.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA777200EF7EE00DD0BED /* types.h */; };
-		F8FAA77F200EF7EE00DD0BED /* encode.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA778200EF7EE00DD0BED /* encode.h */; };
-		F8FAA780200EF7EE00DD0BED /* format_constants.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA779200EF7EE00DD0BED /* format_constants.h */; };
-		F8FAA781200EF7EE00DD0BED /* decode.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA77A200EF7EE00DD0BED /* decode.h */; };
-		F8FAA782200EF7EE00DD0BED /* mux_types.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA77B200EF7EE00DD0BED /* mux_types.h */; };
+		F8FAA774200EF7DD00DD0BED /* thread_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA75A200EF7DD00DD0BED /* thread_utils.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8FAA77C200EF7EE00DD0BED /* demux.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA775200EF7EE00DD0BED /* demux.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8FAA77D200EF7EE00DD0BED /* mux.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA776200EF7EE00DD0BED /* mux.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8FAA77E200EF7EE00DD0BED /* types.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA777200EF7EE00DD0BED /* types.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8FAA77F200EF7EE00DD0BED /* encode.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA778200EF7EE00DD0BED /* encode.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8FAA780200EF7EE00DD0BED /* format_constants.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA779200EF7EE00DD0BED /* format_constants.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8FAA781200EF7EE00DD0BED /* decode.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA77A200EF7EE00DD0BED /* decode.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F8FAA782200EF7EE00DD0BED /* mux_types.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA77B200EF7EE00DD0BED /* mux_types.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA785200EF85800DD0BED /* WebPImageMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA784200EF85800DD0BED /* WebPImageMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8FAA788200EF8A000DD0BED /* WebPImageDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA786200EF8A000DD0BED /* WebPImageDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8FAA789200EF8A000DD0BED /* WebPImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA787200EF8A000DD0BED /* WebPImageDecoder.m */; };
@@ -688,8 +688,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8FAA76D200EF7DD00DD0BED /* huffman_utils.h in Headers */,
 				F8FAA788200EF8A000DD0BED /* WebPImageDecoder.h in Headers */,
+				F8FAA76D200EF7DD00DD0BED /* huffman_utils.h in Headers */,
 				F8FAA668200EF71900DD0BED /* vp8_dec.h in Headers */,
 				F8FAA77F200EF7EE00DD0BED /* encode.h in Headers */,
 				F8FAA669200EF71900DD0BED /* vp8i_dec.h in Headers */,
@@ -707,7 +707,6 @@
 				F8FAA6DE200EF75000DD0BED /* mips_macro.h in Headers */,
 				F8FAA6C1200EF75000DD0BED /* yuv.h in Headers */,
 				F8FAA781200EF7EE00DD0BED /* decode.h in Headers */,
-				F8FAA785200EF85800DD0BED /* WebPImageMacros.h in Headers */,
 				F8FAA724200EF7A200DD0BED /* backward_references_enc.h in Headers */,
 				F8FAA76C200EF7DD00DD0BED /* bit_reader_utils.h in Headers */,
 				F8FAA77E200EF7EE00DD0BED /* types.h in Headers */,
@@ -719,7 +718,6 @@
 				F8FAA763200EF7DD00DD0BED /* quant_levels_utils.h in Headers */,
 				F8FAA6BC200EF75000DD0BED /* dsp.h in Headers */,
 				F8FAA73D200EF7C500DD0BED /* animi.h in Headers */,
-				F814657E200EE40500364146 /* Nuke_WebP_Plugin.h in Headers */,
 				F8FAA6E6200EF75000DD0BED /* neon.h in Headers */,
 				F8FAA76A200EF7DD00DD0BED /* bit_reader_inl_utils.h in Headers */,
 				F8FAA774200EF7DD00DD0BED /* thread_utils.h in Headers */,
@@ -734,6 +732,8 @@
 				F8FAA77D200EF7EE00DD0BED /* mux.h in Headers */,
 				F8FAA65F200EF71900DD0BED /* alphai_dec.h in Headers */,
 				F8FAA761200EF7DD00DD0BED /* quant_levels_dec_utils.h in Headers */,
+				F8FAA785200EF85800DD0BED /* WebPImageMacros.h in Headers */,
+				F814657E200EE40500364146 /* Nuke_WebP_Plugin.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
