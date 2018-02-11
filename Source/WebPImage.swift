@@ -43,7 +43,7 @@ public struct WebPDataDecoder: Nuke.DataDecoding {
 
 // MARK: - WebP Format Testing
 extension Data {
-    // Borrwo from KingfisherWebp
+    // Borrow from KingfisherWebp
     // https://github.com/Yeatse/KingfisherWebP/blob/master/KingfisherWebP/Classes/Image%2BWebP.swift#L38
     var isWebPFormat: Bool {
         if count < 12 {
