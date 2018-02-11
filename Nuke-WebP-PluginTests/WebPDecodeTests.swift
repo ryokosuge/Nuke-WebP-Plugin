@@ -14,6 +14,7 @@ class WebPDecodeTests: XCTestCase {
 
     private lazy var webpImagePath: URL = {
         let webpImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "webp")!
+        let gifImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "gif")!
         return webpImagePath
     }()
     
@@ -26,7 +27,7 @@ class WebPDecodeTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-
+    
     func testsDecodeWebPImage() {
         do {
             let webpData = try Data(contentsOf: self.webpImagePath)
@@ -35,6 +36,19 @@ class WebPDecodeTests: XCTestCase {
             
             let webpImage: Image? = NukeWebPPlugin.WebPImageDecoder.decode(webpData)
             XCTAssertNotNil(webpImage)
+        } catch let e {
+            XCTFail(e.localizedDescription)
+        }
+    }
+
+    func testsDecodeNotWebPImage() {
+        do {
+            let gifData = try Data(contentsOf: self.gifImagePath)
+            let image: UIImage? = UIImage(data: gifData)
+            XCTAssertNotNil(image)
+            
+            let webpImage: Image? = NukeWebPPlugin.WebPImageDecoder.decode(gifData)
+            XCTAssertNil(webpImage)
         } catch let e {
             XCTFail(e.localizedDescription)
         }
