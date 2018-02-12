@@ -14,8 +14,12 @@ class WebPDecodeTests: XCTestCase {
 
     private lazy var webpImagePath: URL = {
         let webpImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "webp")!
-        let gifImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "gif")!
         return webpImagePath
+    }()
+    
+    private lazy var gifImagePath: URL = {
+        let gifImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "gif")!
+        return gifImagePath
     }()
     
     override func setUp() {
