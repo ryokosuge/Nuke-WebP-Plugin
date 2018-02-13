@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C74750E22030E2FC00FA7FE2 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = C74750E12030E2FC00FA7FE2 /* sample.gif */; };
-		C74750E320320A8D00FA7FE2 /* WebPDecodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A457E20197CE200825C6D /* WebPDecodeTests.swift */; };
+		C7A377CC20334B7500339789 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = C74750E12030E2FC00FA7FE2 /* sample.gif */; };
 		F80A457F20197CE200825C6D /* WebPDecodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A457E20197CE200825C6D /* WebPDecodeTests.swift */; };
 		F80A458120197DB600825C6D /* LoadWebPImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A458020197DB600825C6D /* LoadWebPImageTests.swift */; };
 		F814657E200EE40500364146 /* Nuke_WebP_Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = F814657C200EE40500364146 /* Nuke_WebP_Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -828,7 +827,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C74750E22030E2FC00FA7FE2 /* sample.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -836,6 +834,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7A377CC20334B7500339789 /* sample.gif in Resources */,
 				F8FAA4D4200EF08400DD0BED /* sample.webp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -955,7 +954,6 @@
 				F8FAA6B3200EF75000DD0BED /* filters.c in Sources */,
 				F8FAA667200EF71900DD0BED /* vp8_dec.c in Sources */,
 				F8FAA71A200EF7A200DD0BED /* cost_enc.c in Sources */,
-				C74750E320320A8D00FA7FE2 /* WebPDecodeTests.swift in Sources */,
 				F8FAA6C8200EF75000DD0BED /* dec_clip_tables.c in Sources */,
 				F8FAA6C4200EF75000DD0BED /* cost_mips_dsp_r2.c in Sources */,
 				F8FAA666200EF71900DD0BED /* tree_dec.c in Sources */,
