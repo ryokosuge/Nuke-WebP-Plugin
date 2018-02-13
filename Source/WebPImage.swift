@@ -25,10 +25,10 @@ public extension WebPImage {
 }
 
 public struct WebPDataDecoder: Nuke.DataDecoding {
-    
-    // Refer to https://github.com/kean/Nuke-Gifu-Plugin/blob/master/Source/AnimatedImage.swift#L64
-    public init() {}
-    
+
+    public init() {
+    }
+
     public func decode(data: Data, response: URLResponse) -> Image? {
         if !data.isWebPFormat {
             return nil
