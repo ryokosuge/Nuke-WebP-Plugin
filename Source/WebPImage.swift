@@ -26,6 +26,9 @@ public extension WebPImage {
 
 public struct WebPDataDecoder: Nuke.DataDecoding {
 
+    public init() {
+    }
+
     public func decode(data: Data, response: URLResponse) -> Image? {
         return decodeWebPData(data)
     }
