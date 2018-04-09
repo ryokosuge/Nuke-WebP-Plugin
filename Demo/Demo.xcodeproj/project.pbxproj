@@ -100,7 +100,6 @@
 				F8F20D10200F4D1300A3E8E1 /* Frameworks */,
 				F8F20D11200F4D1300A3E8E1 /* Resources */,
 				75926CA0E7DFD7A40B19054B /* [CP] Embed Pods Frameworks */,
-				96496A4197A45A303072EE95 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,21 +196,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nuke-WebP-Demo/Pods-Nuke-WebP-Demo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		96496A4197A45A303072EE95 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nuke-WebP-Demo/Pods-Nuke-WebP-Demo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
