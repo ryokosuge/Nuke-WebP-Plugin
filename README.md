@@ -38,8 +38,8 @@ github 'ryokosuge/Nuke-WebP-Plugin'
 ## Requirements
 
 - iOS9+
-- Xcode9
-- Swift4
+- Xcode9+
+- Swift4+
 
 ## Dependencies
 
