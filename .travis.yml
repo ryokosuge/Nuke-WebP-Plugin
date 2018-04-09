@@ -1,6 +1,6 @@
 language: objective-c
 os: osx
-osx_image: xcode9.2
+osx_image: xcode9.3beta
 
 cache:
   - bundler
@@ -40,5 +40,6 @@ script:
     else
       xcodebuild build -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug | bundle exec xcpretty -c;
     fi
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)
