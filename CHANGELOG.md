@@ -1,6 +1,20 @@
+## Nuke WebP Plugin v1.1.0
+
+- Support Xcode9.3 & Swift4.1
+- Support [CocoaPods 1.5.0](http://blog.cocoapods.org/CocoaPods-1.5.0/)
+
+## Nuke WebP Plugin v1.0.3
+
+- allow datadecoder can be used outside file. Check if it's webp format. #6
+    thank you @systembugtj
+
+## Nuke WebP Plugin v1.0.2
+
+- feat: Add initialization method to WebPDataDecoder.
+
 ## Nuke WebP Plugin v1.0.1
 
-- Suuport [CocoaPods 1.4.0](http://blog.cocoapods.org/CocoaPods-1.4.0/)
+- Support [CocoaPods 1.4.0](http://blog.cocoapods.org/CocoaPods-1.4.0/)
 
 ## Nuke WebP Plugin v1.0.0
 
