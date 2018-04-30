@@ -9,7 +9,7 @@
 import Foundation
 import Nuke
 
-public struct WebPImageDecoder: Nuke.ImageDecoding {
+public class WebPImageDecoder: Nuke.ImageDecoding {
 
     public init() {
     }
@@ -21,6 +21,14 @@ public struct WebPImageDecoder: Nuke.ImageDecoding {
             return nil
         }
         return _decode(data)
+    }
+
+}
+
+extension WebPImageDecoder {
+
+    public static func isWebPFormat(data: Data) -> Bool {
+        return data.isWebPFormat
     }
 
 }
