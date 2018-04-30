@@ -18,6 +18,7 @@
 		F8AD60D9209712DE00D056B2 /* backward_references_cost_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60D8209712DE00D056B2 /* backward_references_cost_enc.c */; };
 		F8AD60DC209716AB00D056B2 /* WebPDataDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = F8AD60DA209716AB00D056B2 /* WebPDataDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8AD60DD209716AB00D056B2 /* WebPDataDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60DB209716AB00D056B2 /* WebPDataDecoder.m */; };
+		F8AD60E0209719A000D056B2 /* Data+WebPFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60DF209719A000D056B2 /* Data+WebPFormat.swift */; };
 		F8BAAEC9200EDE100001110D /* NukeWebPPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BAAEBF200EDE100001110D /* NukeWebPPlugin.framework */; };
 		F8FAA4D4200EF08400DD0BED /* sample.webp in Resources */ = {isa = PBXBuildFile; fileRef = F8FAA4D3200EF08400DD0BED /* sample.webp */; };
 		F8FAA4D7200EF1FD00DD0BED /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FAA4D6200EF1FD00DD0BED /* Nuke.framework */; };
@@ -202,6 +203,7 @@
 		F8AD60D8209712DE00D056B2 /* backward_references_cost_enc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = backward_references_cost_enc.c; path = Carthage/Checkouts/libwebp/src/enc/backward_references_cost_enc.c; sourceTree = "<group>"; };
 		F8AD60DA209716AB00D056B2 /* WebPDataDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebPDataDecoder.h; sourceTree = "<group>"; };
 		F8AD60DB209716AB00D056B2 /* WebPDataDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebPDataDecoder.m; sourceTree = "<group>"; };
+		F8AD60DF209719A000D056B2 /* Data+WebPFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+WebPFormat.swift"; sourceTree = "<group>"; };
 		F8BAAEBF200EDE100001110D /* NukeWebPPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeWebPPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BAAEC8200EDE100001110D /* NukeWebPPlugin Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NukeWebPPlugin Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8FAA4D3200EF08400DD0BED /* sample.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.webp; sourceTree = "<group>"; };
@@ -407,10 +409,19 @@
 		F8146581200EE42B00364146 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F8AD60DE2097198B00D056B2 /* Extensions */,
 				F8FAA783200EF84600DD0BED /* WebP */,
 				F8146582200EE4D700364146 /* WebPImage.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		F8AD60DE2097198B00D056B2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F8AD60DF209719A000D056B2 /* Data+WebPFormat.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F8BAAEB5200EDE100001110D = {
@@ -932,6 +943,7 @@
 				F8FAA6C6200EF75000DD0BED /* yuv.c in Sources */,
 				F8FAA721200EF7A200DD0BED /* frame_enc.c in Sources */,
 				F8FAA6F5200EF75000DD0BED /* enc_msa.c in Sources */,
+				F8AD60E0209719A000D056B2 /* Data+WebPFormat.swift in Sources */,
 				F8FAA71B200EF7A200DD0BED /* picture_tools_enc.c in Sources */,
 				F8FAA769200EF7DD00DD0BED /* color_cache_utils.c in Sources */,
 				F8FAA6D4200EF75000DD0BED /* cost_sse2.c in Sources */,
