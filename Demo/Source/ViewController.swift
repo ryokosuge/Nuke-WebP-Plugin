@@ -18,9 +18,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
+        WebPImageDecoder.enable()
         if let url = URL(string: "https://www.gstatic.com/webp/gallery/5.sm.webp"), let imageView = self.imageView {
-            WebPImage.manager.loadImage(with: url, into: imageView)
+            Nuke.loadImage(with: url, into: imageView)
         }
+
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -31,7 +33,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 

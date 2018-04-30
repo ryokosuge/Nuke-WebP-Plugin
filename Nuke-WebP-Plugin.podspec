@@ -16,12 +16,12 @@ Pod::Spec.new do |s|
   #
 
   s.name                = "Nuke-WebP-Plugin"
-  s.version             = "1.1.0"
+  s.version             = "2.0.0-beta3"
   s.summary             = "Nuke's WebP plugin which can load and display WebP"
 
   s.homepage            = "https://github.com/ryokosuge/Nuke-WebP-Plugin"
 
-  s.swift_version       = "4.0"
+  s.swift_version       = "4.1"
   s.cocoapods_version   = ">= 1.3.1"
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -115,8 +115,8 @@ Pod::Spec.new do |s|
   s.requires_arc      = true
   s.module_name       = 'NukeWebPPlugin'
 
-  s.dependency 'libwebp', '0.6.0'
-  s.dependency 'Nuke', '~> 6.0'
+  s.dependency 'libwebp', '0.6.1'
+  s.dependency 'Nuke', '7.0-beta3'
   s.xcconfig          = { 'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src' }
 
   # ――― Test Spec ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

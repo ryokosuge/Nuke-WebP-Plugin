@@ -26,23 +26,36 @@ class LoadWebPImageTests: XCTestCase {
 
     func testsFailLoadWebPImage() {
         let exception = XCTestExpectation(description: "not decode webp image")
-        Nuke.Manager.shared.loadImage(with: self.webpImageURL) {[exception] (result) in
-            XCTAssertNil(result.value)
+        Nuke.ImagePipeline.shared.loadImage(with: self.webpImageURL) { (imageResponse, error) in
+            /// It is an error because it does not correspond to WebP
+            guard let e = error else {
+                XCTFail()
+                return
+            }
+
+            print(e)
             exception.fulfill()
         }
         self.wait(for: [exception], timeout: 1)
     }
     
     func testsLoadWebPImage() {
-        let exception = XCTestExpectation(description: "not decode webp image")
-        NukeWebPPlugin.WebPImage.manager.loadImage(with: self.webpImageURL) { (result) in
-            switch result {
-            case .success:
-                exception.fulfill()
-            case .failure(let error):
-                XCTFail(error.localizedDescription)
-            }
+        let exception = XCTestExpectation(description: "decode webp image")
+        ImageDecoderRegistry.shared.register { (context) -> ImageDecoding? in
+            return WebPImageDecoder.enable(context: context)
         }
+
+        Nuke.ImagePipeline.shared.loadImage(with: self.webpImageURL) { (imageResponse, error) in
+            if let e = error {
+                XCTFail(e.localizedDescription)
+                exception.fulfill()
+                return
+            }
+            
+            XCTAssertNotNil(imageResponse?.image)
+            exception.fulfill()
+        }
+
         self.wait(for: [exception], timeout: 1)
     }
 

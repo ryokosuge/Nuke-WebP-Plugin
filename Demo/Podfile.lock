@@ -1,32 +1,32 @@
 PODS:
-  - libwebp (0.6.0):
-    - libwebp/core (= 0.6.0)
-    - libwebp/dec (= 0.6.0)
-    - libwebp/demux (= 0.6.0)
-    - libwebp/dsp (= 0.6.0)
-    - libwebp/enc (= 0.6.0)
-    - libwebp/mux (= 0.6.0)
-    - libwebp/utils (= 0.6.0)
-    - libwebp/webp (= 0.6.0)
-  - libwebp/core (0.6.0):
+  - libwebp (0.6.1):
+    - libwebp/core (= 0.6.1)
+    - libwebp/dec (= 0.6.1)
+    - libwebp/demux (= 0.6.1)
+    - libwebp/dsp (= 0.6.1)
+    - libwebp/enc (= 0.6.1)
+    - libwebp/mux (= 0.6.1)
+    - libwebp/utils (= 0.6.1)
+    - libwebp/webp (= 0.6.1)
+  - libwebp/core (0.6.1):
     - libwebp/webp
-  - libwebp/dec (0.6.0):
+  - libwebp/dec (0.6.1):
     - libwebp/core
-  - libwebp/demux (0.6.0):
+  - libwebp/demux (0.6.1):
     - libwebp/core
-  - libwebp/dsp (0.6.0):
+  - libwebp/dsp (0.6.1):
     - libwebp/core
-  - libwebp/enc (0.6.0):
+  - libwebp/enc (0.6.1):
     - libwebp/core
-  - libwebp/mux (0.6.0):
+  - libwebp/mux (0.6.1):
     - libwebp/core
-  - libwebp/utils (0.6.0):
+  - libwebp/utils (0.6.1):
     - libwebp/core
-  - libwebp/webp (0.6.0)
-  - Nuke (6.1.1)
-  - Nuke-WebP-Plugin (1.0.3):
-    - libwebp (= 0.6.0)
-    - Nuke (~> 6.0)
+  - libwebp/webp (0.6.1)
+  - Nuke (7.0-beta3)
+  - Nuke-WebP-Plugin (2.0.0-beta3):
+    - libwebp (= 0.6.1)
+    - Nuke (= 7.0-beta3)
 
 DEPENDENCIES:
   - Nuke-WebP-Plugin (from `../`)
@@ -41,9 +41,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  libwebp: 1d5a07c2eb97f9c31bd5f154bb82efc0ea67c6a2
-  Nuke: bf5d58b2d95ff15cb170c231fe6002d706be77e1
-  Nuke-WebP-Plugin: 0910f0375b4571e946a9126b510ad4dfa7ea7d25
+  libwebp: 0f01098c6c17175391af621b2f14150f3ca16e16
+  Nuke: d870748d5a2d2432f6b3ff0d9f28d29eef234068
+  Nuke-WebP-Plugin: e9cbfb415cb6843424cee470ccd513f6054fefb9
 
 PODFILE CHECKSUM: 007280883f6808fe78e95738c84bbffa7726f39e
 
