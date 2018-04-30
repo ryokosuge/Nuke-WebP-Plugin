@@ -12,6 +12,13 @@
 		F80A458120197DB600825C6D /* LoadWebPImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A458020197DB600825C6D /* LoadWebPImageTests.swift */; };
 		F814657E200EE40500364146 /* Nuke_WebP_Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = F814657C200EE40500364146 /* Nuke_WebP_Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8146583200EE4D700364146 /* WebPImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8146582200EE4D700364146 /* WebPImage.swift */; };
+		F8AD60D5209712C300D056B2 /* ssim_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60D2209712C200D056B2 /* ssim_sse2.c */; };
+		F8AD60D6209712C300D056B2 /* ssim.c in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60D3209712C300D056B2 /* ssim.c */; };
+		F8AD60D7209712C300D056B2 /* yuv_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60D4209712C300D056B2 /* yuv_neon.c */; };
+		F8AD60D9209712DE00D056B2 /* backward_references_cost_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60D8209712DE00D056B2 /* backward_references_cost_enc.c */; };
+		F8AD60DC209716AB00D056B2 /* WebPDataDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = F8AD60DA209716AB00D056B2 /* WebPDataDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8AD60DD209716AB00D056B2 /* WebPDataDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60DB209716AB00D056B2 /* WebPDataDecoder.m */; };
+		F8AD60E0209719A000D056B2 /* Data+WebPFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60DF209719A000D056B2 /* Data+WebPFormat.swift */; };
 		F8BAAEC9200EDE100001110D /* NukeWebPPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BAAEBF200EDE100001110D /* NukeWebPPlugin.framework */; };
 		F8FAA4D4200EF08400DD0BED /* sample.webp in Resources */ = {isa = PBXBuildFile; fileRef = F8FAA4D3200EF08400DD0BED /* sample.webp */; };
 		F8FAA4D7200EF1FD00DD0BED /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FAA4D6200EF1FD00DD0BED /* Nuke.framework */; };
@@ -45,7 +52,6 @@
 		F8FAA6BB200EF75000DD0BED /* enc_avx2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA676200EF74B00DD0BED /* enc_avx2.c */; };
 		F8FAA6BC200EF75000DD0BED /* dsp.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA677200EF74B00DD0BED /* dsp.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA6BD200EF75000DD0BED /* msa_macro.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA678200EF74B00DD0BED /* msa_macro.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		F8FAA6BE200EF75000DD0BED /* argb_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA679200EF74B00DD0BED /* argb_sse2.c */; };
 		F8FAA6BF200EF75000DD0BED /* lossless_enc_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA67A200EF74B00DD0BED /* lossless_enc_msa.c */; };
 		F8FAA6C0200EF75000DD0BED /* alpha_processing_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA67B200EF74B00DD0BED /* alpha_processing_mips_dsp_r2.c */; };
 		F8FAA6C1200EF75000DD0BED /* yuv.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA67C200EF74B00DD0BED /* yuv.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -70,12 +76,10 @@
 		F8FAA6D4200EF75000DD0BED /* cost_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA68F200EF74C00DD0BED /* cost_sse2.c */; };
 		F8FAA6D5200EF75000DD0BED /* lossless.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA690200EF74C00DD0BED /* lossless.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA6D6200EF75000DD0BED /* lossless_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA691200EF74C00DD0BED /* lossless_enc.c */; };
-		F8FAA6D7200EF75000DD0BED /* argb.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA692200EF74C00DD0BED /* argb.c */; };
 		F8FAA6D8200EF75000DD0BED /* rescaler_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA693200EF74D00DD0BED /* rescaler_neon.c */; };
 		F8FAA6D9200EF75000DD0BED /* lossless_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA694200EF74D00DD0BED /* lossless_neon.c */; };
 		F8FAA6DA200EF75000DD0BED /* alpha_processing.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA695200EF74D00DD0BED /* alpha_processing.c */; };
 		F8FAA6DB200EF75000DD0BED /* lossless_enc_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA696200EF74D00DD0BED /* lossless_enc_neon.c */; };
-		F8FAA6DC200EF75000DD0BED /* argb_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA697200EF74D00DD0BED /* argb_mips_dsp_r2.c */; };
 		F8FAA6DD200EF75000DD0BED /* lossless.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA698200EF74D00DD0BED /* lossless.c */; };
 		F8FAA6DE200EF75000DD0BED /* mips_macro.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA699200EF74D00DD0BED /* mips_macro.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA6DF200EF75000DD0BED /* rescaler.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA69A200EF74D00DD0BED /* rescaler.c */; };
@@ -172,8 +176,6 @@
 		F8FAA781200EF7EE00DD0BED /* decode.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA77A200EF7EE00DD0BED /* decode.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA782200EF7EE00DD0BED /* mux_types.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA77B200EF7EE00DD0BED /* mux_types.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8FAA785200EF85800DD0BED /* WebPImageMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA784200EF85800DD0BED /* WebPImageMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8FAA788200EF8A000DD0BED /* WebPImageDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA786200EF8A000DD0BED /* WebPImageDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8FAA789200EF8A000DD0BED /* WebPImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA787200EF8A000DD0BED /* WebPImageDecoder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,6 +197,13 @@
 		F814657D200EE40500364146 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8146582200EE4D700364146 /* WebPImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPImage.swift; sourceTree = "<group>"; };
 		F8766311200F0E48004A8A23 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		F8AD60D2209712C200D056B2 /* ssim_sse2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ssim_sse2.c; path = Carthage/Checkouts/libwebp/src/dsp/ssim_sse2.c; sourceTree = "<group>"; };
+		F8AD60D3209712C300D056B2 /* ssim.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ssim.c; path = Carthage/Checkouts/libwebp/src/dsp/ssim.c; sourceTree = "<group>"; };
+		F8AD60D4209712C300D056B2 /* yuv_neon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yuv_neon.c; path = Carthage/Checkouts/libwebp/src/dsp/yuv_neon.c; sourceTree = "<group>"; };
+		F8AD60D8209712DE00D056B2 /* backward_references_cost_enc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = backward_references_cost_enc.c; path = Carthage/Checkouts/libwebp/src/enc/backward_references_cost_enc.c; sourceTree = "<group>"; };
+		F8AD60DA209716AB00D056B2 /* WebPDataDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebPDataDecoder.h; sourceTree = "<group>"; };
+		F8AD60DB209716AB00D056B2 /* WebPDataDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebPDataDecoder.m; sourceTree = "<group>"; };
+		F8AD60DF209719A000D056B2 /* Data+WebPFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+WebPFormat.swift"; sourceTree = "<group>"; };
 		F8BAAEBF200EDE100001110D /* NukeWebPPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeWebPPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BAAEC8200EDE100001110D /* NukeWebPPlugin Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NukeWebPPlugin Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8FAA4D3200EF08400DD0BED /* sample.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.webp; sourceTree = "<group>"; };
@@ -228,7 +237,6 @@
 		F8FAA676200EF74B00DD0BED /* enc_avx2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = enc_avx2.c; path = Carthage/Checkouts/libwebp/src/dsp/enc_avx2.c; sourceTree = "<group>"; };
 		F8FAA677200EF74B00DD0BED /* dsp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dsp.h; path = Carthage/Checkouts/libwebp/src/dsp/dsp.h; sourceTree = "<group>"; };
 		F8FAA678200EF74B00DD0BED /* msa_macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = msa_macro.h; path = Carthage/Checkouts/libwebp/src/dsp/msa_macro.h; sourceTree = "<group>"; };
-		F8FAA679200EF74B00DD0BED /* argb_sse2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = argb_sse2.c; path = Carthage/Checkouts/libwebp/src/dsp/argb_sse2.c; sourceTree = "<group>"; };
 		F8FAA67A200EF74B00DD0BED /* lossless_enc_msa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lossless_enc_msa.c; path = Carthage/Checkouts/libwebp/src/dsp/lossless_enc_msa.c; sourceTree = "<group>"; };
 		F8FAA67B200EF74B00DD0BED /* alpha_processing_mips_dsp_r2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = alpha_processing_mips_dsp_r2.c; path = Carthage/Checkouts/libwebp/src/dsp/alpha_processing_mips_dsp_r2.c; sourceTree = "<group>"; };
 		F8FAA67C200EF74B00DD0BED /* yuv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yuv.h; path = Carthage/Checkouts/libwebp/src/dsp/yuv.h; sourceTree = "<group>"; };
@@ -253,12 +261,10 @@
 		F8FAA68F200EF74C00DD0BED /* cost_sse2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cost_sse2.c; path = Carthage/Checkouts/libwebp/src/dsp/cost_sse2.c; sourceTree = "<group>"; };
 		F8FAA690200EF74C00DD0BED /* lossless.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lossless.h; path = Carthage/Checkouts/libwebp/src/dsp/lossless.h; sourceTree = "<group>"; };
 		F8FAA691200EF74C00DD0BED /* lossless_enc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lossless_enc.c; path = Carthage/Checkouts/libwebp/src/dsp/lossless_enc.c; sourceTree = "<group>"; };
-		F8FAA692200EF74C00DD0BED /* argb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = argb.c; path = Carthage/Checkouts/libwebp/src/dsp/argb.c; sourceTree = "<group>"; };
 		F8FAA693200EF74D00DD0BED /* rescaler_neon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rescaler_neon.c; path = Carthage/Checkouts/libwebp/src/dsp/rescaler_neon.c; sourceTree = "<group>"; };
 		F8FAA694200EF74D00DD0BED /* lossless_neon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lossless_neon.c; path = Carthage/Checkouts/libwebp/src/dsp/lossless_neon.c; sourceTree = "<group>"; };
 		F8FAA695200EF74D00DD0BED /* alpha_processing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = alpha_processing.c; path = Carthage/Checkouts/libwebp/src/dsp/alpha_processing.c; sourceTree = "<group>"; };
 		F8FAA696200EF74D00DD0BED /* lossless_enc_neon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lossless_enc_neon.c; path = Carthage/Checkouts/libwebp/src/dsp/lossless_enc_neon.c; sourceTree = "<group>"; };
-		F8FAA697200EF74D00DD0BED /* argb_mips_dsp_r2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = argb_mips_dsp_r2.c; path = Carthage/Checkouts/libwebp/src/dsp/argb_mips_dsp_r2.c; sourceTree = "<group>"; };
 		F8FAA698200EF74D00DD0BED /* lossless.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lossless.c; path = Carthage/Checkouts/libwebp/src/dsp/lossless.c; sourceTree = "<group>"; };
 		F8FAA699200EF74D00DD0BED /* mips_macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mips_macro.h; path = Carthage/Checkouts/libwebp/src/dsp/mips_macro.h; sourceTree = "<group>"; };
 		F8FAA69A200EF74D00DD0BED /* rescaler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rescaler.c; path = Carthage/Checkouts/libwebp/src/dsp/rescaler.c; sourceTree = "<group>"; };
@@ -355,8 +361,6 @@
 		F8FAA77A200EF7EE00DD0BED /* decode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = decode.h; path = Carthage/Checkouts/libwebp/src/webp/decode.h; sourceTree = "<group>"; };
 		F8FAA77B200EF7EE00DD0BED /* mux_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mux_types.h; path = Carthage/Checkouts/libwebp/src/webp/mux_types.h; sourceTree = "<group>"; };
 		F8FAA784200EF85800DD0BED /* WebPImageMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPImageMacros.h; sourceTree = "<group>"; };
-		F8FAA786200EF8A000DD0BED /* WebPImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPImageDecoder.h; sourceTree = "<group>"; };
-		F8FAA787200EF8A000DD0BED /* WebPImageDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebPImageDecoder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -405,10 +409,19 @@
 		F8146581200EE42B00364146 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F8AD60DE2097198B00D056B2 /* Extensions */,
 				F8FAA783200EF84600DD0BED /* WebP */,
 				F8146582200EE4D700364146 /* WebPImage.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		F8AD60DE2097198B00D056B2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F8AD60DF209719A000D056B2 /* Data+WebPFormat.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F8BAAEB5200EDE100001110D = {
@@ -511,9 +524,6 @@
 				F8FAA684200EF74B00DD0BED /* alpha_processing_sse2.c */,
 				F8FAA69D200EF74E00DD0BED /* alpha_processing_sse41.c */,
 				F8FAA695200EF74D00DD0BED /* alpha_processing.c */,
-				F8FAA697200EF74D00DD0BED /* argb_mips_dsp_r2.c */,
-				F8FAA679200EF74B00DD0BED /* argb_sse2.c */,
-				F8FAA692200EF74C00DD0BED /* argb.c */,
 				F8FAA6A9200EF74F00DD0BED /* common_sse2.h */,
 				F8FAA67F200EF74B00DD0BED /* cost_mips_dsp_r2.c */,
 				F8FAA682200EF74B00DD0BED /* cost_mips32.c */,
@@ -565,6 +575,8 @@
 				F8FAA693200EF74D00DD0BED /* rescaler_neon.c */,
 				F8FAA6A4200EF74E00DD0BED /* rescaler_sse2.c */,
 				F8FAA69A200EF74D00DD0BED /* rescaler.c */,
+				F8AD60D2209712C200D056B2 /* ssim_sse2.c */,
+				F8AD60D3209712C300D056B2 /* ssim.c */,
 				F8FAA6A5200EF74E00DD0BED /* upsampling_mips_dsp_r2.c */,
 				F8FAA674200EF74A00DD0BED /* upsampling_msa.c */,
 				F8FAA69B200EF74D00DD0BED /* upsampling_neon.c */,
@@ -572,6 +584,7 @@
 				F8FAA670200EF74A00DD0BED /* upsampling.c */,
 				F8FAA6A6200EF74E00DD0BED /* yuv_mips_dsp_r2.c */,
 				F8FAA685200EF74B00DD0BED /* yuv_mips32.c */,
+				F8AD60D4209712C300D056B2 /* yuv_neon.c */,
 				F8FAA6AE200EF74F00DD0BED /* yuv_sse2.c */,
 				F8FAA681200EF74B00DD0BED /* yuv.c */,
 				F8FAA67C200EF74B00DD0BED /* yuv.h */,
@@ -584,6 +597,7 @@
 			children = (
 				F8FAA70B200EF7A100DD0BED /* alpha_enc.c */,
 				F8FAA710200EF7A200DD0BED /* analysis_enc.c */,
+				F8AD60D8209712DE00D056B2 /* backward_references_cost_enc.c */,
 				F8FAA712200EF7A200DD0BED /* backward_references_enc.c */,
 				F8FAA706200EF7A100DD0BED /* backward_references_enc.h */,
 				F8FAA6FA200EF7A000DD0BED /* config_enc.c */,
@@ -679,8 +693,8 @@
 			isa = PBXGroup;
 			children = (
 				F8FAA784200EF85800DD0BED /* WebPImageMacros.h */,
-				F8FAA786200EF8A000DD0BED /* WebPImageDecoder.h */,
-				F8FAA787200EF8A000DD0BED /* WebPImageDecoder.m */,
+				F8AD60DA209716AB00D056B2 /* WebPDataDecoder.h */,
+				F8AD60DB209716AB00D056B2 /* WebPDataDecoder.m */,
 			);
 			path = WebP;
 			sourceTree = "<group>";
@@ -692,7 +706,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8FAA788200EF8A000DD0BED /* WebPImageDecoder.h in Headers */,
 				F8FAA76D200EF7DD00DD0BED /* huffman_utils.h in Headers */,
 				F8FAA668200EF71900DD0BED /* vp8_dec.h in Headers */,
 				F8FAA77F200EF7EE00DD0BED /* encode.h in Headers */,
@@ -733,6 +746,7 @@
 				F8FAA725200EF7A200DD0BED /* delta_palettization_enc.h in Headers */,
 				F8FAA780200EF7EE00DD0BED /* format_constants.h in Headers */,
 				F8FAA723200EF7A200DD0BED /* vp8li_enc.h in Headers */,
+				F8AD60DC209716AB00D056B2 /* WebPDataDecoder.h in Headers */,
 				F8FAA77D200EF7EE00DD0BED /* mux.h in Headers */,
 				F8FAA65F200EF71900DD0BED /* alphai_dec.h in Headers */,
 				F8FAA761200EF7DD00DD0BED /* quant_levels_dec_utils.h in Headers */,
@@ -882,6 +896,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8FAA6DF200EF75000DD0BED /* rescaler.c in Sources */,
+				F8AD60D6209712C300D056B2 /* ssim.c in Sources */,
 				F8FAA662200EF71900DD0BED /* frame_dec.c in Sources */,
 				F8FAA6DB200EF75000DD0BED /* lossless_enc_neon.c in Sources */,
 				F8FAA6D0200EF75000DD0BED /* lossless_enc_sse2.c in Sources */,
@@ -890,8 +905,10 @@
 				F8FAA6EB200EF75000DD0BED /* yuv_mips_dsp_r2.c in Sources */,
 				F8FAA6BB200EF75000DD0BED /* enc_avx2.c in Sources */,
 				F8FAA6EA200EF75000DD0BED /* upsampling_mips_dsp_r2.c in Sources */,
+				F8AD60D9209712DE00D056B2 /* backward_references_cost_enc.c in Sources */,
 				F8FAA6DD200EF75000DD0BED /* lossless.c in Sources */,
 				F8FAA6E2200EF75000DD0BED /* alpha_processing_sse41.c in Sources */,
+				F8AD60D7209712C300D056B2 /* yuv_neon.c in Sources */,
 				F8FAA6E5200EF75000DD0BED /* cost.c in Sources */,
 				F8FAA6E1200EF75000DD0BED /* alpha_processing_neon.c in Sources */,
 				F8FAA733200EF7A200DD0BED /* predictor_enc.c in Sources */,
@@ -912,22 +929,21 @@
 				F8FAA6C9200EF75000DD0BED /* alpha_processing_sse2.c in Sources */,
 				F8FAA6C7200EF75000DD0BED /* cost_mips32.c in Sources */,
 				F8FAA719200EF7A200DD0BED /* delta_palettization_enc.c in Sources */,
-				F8FAA6D7200EF75000DD0BED /* argb.c in Sources */,
 				F8FAA65E200EF71900DD0BED /* alpha_dec.c in Sources */,
 				F8FAA6D8200EF75000DD0BED /* rescaler_neon.c in Sources */,
 				F8FAA6B9200EF75000DD0BED /* upsampling_msa.c in Sources */,
 				F8FAA6B4200EF75000DD0BED /* upsampling_sse2.c in Sources */,
 				F8FAA6F2200EF75000DD0BED /* rescaler_mips32.c in Sources */,
+				F8AD60D5209712C300D056B2 /* ssim_sse2.c in Sources */,
 				F8FAA766200EF7DD00DD0BED /* filters_utils.c in Sources */,
 				F8FAA6CE200EF75000DD0BED /* dec_neon.c in Sources */,
 				F8FAA717200EF7A200DD0BED /* vp8l_enc.c in Sources */,
 				F8FAA66A200EF71900DD0BED /* vp8l_dec.c in Sources */,
 				F8FAA71C200EF7A200DD0BED /* syntax_enc.c in Sources */,
-				F8FAA789200EF8A000DD0BED /* WebPImageDecoder.m in Sources */,
 				F8FAA6C6200EF75000DD0BED /* yuv.c in Sources */,
 				F8FAA721200EF7A200DD0BED /* frame_enc.c in Sources */,
-				F8FAA6BE200EF75000DD0BED /* argb_sse2.c in Sources */,
 				F8FAA6F5200EF75000DD0BED /* enc_msa.c in Sources */,
+				F8AD60E0209719A000D056B2 /* Data+WebPFormat.swift in Sources */,
 				F8FAA71B200EF7A200DD0BED /* picture_tools_enc.c in Sources */,
 				F8FAA769200EF7DD00DD0BED /* color_cache_utils.c in Sources */,
 				F8FAA6D4200EF75000DD0BED /* cost_sse2.c in Sources */,
@@ -937,6 +953,7 @@
 				F8FAA740200EF7C500DD0BED /* muxread.c in Sources */,
 				F8FAA770200EF7DD00DD0BED /* rescaler_utils.c in Sources */,
 				F8FAA6EC200EF75000DD0BED /* lossless_mips_dsp_r2.c in Sources */,
+				F8AD60DD209716AB00D056B2 /* WebPDataDecoder.m in Sources */,
 				F8FAA6B8200EF75000DD0BED /* filters_sse2.c in Sources */,
 				F8FAA664200EF71900DD0BED /* io_dec.c in Sources */,
 				F8FAA73B200EF7C500DD0BED /* muxinternal.c in Sources */,
@@ -962,7 +979,6 @@
 				F8FAA6E7200EF75000DD0BED /* rescaler_mips_dsp_r2.c in Sources */,
 				F8FAA773200EF7DD00DD0BED /* random_utils.c in Sources */,
 				F8FAA6B6200EF75000DD0BED /* enc_sse41.c in Sources */,
-				F8FAA6DC200EF75000DD0BED /* argb_mips_dsp_r2.c in Sources */,
 				F8FAA728200EF7A200DD0BED /* picture_rescale_enc.c in Sources */,
 				F8FAA75F200EF7DD00DD0BED /* thread_utils.c in Sources */,
 				F8FAA75C200EF7DD00DD0BED /* huffman_encode_utils.c in Sources */,

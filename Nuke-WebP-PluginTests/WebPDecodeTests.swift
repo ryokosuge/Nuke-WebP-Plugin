@@ -38,7 +38,8 @@ class WebPDecodeTests: XCTestCase {
             let image: UIImage? = UIImage(data: webpData)
             XCTAssertNil(image)
             
-            let webpImage: Image? = NukeWebPPlugin.WebPImageDecoder.decode(webpData)
+            let decoder = NukeWebPPlugin.WebPDataDecoder();
+            let webpImage: Image? = decoder.decode(webpData)
             XCTAssertNotNil(webpImage)
         } catch let e {
             XCTFail(e.localizedDescription)
@@ -51,8 +52,31 @@ class WebPDecodeTests: XCTestCase {
             let image: UIImage? = UIImage(data: gifData)
             XCTAssertNotNil(image)
             
-            let webpImage: Image? = NukeWebPPlugin.WebPImageDecoder.decode(gifData)
+            let decoder = NukeWebPPlugin.WebPDataDecoder();
+            let webpImage: Image? = decoder.decode(gifData)
             XCTAssertNil(webpImage)
+        } catch let e {
+            XCTFail(e.localizedDescription)
+        }
+    }
+
+    func testsProgressiveDecodeWebPImage() {
+        do {
+            let webpData = try Data(contentsOf: self.webpImagePath)
+            let decoder = NukeWebPPlugin.WebPDataDecoder();
+            // no image
+            XCTAssertNil(decoder.incrementallyDecode(webpData[0...500], isFinal: false))
+
+            // created image
+            let scan1 = decoder.incrementallyDecode(webpData[0...3702], isFinal: false)
+            XCTAssertNotNil(scan1)
+            XCTAssertEqual(scan1!.size.width, 320)
+            XCTAssertEqual(scan1!.size.height, 235)
+
+            let scan2 = decoder.incrementallyDecode(webpData, isFinal: true)
+            XCTAssertNotNil(scan2)
+            XCTAssertEqual(scan2!.size.width, 320)
+            XCTAssertEqual(scan2!.size.height, 235)
         } catch let e {
             XCTFail(e.localizedDescription)
         }
@@ -67,7 +91,8 @@ class WebPDecodeTests: XCTestCase {
                 let image: UIImage? = UIImage(data: webpData)
                 XCTAssertNil(image)
                 
-                let webpImage: Image? = NukeWebPPlugin.WebPImageDecoder.decode(webpData)
+                let decoder = NukeWebPPlugin.WebPDataDecoder();
+                let webpImage: Image? = decoder.decode(webpData)
                 XCTAssertNotNil(webpImage)
             } catch let e {
                 XCTFail(e.localizedDescription)
