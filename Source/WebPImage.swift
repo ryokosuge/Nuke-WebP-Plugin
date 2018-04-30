@@ -11,20 +11,21 @@ import Nuke
 
 public class WebPImageDecoder: Nuke.ImageDecoding {
 
+    private lazy var decoder: WebPDataDecoder = WebPDataDecoder()
+
     public init() {
     }
 
     public func decode(data: Data, isFinal: Bool) -> Image? {
+        guard data.isWebPFormat else { return nil }
         guard !isFinal else { return _decode(data) }
 
-        if !data.isWebPFormat {
-            return nil
-        }
-        return _decode(data)
+        return decoder.incrementallyDecode(data, isFinal: isFinal)
     }
 
 }
 
+// MARK: - check webp format data.
 extension WebPImageDecoder {
 
     public static func isWebPFormat(data: Data) -> Bool {
@@ -33,10 +34,14 @@ extension WebPImageDecoder {
 
 }
 
+// MARK: - private
 private let _queue = DispatchQueue(label: "com.github.ryokosuge.Nuke-WebP-Plugin.DataDecoder")
+extension WebPImageDecoder {
 
-internal func _decode(_ data: Data) -> Image? {
-    return _queue.sync {
-        return WebPDataDecoder.decode(data)
+    internal func _decode(_ data: Data) -> Image? {
+        return _queue.sync {
+            return decoder.decode(data)
+        }
     }
+
 }
