@@ -42,7 +42,7 @@ class LoadWebPImageTests: XCTestCase {
     func testsLoadWebPImage() {
         let exception = XCTestExpectation(description: "decode webp image")
         ImageDecoderRegistry.shared.register { (context) -> ImageDecoding? in
-            return WebPImageDecoder.isWebPFormat(data: context.data) ? WebPImageDecoder() : nil
+            return WebPImageDecoder.enable(context: context)
         }
 
         Nuke.ImagePipeline.shared.loadImage(with: self.webpImageURL) { (imageResponse, error) in
@@ -61,8 +61,9 @@ class LoadWebPImageTests: XCTestCase {
 
     func testsProgressWebPImage() {
         let exception = XCTestExpectation(description: "decode progressive webp image")
+        
         ImageDecoderRegistry.shared.register { (context) -> ImageDecoding? in
-            return WebPImageDecoder.isWebPFormat(data: context.data) ? WebPImageDecoder() : nil
+            return WebPImageDecoder.enable(context: context)
         }
 
         let pipeline = ImagePipeline {
