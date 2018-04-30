@@ -28,6 +28,12 @@ public class WebPImageDecoder: Nuke.ImageDecoding {
 // MARK: - check webp format data.
 extension WebPImageDecoder {
 
+    public static func enable() {
+        Nuke.ImageDecoderRegistry.shared.register { (context) -> ImageDecoding? in
+            WebPImageDecoder.enable(context: context)
+        }
+    }
+
     public static func enable(context: Nuke.ImageDecodingContext) -> Nuke.ImageDecoding? {
         return context.data.isWebPFormat ? WebPImageDecoder() : nil
     }
