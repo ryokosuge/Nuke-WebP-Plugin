@@ -18,7 +18,11 @@ import NukeWebPPlugin
 
 let imageView = UIImageView()
 let webpimageURL = URL(string: "https://example.com/sample.webp")!
-WebPImage.manager.loadImage(with: webpimageURL, into: imageView)
+Nuke.ImageDecoderRegistry.shared.register { (context) -> ImageDecoding? in
+  return WebPImageDecoder.isWebPFormat(data: context.data) ? WebPImageDecoder() : nil
+}
+
+Nuke.loadImage(with: url, into: imageView)
 ```
 
 ## Installation
@@ -43,8 +47,8 @@ github 'ryokosuge/Nuke-WebP-Plugin'
 
 ## Dependencies
 
-- [Nuke ~> 6.0](https://github.com/kean/Nuke)
-- [libwebp = 0.6.0](https://chromium.googlesource.com/webm/libwebp)
+- [Nuke = 7.0-beta3](https://github.com/kean/Nuke)
+- [libwebp = 0.6.1](https://chromium.googlesource.com/webm/libwebp)
 
 ## Author
 
