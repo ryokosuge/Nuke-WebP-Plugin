@@ -9,35 +9,27 @@
 import Foundation
 import Nuke
 
-public class WebPImage: NSObject {
-}
-
-public extension WebPImage {
-
-    public static let manager: Nuke.Manager = {
-        let dataDecoder = Nuke.DataDecoder()
-        let webpDataDecoder = WebPDataDecoder()
-        let decoder = Nuke.DataDecoderComposition(decoders: [webpDataDecoder, dataDecoder])
-        let loader = Nuke.Loader(loader: DataLoader(), decoder: decoder)
-        return Nuke.Manager(loader: loader)
-    }()
-
-}
-
-public struct WebPDataDecoder: Nuke.DataDecoding {
+public struct WebPImageDecoder: Nuke.ImageDecoding {
 
     public init() {
     }
 
-    public func decode(data: Data, response: URLResponse) -> Image? {
+    public func decode(data: Data, isFinal: Bool) -> Image? {
+        guard !isFinal else { return _decode(data) }
+
         if !data.isWebPFormat {
             return nil
         }
-        return decodeWebPData(data)
+        return _decode(data)
     }
-    
-    internal func decodeWebPData(_ webpData: Data) -> Image? {
-        return WebPImageDecoder.decode(webpData)
+
+}
+
+private let _queue = DispatchQueue(label: "com.github.ryokosuge.Nuke-WebP-Plugin.DataDecoder")
+
+internal func _decode(_ data: Data) -> Image? {
+    return _queue.sync {
+        return WebPDataDecoder.decode(data)
     }
 }
 
