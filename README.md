@@ -19,7 +19,7 @@ import NukeWebPPlugin
 let imageView = UIImageView()
 let webpimageURL = URL(string: "https://example.com/sample.webp")!
 Nuke.ImageDecoderRegistry.shared.register { (context) -> ImageDecoding? in
-  return WebPImageDecoder.isWebPFormat(data: context.data) ? WebPImageDecoder() : nil
+    return WebPImageDecoder.enable(context: context)
 }
 
 Nuke.loadImage(with: url, into: imageView)
