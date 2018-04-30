@@ -40,7 +40,7 @@ class LoadWebPImageTests: XCTestCase {
     }
     
     func testsLoadWebPImage() {
-        let exception = XCTestExpectation(description: "not decode webp image")
+        let exception = XCTestExpectation(description: "decode webp image")
         ImageDecoderRegistry.shared.register { (context) -> ImageDecoding? in
             return WebPImageDecoder.isWebPFormat(data: context.data) ? WebPImageDecoder() : nil
         }
@@ -57,6 +57,33 @@ class LoadWebPImageTests: XCTestCase {
         }
 
         self.wait(for: [exception], timeout: 1)
+    }
+
+    func testsProgressWebPImage() {
+        let exception = XCTestExpectation(description: "decode progressive webp image")
+        ImageDecoderRegistry.shared.register { (context) -> ImageDecoding? in
+            return WebPImageDecoder.isWebPFormat(data: context.data) ? WebPImageDecoder() : nil
+        }
+
+        let pipeline = ImagePipeline {
+            $0.isProgressiveDecodingEnabled = true
+        }
+        let task = pipeline.loadImage(with: webpImageURL) { (imageResponse, error) in
+            if let e = error {
+                XCTFail(e.localizedDescription)
+                exception.fulfill()
+                return
+            }
+            
+            XCTAssertNotNil(imageResponse?.image)
+            exception.fulfill()
+        }
+
+        task.progressiveImageHandler = {
+            print($0)
+        }
+
+        self.wait(for: [exception], timeout: 5)
     }
 
 }

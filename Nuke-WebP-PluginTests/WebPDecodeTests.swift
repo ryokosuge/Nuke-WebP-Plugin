@@ -38,7 +38,8 @@ class WebPDecodeTests: XCTestCase {
             let image: UIImage? = UIImage(data: webpData)
             XCTAssertNil(image)
             
-            let webpImage: Image? = NukeWebPPlugin.WebPDataDecoder.decode(webpData)
+            let decoder = NukeWebPPlugin.WebPDataDecoder();
+            let webpImage: Image? = decoder.decode(webpData)
             XCTAssertNotNil(webpImage)
         } catch let e {
             XCTFail(e.localizedDescription)
@@ -51,7 +52,8 @@ class WebPDecodeTests: XCTestCase {
             let image: UIImage? = UIImage(data: gifData)
             XCTAssertNotNil(image)
             
-            let webpImage: Image? = NukeWebPPlugin.WebPDataDecoder.decode(gifData)
+            let decoder = NukeWebPPlugin.WebPDataDecoder();
+            let webpImage: Image? = decoder.decode(gifData)
             XCTAssertNil(webpImage)
         } catch let e {
             XCTFail(e.localizedDescription)
@@ -67,7 +69,8 @@ class WebPDecodeTests: XCTestCase {
                 let image: UIImage? = UIImage(data: webpData)
                 XCTAssertNil(image)
                 
-                let webpImage: Image? = NukeWebPPlugin.WebPDataDecoder.decode(webpData)
+                let decoder = NukeWebPPlugin.WebPDataDecoder();
+                let webpImage: Image? = decoder.decode(webpData)
                 XCTAssertNotNil(webpImage)
             } catch let e {
                 XCTFail(e.localizedDescription)
