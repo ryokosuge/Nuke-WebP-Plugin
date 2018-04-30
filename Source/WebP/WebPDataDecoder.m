@@ -18,8 +18,25 @@ void free_image_data(void *info, const void *data, size_t size) {
     WebPFree((void *)data);
 }
 
+CGColorSpaceRef NWPCGColorSpaceGetDeviceRGB(void) {
+    static CGColorSpaceRef colorSpace;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        colorSpace = CGColorSpaceCreateDeviceRGB();
+    });
+    return colorSpace;
+}
+
+
 @implementation WebPDataDecoder {
     WebPIDecoder *_idec;
+}
+
+- (void)dealloc {
+    if (_idec) {
+        WebPIDelete(_idec);
+        _idec = NULL;
+    }
 }
 
 - (UIImage *)incrementallyDecodeData:(NSData *)data isFinal:(BOOL)isFinal {
@@ -44,7 +61,7 @@ void free_image_data(void *info, const void *data, size_t size) {
     if (0 < width + height && 0 < last_y && last_y <= height) {
         size_t rgbaSize = last_y * stride;
         CGDataProviderRef provider = CGDataProviderCreateWithData(NULL, rgba, rgbaSize, NULL);
-        CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+        CGColorSpaceRef colorSpaceRef = NWPCGColorSpaceGetDeviceRGB();
         CGBitmapInfo bitmapInfo = kCGBitmapByteOrder32Big | kCGImageAlphaPremultipliedLast;
         size_t components = 4;
         CGColorRenderingIntent renderingIntent = kCGRenderingIntentDefault;
@@ -57,12 +74,10 @@ void free_image_data(void *info, const void *data, size_t size) {
             return nil;
         }
 
-        CGColorSpaceRef canvasColorSpaceRef = CGColorSpaceCreateDeviceRGB();
+        CGColorSpaceRef canvasColorSpaceRef = NWPCGColorSpaceGetDeviceRGB();
         CGContextRef canvas = CGBitmapContextCreate(NULL, width, height, 8, 0, canvasColorSpaceRef, bitmapInfo);
         if (!canvas) {
             CGImageRelease(imageRef);
-            CGColorSpaceRelease(colorSpaceRef);
-            CGColorSpaceRelease(canvasColorSpaceRef);
             return nil;
         }
 
@@ -70,11 +85,8 @@ void free_image_data(void *info, const void *data, size_t size) {
         CGImageRef newImageRef = CGBitmapContextCreateImage(canvas);
 
         CGImageRelease(imageRef);
-        CGColorSpaceRelease(colorSpaceRef);
-
         if (!newImageRef) {
             CGContextRelease(canvas);
-            CGColorSpaceRelease(canvasColorSpaceRef);
             return nil;
         }
 
@@ -84,8 +96,6 @@ void free_image_data(void *info, const void *data, size_t size) {
         image = [UIImage imageWithCGImage:imageRef];
 #endif
         CGImageRelease(newImageRef);
-        CGColorSpaceRelease(canvasColorSpaceRef);
-
     }
 
     if (isFinal) {
