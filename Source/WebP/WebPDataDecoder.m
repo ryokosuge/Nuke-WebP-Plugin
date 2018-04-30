@@ -20,7 +20,7 @@ void free_image_data(void *info, const void *data, size_t size) {
 
 @implementation WebPDataDecoder
 
-+ (NSData *)decodeData:(NSData *)data {
++ (Image *)decodeData:(NSData *)data {
     WebPBitstreamFeatures features;
     if (WebPGetFeatures([data bytes], [data length], &features) != VP8_STATUS_OK) {
         return nil;
