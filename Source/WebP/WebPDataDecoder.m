@@ -18,16 +18,6 @@ void free_image_data(void *info, const void *data, size_t size) {
     WebPFree((void *)data);
 }
 
-CGColorSpaceRef NWPCGColorSpaceGetDeviceRGB(void) {
-    static CGColorSpaceRef colorSpace;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        colorSpace = CGColorSpaceCreateDeviceRGB();
-    });
-    return colorSpace;
-}
-
-
 @implementation WebPDataDecoder {
     WebPIDecoder *_idec;
 }
@@ -61,23 +51,24 @@ CGColorSpaceRef NWPCGColorSpaceGetDeviceRGB(void) {
     if (0 < width + height && 0 < last_y && last_y <= height) {
         size_t rgbaSize = last_y * stride;
         CGDataProviderRef provider = CGDataProviderCreateWithData(NULL, rgba, rgbaSize, NULL);
-        CGColorSpaceRef colorSpaceRef = NWPCGColorSpaceGetDeviceRGB();
+        CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
         CGBitmapInfo bitmapInfo = kCGBitmapByteOrder32Big | kCGImageAlphaPremultipliedLast;
         size_t components = 4;
         CGColorRenderingIntent renderingIntent = kCGRenderingIntentDefault;
 
         CGImageRef imageRef = CGImageCreate(width, last_y, 8, components * 8, components * width, colorSpaceRef, bitmapInfo, provider, NULL, NO, renderingIntent);
 
-        CGDataProviderRelease(provider);
-
         if (!imageRef) {
             return nil;
         }
 
-        CGColorSpaceRef canvasColorSpaceRef = NWPCGColorSpaceGetDeviceRGB();
+        CGColorSpaceRef canvasColorSpaceRef = CGColorSpaceCreateDeviceRGB();
         CGContextRef canvas = CGBitmapContextCreate(NULL, width, height, 8, 0, canvasColorSpaceRef, bitmapInfo);
         if (!canvas) {
             CGImageRelease(imageRef);
+            CGColorSpaceRelease(colorSpaceRef);
+            CGColorSpaceRelease(canvasColorSpaceRef);
+            CGDataProviderRelease(provider);
             return nil;
         }
 
@@ -85,17 +76,23 @@ CGColorSpaceRef NWPCGColorSpaceGetDeviceRGB(void) {
         CGImageRef newImageRef = CGBitmapContextCreateImage(canvas);
 
         CGImageRelease(imageRef);
+        CGColorSpaceRelease(colorSpaceRef);
+
         if (!newImageRef) {
-            CGContextRelease(canvas);
+            CGDataProviderRelease(provider);
             return nil;
         }
 
+        CGContextRelease(canvas);
+        CGColorSpaceRelease(canvasColorSpaceRef);
+
 #if WEBP_IMAGE_MAC
-        image = [[NSImage alloc] initWithCGImage: imageRef size: CGSizeZero];
+        image = [[NSImage alloc] initWithCGImage: newImageRef, size: CGSizeZero];
 #else
-        image = [UIImage imageWithCGImage:imageRef];
+        image = [UIImage imageWithCGImage:newImageRef];
 #endif
         CGImageRelease(newImageRef);
+        CGDataProviderRelease(provider);
     }
 
     return image;
