@@ -1,12 +1,12 @@
 //
 //  WebPDataDecoder.m
-//  Nuke-WebP-Plugin
+//  Nuke-WebP-Plugin iOS
 //
-//  Created by ryokosuge on 2018/01/17.
+//  Created by nagisa-kosuge on 2018/04/30.
 //  Copyright © 2018年 RyoKosuge. All rights reserved.
 //
 
-#import "WebPImageDecoder.h"
+#import "WebPDataDecoder.h"
 #import "webp/decode.h"
 
 void free_image_data(void *info, const void *data, size_t size) {
@@ -18,9 +18,9 @@ void free_image_data(void *info, const void *data, size_t size) {
     WebPFree((void *)data);
 }
 
-@implementation WebPImageDecoder
+@implementation WebPDataDecoder
 
-+ (Image *)decodeData:(NSData *)data {
++ (NSData *)decodeData:(NSData *)data {
     WebPBitstreamFeatures features;
     if (WebPGetFeatures([data bytes], [data length], &features) != VP8_STATUS_OK) {
         return nil;
@@ -46,9 +46,9 @@ void free_image_data(void *info, const void *data, size_t size) {
                                                                  webpData,
                                                                  width * height * pixelLength,
                                                                  free_image_data);
-
+    
     CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
-
+    
     CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault;
     if (features.has_alpha) {
         bitmapInfo |= kCGImageAlphaLast;
@@ -70,11 +70,11 @@ void free_image_data(void *info, const void *data, size_t size) {
                                         renderingIntent);
     Image *image = nil;
     
-    #if WEBP_IMAGE_MAC
-        image = [[NSImage alloc] initWithCGImage: imageRef size: CGSizeZero];
-    #else
-        image = [UIImage imageWithCGImage:imageRef];
-    #endif
+#if WEBP_IMAGE_MAC
+    image = [[NSImage alloc] initWithCGImage: imageRef size: CGSizeZero];
+#else
+    image = [UIImage imageWithCGImage:imageRef];
+#endif
     
     CGImageRelease(imageRef);
     CGColorSpaceRelease(colorSpaceRef);
