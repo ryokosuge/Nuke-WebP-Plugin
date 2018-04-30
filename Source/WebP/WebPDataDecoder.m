@@ -98,13 +98,6 @@ CGColorSpaceRef NWPCGColorSpaceGetDeviceRGB(void) {
         CGImageRelease(newImageRef);
     }
 
-    if (isFinal) {
-        if (_idec) {
-            WebPIDelete(_idec);
-            _idec = NULL;
-        }
-    }
-
     return image;
 }
 
