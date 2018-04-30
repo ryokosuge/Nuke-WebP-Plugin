@@ -18,6 +18,7 @@
 
 @interface WebPDataDecoder : NSObject
 
-+ (nullable Image *)decodeData:(nonnull NSData *)data;
+- (nullable Image *)incrementallyDecodeData:(nonnull NSData *)data isFinal:(BOOL)isFinal;
+- (nullable Image *)decodeData:(nonnull NSData *)data;
 
 @end

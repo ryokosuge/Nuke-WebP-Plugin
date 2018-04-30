@@ -18,9 +18,87 @@ void free_image_data(void *info, const void *data, size_t size) {
     WebPFree((void *)data);
 }
 
-@implementation WebPDataDecoder
+@implementation WebPDataDecoder {
+    WebPIDecoder *_idec;
+}
 
-+ (Image *)decodeData:(NSData *)data {
+- (UIImage *)incrementallyDecodeData:(NSData *)data isFinal:(BOOL)isFinal {
+
+    if (!_idec) {
+        _idec = WebPINewRGB(MODE_rgbA, NULL, 0, 0);
+        if (!_idec) {
+            return nil;
+        }
+    }
+
+    Image *image;
+
+    VP8StatusCode status = WebPIUpdate(_idec, [data bytes], [data length]);
+    if (status != VP8_STATUS_OK && status != VP8_STATUS_SUSPENDED) {
+        return nil;
+    }
+
+    int width, height, last_y, stride = 0;
+    uint8_t *rgba = WebPIDecGetRGB(_idec, &last_y, &width, &height, &stride);
+
+    if (0 < width + height && 0 < last_y && last_y <= height) {
+        size_t rgbaSize = last_y * stride;
+        CGDataProviderRef provider = CGDataProviderCreateWithData(NULL, rgba, rgbaSize, NULL);
+        CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+        CGBitmapInfo bitmapInfo = kCGBitmapByteOrder32Big | kCGImageAlphaPremultipliedLast;
+        size_t components = 4;
+        CGColorRenderingIntent renderingIntent = kCGRenderingIntentDefault;
+
+        CGImageRef imageRef = CGImageCreate(width, last_y, 8, components * 8, components * width, colorSpaceRef, bitmapInfo, provider, NULL, NO, renderingIntent);
+
+        CGDataProviderRelease(provider);
+
+        if (!imageRef) {
+            return nil;
+        }
+
+        CGColorSpaceRef canvasColorSpaceRef = CGColorSpaceCreateDeviceRGB();
+        CGContextRef canvas = CGBitmapContextCreate(NULL, width, height, 8, 0, canvasColorSpaceRef, bitmapInfo);
+        if (!canvas) {
+            CGImageRelease(imageRef);
+            CGColorSpaceRelease(colorSpaceRef);
+            CGColorSpaceRelease(canvasColorSpaceRef);
+            return nil;
+        }
+
+        CGContextDrawImage(canvas, CGRectMake(0, height - last_y, width, last_y), imageRef);
+        CGImageRef newImageRef = CGBitmapContextCreateImage(canvas);
+
+        CGImageRelease(imageRef);
+        CGColorSpaceRelease(colorSpaceRef);
+
+        if (!newImageRef) {
+            CGContextRelease(canvas);
+            CGColorSpaceRelease(canvasColorSpaceRef);
+            return nil;
+        }
+
+#if WEBP_IMAGE_MAC
+        image = [[NSImage alloc] initWithCGImage: imageRef size: CGSizeZero];
+#else
+        image = [UIImage imageWithCGImage:imageRef];
+#endif
+        CGImageRelease(newImageRef);
+        CGColorSpaceRelease(canvasColorSpaceRef);
+
+    }
+
+    if (isFinal) {
+        if (_idec) {
+            WebPIDelete(_idec);
+            _idec = NULL;
+        }
+    }
+
+    return image;
+}
+
+- (Image *)decodeData:(NSData *)data {
     WebPBitstreamFeatures features;
     if (WebPGetFeatures([data bytes], [data length], &features) != VP8_STATUS_OK) {
         return nil;
