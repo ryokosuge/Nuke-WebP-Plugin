@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
 
         Nuke.ImageDecoderRegistry.shared.register { (context) -> ImageDecoding? in
-            return WebPImageDecoder.isWebPFormat(data: context.data) ? WebPImageDecoder() : nil
+            return WebPImageDecoder.enable(context: context)
         }
 
         if let url = URL(string: "https://www.gstatic.com/webp/gallery/5.sm.webp"), let imageView = self.imageView {
