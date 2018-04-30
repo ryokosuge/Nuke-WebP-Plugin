@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
   s.homepage            = "https://github.com/ryokosuge/Nuke-WebP-Plugin"
 
-  s.swift_version       = "4.0"
+  s.swift_version       = "4.1"
   s.cocoapods_version   = ">= 1.3.1"
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
