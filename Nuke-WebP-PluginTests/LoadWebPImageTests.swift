@@ -42,7 +42,7 @@ class LoadWebPImageTests: XCTestCase {
     func testsLoadWebPImage() {
         let exception = XCTestExpectation(description: "not decode webp image")
         ImageDecoderRegistry.shared.register { (context) -> ImageDecoding? in
-            return context.data.isWebPFormat ? WebPImageDecoder() : nil
+            return WebPImageDecoder.isWebPFormat(data: context.data) ? WebPImageDecoder() : nil
         }
 
         Nuke.ImagePipeline.shared.loadImage(with: self.webpImageURL) { (imageResponse, error) in
