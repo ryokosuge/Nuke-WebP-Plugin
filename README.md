@@ -4,7 +4,7 @@
 [![codecov](https://codecov.io/gh/ryokosuge/Nuke-WebP-Plugin/branch/master/graph/badge.svg)](https://codecov.io/gh/ryokosuge/Nuke-WebP-Plugin)
 ![Version](https://img.shields.io/cocoapods/v/Nuke-WebP-Plugin.svg?label=version)
 ![Supoprts](https://img.shields.io/badge/supports-CocoaPods%20%7C%20Carthage-green.svg)
-![Platform](https://img.shields.io/badge/platforms-iOS-lightgrey.svg)
+![Platform](https://img.shields.io/badge/platforms-iOS%20%7C%20macOS-lightgrey.svg)
 
 WebP for Nuke that allows you to load and display WebP image. You can see it for yourself in a demo, included in the project.
 
@@ -38,7 +38,7 @@ github 'ryokosuge/Nuke-WebP-Plugin'
 
 ## Requirements
 
-- iOS9+
+- iOS9+ / macOS10.10+
 - Xcode9.3
 - Swift4.1
 
