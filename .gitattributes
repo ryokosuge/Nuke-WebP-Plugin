@@ -6,8 +6,14 @@ Demo/Source/** linguist-documentation
 Nuke-WebP-PluginTests/Info.plist linguist-documentation
 
 ## Ruby
+
+### Gemfile & Gemfile.lock
+Gemfile linguist-documentation
+Gemfile.lock linguist-documentation
+
 ### Podspec
 Nuke-WebP-Plugin.podspec linguist-documentation
 
 ### Podfile && Podfile.lock
 Demo/Podfile linguist-documentation
+Demo/Podfile.lock linguist-documentation
