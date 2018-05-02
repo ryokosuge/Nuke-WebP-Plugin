@@ -29,7 +29,7 @@ void free_image_data(void *info, const void *data, size_t size) {
     }
 }
 
-- (UIImage *)incrementallyDecodeData:(NSData *)data isFinal:(BOOL)isFinal {
+- (Image *)incrementallyDecodeData:(NSData *)data isFinal:(BOOL)isFinal {
 
     if (!_idec) {
         _idec = WebPINewRGB(MODE_rgbA, NULL, 0, 0);
@@ -86,8 +86,8 @@ void free_image_data(void *info, const void *data, size_t size) {
         CGContextRelease(canvas);
         CGColorSpaceRelease(canvasColorSpaceRef);
 
-#if WEBP_IMAGE_MAC
-        image = [[NSImage alloc] initWithCGImage: newImageRef, size: CGSizeZero];
+#if WEBP_PLUGIN_MAC
+        image = [[NSImage alloc] initWithCGImage:newImageRef size:CGSizeZero];
 #else
         image = [UIImage imageWithCGImage:newImageRef];
 #endif
@@ -148,7 +148,7 @@ void free_image_data(void *info, const void *data, size_t size) {
                                         renderingIntent);
     Image *image = nil;
     
-#if WEBP_IMAGE_MAC
+#if WEBP_PLUGIN_MAC
     image = [[NSImage alloc] initWithCGImage: imageRef size: CGSizeZero];
 #else
     image = [UIImage imageWithCGImage:imageRef];

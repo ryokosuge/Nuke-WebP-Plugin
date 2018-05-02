@@ -1,8 +1,8 @@
 //
-//  WebPDecodeTests.swift
-//  Nuke-WebP-PluginTests iOS
+//  WebPDecodeTests_MacOS.swift
+//  Nuke-WebP-PluginTests macOS
 //
-//  Created by nagisa-kosuge on 2018/01/25.
+//  Created by nagisa-kosuge on 2018/05/02.
 //  Copyright © 2018年 RyoKosuge. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import Nuke
 @testable import NukeWebPPlugin
 
 class WebPDecodeTests: XCTestCase {
-
+    
     private lazy var webpImagePath: URL = {
         let webpImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "webp")!
         return webpImagePath
@@ -35,44 +35,44 @@ class WebPDecodeTests: XCTestCase {
     func testsDecodeWebPImage() {
         do {
             let webpData = try Data(contentsOf: self.webpImagePath)
-            let image: UIImage? = UIImage(data: webpData)
+            let image: NSImage? = NSImage(data: webpData)
             XCTAssertNil(image)
             
             let decoder = NukeWebPPlugin.WebPDataDecoder();
-            let webpImage: UIImage? = decoder.decode(webpData)
+            let webpImage: NSImage? = decoder.decode(webpData)
             XCTAssertNotNil(webpImage)
         } catch let e {
             XCTFail(e.localizedDescription)
         }
     }
-
+    
     func testsDecodeNotWebPImage() {
         do {
             let gifData = try Data(contentsOf: self.gifImagePath)
-            let image: UIImage? = UIImage(data: gifData)
+            let image: NSImage? = NSImage(data: gifData)
             XCTAssertNotNil(image)
             
             let decoder = NukeWebPPlugin.WebPDataDecoder();
-            let webpImage: UIImage? = decoder.decode(gifData)
+            let webpImage: NSImage? = decoder.decode(gifData)
             XCTAssertNil(webpImage)
         } catch let e {
             XCTFail(e.localizedDescription)
         }
     }
-
+    
     func testsProgressiveDecodeWebPImage() {
         do {
             let webpData = try Data(contentsOf: self.webpImagePath)
             let decoder = NukeWebPPlugin.WebPDataDecoder();
             // no image
             XCTAssertNil(decoder.incrementallyDecode(webpData[0...500], isFinal: false))
-
+            
             // created image
             let scan1 = decoder.incrementallyDecode(webpData[0...3702], isFinal: false)
             XCTAssertNotNil(scan1)
             XCTAssertEqual(scan1!.size.width, 320)
             XCTAssertEqual(scan1!.size.height, 235)
-
+            
             let scan2 = decoder.incrementallyDecode(webpData, isFinal: true)
             XCTAssertNotNil(scan2)
             XCTAssertEqual(scan2!.size.width, 320)
@@ -88,11 +88,11 @@ class WebPDecodeTests: XCTestCase {
             // Put the code you want to measure the time of here.
             do {
                 let webpData = try Data(contentsOf: self.webpImagePath)
-                let image: UIImage? = UIImage(data: webpData)
+                let image: NSImage? = NSImage(data: webpData)
                 XCTAssertNil(image)
                 
                 let decoder = NukeWebPPlugin.WebPDataDecoder();
-                let webpImage: UIImage? = decoder.decode(webpData)
+                let webpImage: NSImage? = decoder.decode(webpData)
                 XCTAssertNotNil(webpImage)
             } catch let e {
                 XCTFail(e.localizedDescription)
