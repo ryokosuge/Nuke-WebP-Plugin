@@ -8,7 +8,7 @@
 
 #import "WebPImageMacros.h"
 
-#if WEBP_IMAGE_MAC
+#if WEBP_PLUGIN_MAC
 #import <AppKit/AppKit.h>
 #define Image   NSImage
 #else
