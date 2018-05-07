@@ -1,3 +1,9 @@
+## Nuke WebP Plugin v2.0.0-beta3
+
+- Support [Nuke 7.0-beta3](https://github.com/kean/Nuke)
+    - Support Progressive decoding.
+    - Support ImageDecoderRegistry.
+
 ## Nuke WebP Plugin v1.1.0
 
 - Support Xcode9.3 & Swift4.1

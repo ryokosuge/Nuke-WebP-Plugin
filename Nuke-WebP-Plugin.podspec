@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name                = "Nuke-WebP-Plugin"
-  s.version             = "2.0.0-beta3"
+  s.version             = "2.0.0-rc1"
   s.summary             = "Nuke's WebP plugin which can load and display WebP"
 
   s.homepage            = "https://github.com/ryokosuge/Nuke-WebP-Plugin"
@@ -52,13 +52,11 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform            = :ios, "9.0"
-
   #  When using multiple platforms
   s.ios.deployment_target = "9.0"
-  # s.osx.deployment_target = "10.7"
-  # s.watchos.deployment_target = "2.0"
-  # s.tvos.deployment_target = "9.0"
+  s.osx.deployment_target  = '10.10'
+  s.tvos.deployment_target = "9.0"
+  s.watchos.deployment_target = "2.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -116,13 +114,7 @@ Pod::Spec.new do |s|
   s.module_name       = 'NukeWebPPlugin'
 
   s.dependency 'libwebp', '0.6.1'
-  s.dependency 'Nuke', '7.0-beta3'
+  s.dependency 'Nuke', '7.0-rc1'
   s.xcconfig          = { 'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src' }
-
-  # ――― Test Spec ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.test_spec do |test_spec|
-    test_spec.source_files = 'Nuke-WebP-PluginTests/*.swift'
-    test_spec.resources = 'Nuke-WebP-PluginTests/Resource/*'
-  end
 
 end

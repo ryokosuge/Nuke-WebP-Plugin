@@ -2,44 +2,57 @@ language: objective-c
 os: osx
 osx_image: xcode9.3
 
+notifications:
+  slack:
+    secure: IbNnbJC6ZWWyTwPzXkHVopKo7qJI94+dVSBfP+5Dm7EURa0yceBg5iFTsWcsFJSajM/xVUoupaMOmaKzSjqs1pJRmVkbM3D/yd2W80/9VtNbGyfcCzrgylfC8XupUhfsJMb3igRhOKsnqYqG+lAkGjyZoMIrnQNU3zVVtIEOxcELoA2OdvuUEzDUPW4steS68Ta7ilyhqo8XG/WKuELfXvSs32+HKfMas0c8MpXgnOYg6QPpN1PUVo0iOUwXlzg5UIJmFOTLqEY8/9oEo5ppNAew0deu/g5g19L+Izr8ABxammq3R30W1HHvnQeV0XsGUtG14ZuTk3UpLBOirJbrxYrgLNUwlhr64NjNIpt1WP19AMfYfFjnZ6wh71dPey2LVeQRHYOi0KNmHAV8Bc+INesV3of53v1SU/IPzESo5LzfEW37fMxAGmb7PcdSJlKEz8BxxUlYSsQbo0ZxjMriP3257lssQeJ+WkJbgWjIxFgatVKu8SgeRbxZn0KiPONrdUpuzypLAD2D5JEFVwoy6p5c4TeM5srMxf+yeAtc7+BjU/a2NrbmGpC5/MdUiBf7h2CnhndVaQjm8mqjy3iIGKzlD/fm9ewwoKsxFoR+ZPFj2id+YOGK3HXHF2MWlCSN21Qy4aOqlFDkKOWC8Ca97jwzUr65H2TP7ArE37qJuFU=
+
 cache:
-  - bundler
+    - bundler
 
 env:
-  global:
-  - IOS_SCHEME="Nuke-WebP-Plugin iOS"
-    # - MACOS_SCHEME="NukeWebP macOS"
-    # - TVOS_SCHEME="NukeWebP tvOS"
-    # - WATCHOS_SCHEME="NukeWebP watchOS"
+    global:
+        - IOS_SCHEME="Nuke-WebP-Plugin iOS"
+        - MACOS_SCHEME="Nuke-WebP-Plugin macOS"
+        - TVOS_SCHEME="Nuke-WebP-Plugin tvOS"
+        - WATCHOS_SCHEME="Nuke-WebP-Plugin watchOS"
 
-  matrix:
-  - DESTINATION="OS=11.2,name=iPhone X"
-    SCHEME="$IOS_SCHEME"     RUN_TESTS="YES"
-  - DESTINATION="OS=10.3.1,name=iPhone 7 Plus"
-    SCHEME="$IOS_SCHEME"     RUN_TESTS="YES"
-  - DESTINATION="OS=9.3,name=iPhone 6"
-    SCHEME="$IOS_SCHEME"     RUN_TESTS="YES"
+    matrix:
+        - DESTINATION="OS=11.3,name=iPhone X"
+          SCHEME="$IOS_SCHEME"      RUN_TESTS="YES"
+        - DESTINATION="OS=10.3.1,name=iPhone 7 Plus"
+          SCHEME="$IOS_SCHEME"      RUN_TESTS="YES"
+        - DESTINATION="OS=9.3,name=iPhone 6"
+          SCHEME="$IOS_SCHEME"      RUN_TESTS="YES"
 
-    # - DESTINATION="OS=10.0,name=Apple TV 1080p"
-    # SCHEME="$TVOS_SCHEME"    RUN_TESTS="YES"
+        - DESTINATION="arch=x86_64"
+          SCHEME="$MACOS_SCHEME"    RUN_TESTS="YES"
 
-    # - DESTINATION="arch=x86_64"
-    # SCHEME="$MACOS_SCHEME"   RUN_TESTS="YES"
+        - DESTINATION="OS=11.3,name=Apple TV 4k"
+          SCHEME="$TVOS_SCHEME"    RUN_TESTS="YES"
+        - DESTINATION="OS=10.2,name=Apple TV 1080p"
+          SCHEME="$TVOS_SCHEME"    RUN_TESTS="YES"
+        - DESTINATION="OS=9.2,name=Apple TV 1080p"
+          SCHEME="$TVOS_SCHEME"    RUN_TESTS="YES"
+
+        - DESTINATION="OS=4.3,name=Apple Watch - 42mm"
+          SCHEME="$WATCHOS_SCHEME" RUN_TESTS="NO"
+        - DESTINATION="OS=3.2,name=Apple Watch - 42mm"
+          SCHEME="$WATCHOS_SCHEME" RUN_TESTS="NO"
 
 before_install:
-  - brew update
-  - brew outdated carthage || brew upgrade carthage
-  - carthage bootstrap --no-use-binaries
-  - xcodebuild -version
-  - xcodebuild -showsdks
+    - brew update
+    - brew outdated carthage || brew upgrade carthage
+    - carthage bootstrap --no-use-binaries
 
 script:
-  - set -o pipefail
-  - if [ $RUN_TESTS == "YES" ]; then
-      xcodebuild test -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug | bundle exec xcpretty -c;
-    else
-      xcodebuild build -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug | bundle exec xcpretty -c;
-    fi
+    - set -o pipefail
+    - xcodebuild -version
+    - xcodebuild -showsdks
+    - if [ $RUN_TESTS == "YES" ]; then
+        xcodebuild test -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug | bundle exec xcpretty -c;
+      else
+        xcodebuild build -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug | bundle exec xcpretty -c;
+      fi
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+    - bash <(curl -s https://codecov.io/bash)

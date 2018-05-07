@@ -11,27 +11,27 @@
 #define WebPImageMacros_h
 
 #if !TARGET_OS_IPHONE && !TARGET_OS_IOS && !TARGET_OS_TV && !TARGET_OS_WATCH
-#define WEBP_PLUGIN_MAC 1
+    #define WEBP_PLUGIN_MAC 1
 #else
-#define WEBP_PLUGIN_MAC 0
+    #define WEBP_PLUGIN_MAC 0
 #endif
 
 #if TARGET_OS_IOS || TARGET_OS_TV
-#define WEBP_PLUGIN_UIKIT 1
+    #define WEBP_PLUGIN_UIKIT 1
 #else
-#define WEBP_PLUGIN_UIKIT 0
+    #define WEBP_PLUGIN_UIKIT 0
 #endif
 
 #if TARGET_OS_IOS
-#define WEBP_PLUGIN_IOS 1
+    #define WEBP_PLUGIN_IOS 1
 #else
-#define WEBP_PLUGIN_IOS 0
+    #define WEBP_PLUGIN_IOS 0
 #endif
 
 #if TARGET_OS_TV
-#define WEBP_PLUGIN_TV 1
+    #define WEBP_PLUGIN_TV 1
 #else
-#define WEBP_PLUGIN_TV 0
+    #define WEBP_PLUGIN_TV 0
 #endif
 
 #endif /* WebPImageMacros_h */
