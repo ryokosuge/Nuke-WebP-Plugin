@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name                = "Nuke-WebP-Plugin"
-  s.version             = "2.0.0-beta3"
+  s.version             = "2.0.0-rc1"
   s.summary             = "Nuke's WebP plugin which can load and display WebP"
 
   s.homepage            = "https://github.com/ryokosuge/Nuke-WebP-Plugin"
@@ -55,8 +55,8 @@ Pod::Spec.new do |s|
   #  When using multiple platforms
   s.ios.deployment_target = "9.0"
   s.osx.deployment_target  = '10.10'
-  # s.watchos.deployment_target = "2.0"
-  # s.tvos.deployment_target = "9.0"
+  s.tvos.deployment_target = "9.0"
+  s.watchos.deployment_target = "2.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
