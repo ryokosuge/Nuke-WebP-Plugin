@@ -17,7 +17,7 @@ env:
         - WATCHOS_SCHEME="Nuke-WebP-Plugin watchOS"
 
     matrix:
-        - DESTINATION="OS=11.2,name=iPhone X"
+        - DESTINATION="OS=11.3,name=iPhone X"
           SCHEME="$IOS_SCHEME"      RUN_TESTS="YES"
         - DESTINATION="OS=10.3.1,name=iPhone 7 Plus"
           SCHEME="$IOS_SCHEME"      RUN_TESTS="YES"
@@ -28,6 +28,10 @@ env:
           SCHEME="$MACOS_SCHEME"    RUN_TESTS="YES"
 
         - DESTINATION="OS=11.3,name=Apple TV 4k"
+          SCHEME="$TVOS_SCHEME"    RUN_TESTS="YES"
+        - DESTINATION="OS=10.2,name=Apple TV 1080p"
+          SCHEME="$TVOS_SCHEME"    RUN_TESTS="YES"
+        - DESTINATION="OS=9.2,name=Apple TV 1080p"
           SCHEME="$TVOS_SCHEME"    RUN_TESTS="YES"
 
         - DESTINATION="OS=4.3,name=Apple Watch - 42mm"
