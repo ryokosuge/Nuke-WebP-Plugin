@@ -1,6 +1,14 @@
+## Nuke WebP Plugin v2.0.0-rc1
+
+- Support [Nuke 7.0-rc1](https://github.com/kean/Nuke/releases/tag/7.0-rc1)
+- Support multiple platform.
+    - macOS:    10.10
+    - tvOS:     9.0
+    - watchOS:  2.0
+
 ## Nuke WebP Plugin v2.0.0-beta3
 
-- Support [Nuke 7.0-beta3](https://github.com/kean/Nuke)
+- Support [Nuke 7.0-beta3](https://github.com/kean/Nuke/releases/tag/7.0-beta3)
     - Support Progressive decoding.
     - Support ImageDecoderRegistry.
 

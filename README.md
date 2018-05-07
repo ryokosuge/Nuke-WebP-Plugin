@@ -44,7 +44,7 @@ github 'ryokosuge/Nuke-WebP-Plugin'
 
 ## Dependencies
 
-- [Nuke = 7.0-beta3](https://github.com/kean/Nuke)
+- [Nuke = 7.0-rc1](https://github.com/kean/Nuke)
 - [libwebp = 0.6.1](https://chromium.googlesource.com/webm/libwebp)
 
 ## Author
