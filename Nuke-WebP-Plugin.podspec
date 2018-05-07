@@ -117,10 +117,4 @@ Pod::Spec.new do |s|
   s.dependency 'Nuke', '7.0-rc1'
   s.xcconfig          = { 'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src' }
 
-  # ――― Test Spec ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.test_spec do |test_spec|
-    test_spec.source_files = 'Nuke-WebP-PluginTests/*.swift'
-    test_spec.resources = 'Nuke-WebP-PluginTests/Resource/*'
-  end
-
 end
