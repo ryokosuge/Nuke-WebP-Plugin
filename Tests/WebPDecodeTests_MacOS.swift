@@ -21,7 +21,7 @@ class WebPDecodeTests: XCTestCase {
         let gifImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "gif")!
         return gifImagePath
     }()
-    
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -70,25 +70,6 @@ class WebPDecodeTests: XCTestCase {
         XCTAssertEqual(scan2!.size.height, 235)
     }
 
-    func testsProgressiveDecodeWebPImageDecoder() {
-        let webpData = try! Data(contentsOf: self.webpImagePath)
-        let decoder = NukeWebPPlugin.WebPImageDecoder()
-        
-        // no image
-        XCTAssertNil(decoder.decode(data: webpData[0...500], isFinal: false))
-        
-        // created image
-        let scan1 = decoder.decode(data: webpData[0...3702], isFinal: false)
-        XCTAssertNotNil(scan1)
-        XCTAssertEqual(scan1!.size.width, 320)
-        XCTAssertEqual(scan1!.size.height, 235)
-        
-        let scan2 = decoder.decode(data: webpData, isFinal: true)
-        XCTAssertNotNil(scan2)
-        XCTAssertEqual(scan2!.size.width, 320)
-        XCTAssertEqual(scan2!.size.height, 235)
-    }
-    
     func testPerformanceDecodeWebP() {
         // This is an example of a performance test case.
         self.measure {
