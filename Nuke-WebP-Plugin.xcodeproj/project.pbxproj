@@ -1037,12 +1037,12 @@
 		F8BAAEB5200EDE100001110D = {
 			isa = PBXGroup;
 			children = (
-				F8FAA60D200EF66000DD0BED /* libwebp */,
 				F8146581200EE42B00364146 /* Source */,
 				F814657B200EE3E000364146 /* Supporting Files */,
 				F8146575200EE39C00364146 /* Tests */,
 				F8BAAEC0200EDE100001110D /* Products */,
 				F80D746C209FDB370015EA10 /* MetaData */,
+				F8FAA60D200EF66000DD0BED /* libwebp */,
 				F8FAA4D5200EF1FD00DD0BED /* Frameworks */,
 			);
 			sourceTree = "<group>";
