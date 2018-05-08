@@ -7,8 +7,19 @@
 //
 
 import XCTest
+@testable import NukeWebPPlugin
 
 class DataExtensionsTests: XCTestCase {
+
+    private lazy var webpImagePath: URL = {
+        let webpImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "webp")!
+        return webpImagePath
+    }()
+    
+    private lazy var gifImagePath: URL = {
+        let gifImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "gif")!
+        return gifImagePath
+    }()
     
     override func setUp() {
         super.setUp()
@@ -19,17 +30,18 @@ class DataExtensionsTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+    func testsDataIsWebPFormat() {
+        let webpData = try! Data(contentsOf: self.webpImagePath)
+        XCTAssertTrue(webpData.isWebPFormat)
+
+        let gifData = try! Data(contentsOf: self.gifImagePath)
+        XCTAssertFalse(gifData.isWebPFormat)
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+
+    func testsNoData() {
+        let data = Data(count: 0)
+        XCTAssertFalse(data.isWebPFormat)
     }
-    
+
 }
