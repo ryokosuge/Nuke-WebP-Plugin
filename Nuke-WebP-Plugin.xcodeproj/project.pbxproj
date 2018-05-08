@@ -356,6 +356,12 @@
 		F8AD60DD209716AB00D056B2 /* WebPDataDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60DB209716AB00D056B2 /* WebPDataDecoder.m */; };
 		F8AD60E0209719A000D056B2 /* Data+WebPFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60DF209719A000D056B2 /* Data+WebPFormat.swift */; };
 		F8BAAEC9200EDE100001110D /* NukeWebPPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BAAEBF200EDE100001110D /* NukeWebPPlugin.framework */; };
+		F8CFDAE420A12A2A00C87102 /* DataExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFDAE320A12A2A00C87102 /* DataExtensionsTests.swift */; };
+		F8CFDAE520A12A2A00C87102 /* DataExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFDAE320A12A2A00C87102 /* DataExtensionsTests.swift */; };
+		F8CFDAE620A12A2A00C87102 /* DataExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFDAE320A12A2A00C87102 /* DataExtensionsTests.swift */; };
+		F8CFDAE820A1305500C87102 /* WebPImageDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFDAE720A1305500C87102 /* WebPImageDecoderTests.swift */; };
+		F8CFDAE920A1305500C87102 /* WebPImageDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFDAE720A1305500C87102 /* WebPImageDecoderTests.swift */; };
+		F8CFDAEA20A1305500C87102 /* WebPImageDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFDAE720A1305500C87102 /* WebPImageDecoderTests.swift */; };
 		F8E3449D2099337A002A0D95 /* rescaler.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA69A200EF74D00DD0BED /* rescaler.c */; };
 		F8E3449E2099337A002A0D95 /* ssim.c in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60D3209712C300D056B2 /* ssim.c */; };
 		F8E3449F2099337A002A0D95 /* frame_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FAA63D200EF6D900DD0BED /* frame_dec.c */; };
@@ -759,6 +765,8 @@
 		F8AD60DF209719A000D056B2 /* Data+WebPFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+WebPFormat.swift"; sourceTree = "<group>"; };
 		F8BAAEBF200EDE100001110D /* NukeWebPPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeWebPPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BAAEC8200EDE100001110D /* NukeWebPPlugin Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NukeWebPPlugin Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8CFDAE320A12A2A00C87102 /* DataExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensionsTests.swift; sourceTree = "<group>"; };
+		F8CFDAE720A1305500C87102 /* WebPImageDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPImageDecoderTests.swift; sourceTree = "<group>"; };
 		F8E345472099337A002A0D95 /* NukeWebPPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeWebPPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E3455C20993551002A0D95 /* NukeWebPPlugin Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NukeWebPPlugin Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E345602099371C002A0D95 /* WebPDecodeTests_MacOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPDecodeTests_MacOS.swift; sourceTree = "<group>"; };
@@ -1002,9 +1010,10 @@
 				F8E345602099371C002A0D95 /* WebPDecodeTests_MacOS.swift */,
 				F80A457E20197CE200825C6D /* WebPDecodeTests.swift */,
 				F8FAA4D2200EF07300DD0BED /* Resource */,
+				F8CFDAE320A12A2A00C87102 /* DataExtensionsTests.swift */,
+				F8CFDAE720A1305500C87102 /* WebPImageDecoderTests.swift */,
 			);
-			name = Tests;
-			path = "Nuke-WebP-PluginTests";
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		F814657B200EE3E000364146 /* Supporting Files */ = {
@@ -1038,12 +1047,12 @@
 		F8BAAEB5200EDE100001110D = {
 			isa = PBXGroup;
 			children = (
-				F8FAA60D200EF66000DD0BED /* libwebp */,
 				F8146581200EE42B00364146 /* Source */,
 				F814657B200EE3E000364146 /* Supporting Files */,
 				F8146575200EE39C00364146 /* Tests */,
 				F8BAAEC0200EDE100001110D /* Products */,
 				F80D746C209FDB370015EA10 /* MetaData */,
+				F8FAA60D200EF66000DD0BED /* libwebp */,
 				F8FAA4D5200EF1FD00DD0BED /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -2033,7 +2042,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8CFDAEA20A1305500C87102 /* WebPImageDecoderTests.swift in Sources */,
 				F80D747E209FDD810015EA10 /* LoadWebPImageTests.swift in Sources */,
+				F8CFDAE620A12A2A00C87102 /* DataExtensionsTests.swift in Sources */,
 				F80D7490209FDF170015EA10 /* WebPDecodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2288,7 +2299,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8CFDAE820A1305500C87102 /* WebPImageDecoderTests.swift in Sources */,
 				F80A458120197DB600825C6D /* LoadWebPImageTests.swift in Sources */,
+				F8CFDAE420A12A2A00C87102 /* DataExtensionsTests.swift in Sources */,
 				F8E345622099376B002A0D95 /* WebPDecodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2420,7 +2433,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8CFDAE920A1305500C87102 /* WebPImageDecoderTests.swift in Sources */,
 				F8E3455020993551002A0D95 /* LoadWebPImageTests.swift in Sources */,
+				F8CFDAE520A12A2A00C87102 /* DataExtensionsTests.swift in Sources */,
 				F8E345612099371C002A0D95 /* WebPDecodeTests_MacOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2518,7 +2533,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Nuke-WebP-PluginTests/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ryokosuge.Nuke-WebP-PluginTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2543,7 +2558,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Nuke-WebP-PluginTests/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ryokosuge.Nuke-WebP-PluginTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2800,7 +2815,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Nuke-WebP-PluginTests/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ryokosuge.Nuke-WebP-PluginTests";
 				PRODUCT_NAME = "NukeWebPPlugin Tests iOS";
@@ -2822,7 +2837,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Nuke-WebP-PluginTests/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ryokosuge.Nuke-WebP-PluginTests";
 				PRODUCT_NAME = "NukeWebPPlugin Tests iOS";
@@ -2901,7 +2916,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Nuke-WebP-PluginTests/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ryokosuge.Nuke-WebP-PluginTests";
 				PRODUCT_NAME = "NukeWebPPlugin Tests macOS";
@@ -2925,7 +2940,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Nuke-WebP-PluginTests/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ryokosuge.Nuke-WebP-PluginTests";
 				PRODUCT_NAME = "NukeWebPPlugin Tests macOS";

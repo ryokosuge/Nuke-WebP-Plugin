@@ -8,26 +8,19 @@
 
 import Foundation
 
+private let fileHeaderIndex: Int = 12
+private let fileHeaderPrefix = "RIFF"
+private let fileHeaderSuffix = "WEBP"
+
 // MARK: - WebP Format Testing
 extension Data {
 
-    // Borrow from KingfisherWebp
-    // https://github.com/Yeatse/KingfisherWebP/blob/master/KingfisherWebP/Classes/Image%2BWebP.swift#L38
     internal var isWebPFormat: Bool {
-        if count < 12 {
-            return false
-        }
-        
-        let endIndex = index(startIndex, offsetBy: 12)
-        let testData = subdata(in: startIndex..<endIndex)
-        guard let testString = String(data: testData, encoding: .ascii) else {
-            return false
-        }
-        
-        if testString.hasPrefix("RIFF") && testString.hasSuffix("WEBP") {
-            return true
-        } else {
-            return false
-        }
+        guard fileHeaderIndex < count else { return false }
+        let endIndex = index(startIndex, offsetBy: fileHeaderIndex)
+        let data = subdata(in: startIndex..<endIndex)
+        let string = String(data: data, encoding: .ascii) ?? ""
+        return string.hasPrefix(fileHeaderPrefix) && string.hasSuffix(fileHeaderSuffix)
     }
+
 }
