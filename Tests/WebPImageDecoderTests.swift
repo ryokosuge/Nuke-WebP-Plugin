@@ -50,16 +50,12 @@ class WebPImageDecoderTests: XCTestCase {
 
     func testsImageDecoderRegistryRegistered() {
         let exception = XCTestExpectation(description: "decode webp image")
-        ImagePipeline.shared.loadImage(with: webpImageURL, progress: nil) { (response, error) in
-            XCTAssertNil(response)
-            XCTAssertNotNil(error)
-
-            WebPImageDecoder.enable()
-            ImagePipeline.shared.loadImage(with: self.webpImageURL, progress: nil) { (response, error) in
-                XCTAssertNil(error)
-                XCTAssertNotNil(response)
-                exception.fulfill()
-            }
+        Nuke.DataLoader.sharedUrlCache.removeAllCachedResponses()
+        WebPImageDecoder.enable()
+        Nuke.ImagePipeline.shared.loadImage(with: self.webpImageURL, progress: nil) { (response, error) in
+            XCTAssertNil(error)
+            XCTAssertNotNil(response)
+            exception.fulfill()
         }
 
         self.wait(for: [exception], timeout: 1)
