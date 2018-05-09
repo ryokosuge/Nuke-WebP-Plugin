@@ -1,5 +1,9 @@
 ## Nuke WebP Plugin v2.0.0-rc1
 
+- Improve test coverage.
+
+## Nuke WebP Plugin v2.0.0-rc1
+
 - Support [Nuke 7.0-rc1](https://github.com/kean/Nuke/releases/tag/7.0-rc1)
 - Support multiple platform.
     - macOS:    10.10
