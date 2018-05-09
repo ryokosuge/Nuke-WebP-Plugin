@@ -28,12 +28,8 @@ class LoadWebPImageTests: XCTestCase {
         let exception = XCTestExpectation(description: "not decode webp image")
         Nuke.ImagePipeline.shared.loadImage(with: self.webpImageURL) { (imageResponse, error) in
             /// It is an error because it does not correspond to WebP
-            guard let e = error else {
-                XCTFail()
-                return
-            }
-
-            print(e)
+            XCTAssertNil(imageResponse)
+            XCTAssertNotNil(error)
             exception.fulfill()
         }
         self.wait(for: [exception], timeout: 1)
@@ -46,12 +42,7 @@ class LoadWebPImageTests: XCTestCase {
         }
 
         Nuke.ImagePipeline.shared.loadImage(with: self.webpImageURL) { (imageResponse, error) in
-            if let e = error {
-                XCTFail(e.localizedDescription)
-                exception.fulfill()
-                return
-            }
-            
+            XCTAssertNil(error)
             XCTAssertNotNil(imageResponse?.image)
             exception.fulfill()
         }

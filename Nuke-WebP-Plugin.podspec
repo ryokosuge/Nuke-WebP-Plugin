@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name                = "Nuke-WebP-Plugin"
-  s.version             = "2.0.0-rc1"
+  s.version             = "2.0.0-rc2"
   s.summary             = "Nuke's WebP plugin which can load and display WebP"
 
   s.homepage            = "https://github.com/ryokosuge/Nuke-WebP-Plugin"
