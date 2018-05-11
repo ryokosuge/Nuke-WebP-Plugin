@@ -18,9 +18,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        WebPImageDecoder.enable()
         if let url = URL(string: "https://www.gstatic.com/webp/gallery/5.sm.webp"), let imageView = self.imageView {
-            Nuke.loadImage(with: url, into: imageView)
+            Nuke.loadImage(with: url, into: imageView, progress: {[imageView] (response, total, bytes) in
+                imageView.image = response?.image
+            }) { (response, error) in
+                imageView.image = response?.image
+            }
         }
 
     }
