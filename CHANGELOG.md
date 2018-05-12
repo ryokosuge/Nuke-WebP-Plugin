@@ -2,7 +2,7 @@
 
 ### Feature
 
-- Support [Nuke 7.0](https://github.com/kean/Nuke/release/tag/7.0)
+- Support [Nuke 7.0](https://github.com/kean/Nuke/releases/tag/7.0)
 - Support multiple platform.
     - macOS: 10.10
     - tvOS: 9.0 ( pull request: #15 )
