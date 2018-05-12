@@ -16,7 +16,7 @@ The plugin features a pre-configured Nuke.Manager with WebP support, and an WebP
 import Nuke
 import NukeWebPPlugin
 
-WebPImgaeDecoder.enable()
+WebPImageDecoder.enable()
 
 let imageView = UIImageView()
 let webpimageURL = URL(string: "https://example.com/sample.webp")!
