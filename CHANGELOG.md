@@ -1,3 +1,18 @@
+## Nuke WebP Plugin v2.0.0
+
+### Feature
+
+- Support [Nuke 7.0](https://github.com/kean/Nuke/release/tag/7.0)
+- Support multiple platform.
+    - macOS: 10.10
+    - tvOS: 9.0 ( pull request: #15 )
+    - watchOS: 2.0 ( pull request: #17 )
+
+### Fix
+
+- README typo... #24
+    - **Thank you !!!** @markohlebar
+
 ## Nuke WebP Plugin v2.0.0-rc1
 
 - Improve test coverage.
