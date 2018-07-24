@@ -1,3 +1,10 @@
+## Nuke WebP Plugin v2.0.1
+
+### Feature
+
+- Support Xcode9.4
+    - Operation check.
+
 ## Nuke WebP Plugin v2.0.0
 
 ### Feature
