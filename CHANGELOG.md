@@ -1,3 +1,10 @@
+## Nuke WebP Plugin v2.0.2
+
+### Fix
+
+- Compliant with swift version of project
+    - pull request: #29
+
 ## Nuke WebP Plugin v2.0.1
 
 ### Feature
