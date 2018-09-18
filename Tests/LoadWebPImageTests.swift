@@ -32,7 +32,7 @@ class LoadWebPImageTests: XCTestCase {
             XCTAssertNotNil(error)
             exception.fulfill()
         }
-        self.wait(for: [exception], timeout: 1)
+        self.wait(for: [exception], timeout: 5)
     }
     
     func testsLoadWebPImage() {
@@ -47,7 +47,7 @@ class LoadWebPImageTests: XCTestCase {
             exception.fulfill()
         }
 
-        self.wait(for: [exception], timeout: 1)
+        self.wait(for: [exception], timeout: 5)
     }
 
 }
