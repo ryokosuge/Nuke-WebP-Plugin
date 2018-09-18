@@ -24,7 +24,7 @@ PODS:
     - libwebp/core
   - libwebp/webp (1.0.0)
   - Nuke (7.3.2)
-  - Nuke-WebP-Plugin (2.0.2):
+  - Nuke-WebP-Plugin (3.0.0):
     - libwebp (= 1.0.0)
     - Nuke (~> 7.0)
 
@@ -43,7 +43,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   libwebp: d7e0c95fe97245c97e08101eba10702ebb0f6101
   Nuke: a9a31bbd6c6723753ab024ef22057dcaaf046c1b
-  Nuke-WebP-Plugin: 90b08547764a23b67f2d003116d4c1a23c2f736e
+  Nuke-WebP-Plugin: 7ba11a8114710988288de676dbd231bad6ff0ea8
 
 PODFILE CHECKSUM: b85cd6918b543abc6d4a39a80872e4d0aa93fc58
 

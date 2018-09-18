@@ -1,3 +1,10 @@
+## Nuke WebP Plugin v3.0.0
+
+### Feature
+
+- Support Xcode10 & Swift4.2
+- Update libwebp to v1.0.0
+
 ## Nuke WebP Plugin v2.0.2
 
 ### Fix

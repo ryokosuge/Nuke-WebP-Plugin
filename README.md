@@ -40,13 +40,13 @@ github 'ryokosuge/Nuke-WebP-Plugin'
 ## Requirements
 
 - iOS 9+ / macOS 10.10+ / tvOS 9.0+
-- Xcode9.4 / Xcode9.3 / Xcode9.2
-- Swift4.1 / Swift4
+- Xcode10 / Xcode9.4 / Xcode9.3 / Xcode9.2
+- Swift4.2 / Swift4.1 / Swift4
 
 ## Dependencies
 
 - [Nuke >= 7.0](https://github.com/kean/Nuke)
-- [libwebp = 0.6.1](https://chromium.googlesource.com/webm/libwebp)
+- [libwebp = 1.0.0](https://chromium.googlesource.com/webm/libwebp)
 
 ## Author
 
