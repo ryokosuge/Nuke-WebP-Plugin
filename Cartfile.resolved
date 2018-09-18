@@ -1,2 +1,2 @@
-git "https://chromium.googlesource.com/webm/libwebp" "v0.6.1"
-github "kean/Nuke" "7.0"
+git "https://chromium.googlesource.com/webm/libwebp" "v1.0.0"
+github "kean/Nuke" "7.3.2"
