@@ -351,7 +351,7 @@
 		F8AAB37C215088A100E1744B /* common_sse41.h in Headers */ = {isa = PBXBuildFile; fileRef = F8AAB376215088A100E1744B /* common_sse41.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8AAB37D215088A100E1744B /* common_sse41.h in Headers */ = {isa = PBXBuildFile; fileRef = F8AAB376215088A100E1744B /* common_sse41.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8AAB37E215088A100E1744B /* common_sse41.h in Headers */ = {isa = PBXBuildFile; fileRef = F8AAB376215088A100E1744B /* common_sse41.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		F8AAB37F215088A100E1744B /* common_sse41.h in Headers */ = {isa = PBXBuildFile; fileRef = F8AAB376215088A100E1744B /* common_sse41.h */; };
+		F8AAB37F215088A100E1744B /* common_sse41.h in Headers */ = {isa = PBXBuildFile; fileRef = F8AAB376215088A100E1744B /* common_sse41.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F8AAB380215088A100E1744B /* upsampling_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = F8AAB377215088A100E1744B /* upsampling_sse41.c */; };
 		F8AAB381215088A100E1744B /* upsampling_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = F8AAB377215088A100E1744B /* upsampling_sse41.c */; };
 		F8AAB382215088A100E1744B /* upsampling_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = F8AAB377215088A100E1744B /* upsampling_sse41.c */; };
