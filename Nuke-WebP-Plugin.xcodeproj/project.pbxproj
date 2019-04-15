@@ -1698,28 +1698,33 @@
 				ORGANIZATIONNAME = RyoKosuge;
 				TargetAttributes = {
 					F80D73BE209FD9B10015EA10 = {
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					F80D747A209FDD810015EA10 = {
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					F8A0AEBB209FE4AE008A06AD = {
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					F8BAAEBE200EDE100001110D = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					F8BAAEC7200EDE100001110D = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					F8E3449B2099337A002A0D95 = {
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					F8E3454C20993551002A0D95 = {
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1730,6 +1735,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = F8BAAEB5200EDE100001110D;
 			productRefGroup = F8BAAEC0200EDE100001110D /* Products */;
@@ -2495,6 +2501,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Debug;
@@ -2523,6 +2530,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Release;
@@ -2547,7 +2555,8 @@
 				SDKROOT = appletvos;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3";
 			};
 			name = Debug;
 		};
@@ -2570,7 +2579,8 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3";
 			};
 			name = Release;
 		};
@@ -2598,6 +2608,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "watchsimulator watchos";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 			};
 			name = Debug;
@@ -2626,6 +2637,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "watchsimulator watchos";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 			};
 			name = Release;
@@ -2778,6 +2790,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ryokosuge.Nuke-WebP-Plugin";
 				PRODUCT_NAME = NukeWebPPlugin;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2805,6 +2818,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ryokosuge.Nuke-WebP-Plugin";
 				PRODUCT_NAME = NukeWebPPlugin;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -2826,6 +2840,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ryokosuge.Nuke-WebP-PluginTests";
 				PRODUCT_NAME = "NukeWebPPlugin Tests iOS";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2846,6 +2861,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ryokosuge.Nuke-WebP-PluginTests";
 				PRODUCT_NAME = "NukeWebPPlugin Tests iOS";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -2873,6 +2889,7 @@
 				PRODUCT_NAME = NukeWebPPlugin;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2900,6 +2917,7 @@
 				PRODUCT_NAME = NukeWebPPlugin;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -2923,6 +2941,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2945,6 +2964,7 @@
 				PRODUCT_NAME = "NukeWebPPlugin Tests macOS";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
