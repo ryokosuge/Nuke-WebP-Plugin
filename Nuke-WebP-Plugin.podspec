@@ -114,7 +114,7 @@ Pod::Spec.new do |s|
   s.module_name       = 'NukeWebPPlugin'
 
   s.dependency 'libwebp', '1.0.0'
-  s.dependency 'Nuke', '~> 7.6'
+  s.dependency 'Nuke', '~> 7.0'
   s.xcconfig          = { 'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src' }
 
 end
