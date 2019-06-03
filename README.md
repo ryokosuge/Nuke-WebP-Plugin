@@ -39,7 +39,7 @@ github 'ryokosuge/Nuke-WebP-Plugin'
 
 ## Requirements
 
-- iOS 9+ / macOS 10.10+ / tvOS 9.0+
+- iOS 10+ / macOS 10.12+ / tvOS 10.0+ / watchOS 3.0
 - Xcode10.2
 - Swift5
 
