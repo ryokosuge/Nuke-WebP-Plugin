@@ -45,11 +45,10 @@ before_install:
     - brew update
     - brew outdated carthage || brew upgrade carthage
     - carthage bootstrap --no-use-binaries
+    - gem install bundler --version 2.0.1
 
 script:
     - set -o pipefail
-    - xcodebuild -version
-    - xcodebuild -showsdks
     - if [ $RUN_TESTS == "YES" ]; then
         xcodebuild test -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug | bundle exec xcpretty -c;
       else
