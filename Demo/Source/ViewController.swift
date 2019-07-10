@@ -21,11 +21,10 @@ class ViewController: UIViewController {
         if let url = URL(string: "https://www.gstatic.com/webp/gallery/5.sm.webp"), let imageView = self.imageView {
             Nuke.loadImage(with: url, into: imageView, progress: {[imageView] (response, total, bytes) in
                 imageView.image = response?.image
-            }) { (response, error) in
-                imageView.image = response?.image
+            }) { (result) in
+                imageView.image = try? result.get().image
             }
         }
-
     }
 
     override func viewDidAppear(_ animated: Bool) {
