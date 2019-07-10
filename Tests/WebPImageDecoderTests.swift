@@ -52,9 +52,13 @@ class WebPImageDecoderTests: XCTestCase {
         let exception = XCTestExpectation(description: "decode webp image")
         Nuke.DataLoader.sharedUrlCache.removeAllCachedResponses()
         WebPImageDecoder.enable()
-        Nuke.ImagePipeline.shared.loadImage(with: self.webpImageURL, progress: nil) { (response, error) in
-            XCTAssertNil(error)
-            XCTAssertNotNil(response)
+        Nuke.ImagePipeline.shared.loadImage(with: self.webpImageURL, progress: nil) { (result) in
+            switch result {
+            case .success(let imageResponse):
+                XCTAssertNotNil(imageResponse.image)
+            case .failure(let error):
+                XCTFail("decoding failed: \(error)")
+            }
             exception.fulfill()
         }
 
