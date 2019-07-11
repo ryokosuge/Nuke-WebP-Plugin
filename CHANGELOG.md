@@ -1,3 +1,8 @@
+## Nuke WebP Plugin v4.0.0
+
+- Support [Nuke 8.0](https://github.com/kean/Nuke/releases/tag/8.0)
+    - Special thanks @mcmurrym
+
 ## Nuke WebP Plugin v3.1.0
 
 ### Feature
