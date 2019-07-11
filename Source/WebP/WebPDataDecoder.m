@@ -2,7 +2,7 @@
 //  WebPDataDecoder.m
 //  Nuke-WebP-Plugin iOS
 //
-//  Created by nagisa-kosuge on 2018/04/30.
+//  Created by ryokosuge on 2018/04/30.
 //  Copyright © 2018年 RyoKosuge. All rights reserved.
 //
 
