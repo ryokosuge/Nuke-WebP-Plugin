@@ -1,3 +1,11 @@
+## Nuke WebP Plugin v3.1.0
+
+### Feature
+
+- Support Xcode10.2 & Swift5
+    - pull request: #34, #37
+    - Special thanks @mcmurrym, @pongsakorn-onsri
+
 ## Nuke WebP Plugin v3.0.0
 
 ### Feature
