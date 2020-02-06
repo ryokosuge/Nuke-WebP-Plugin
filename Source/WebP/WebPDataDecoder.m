@@ -89,7 +89,9 @@ void free_image_data(void *info, const void *data, size_t size) {
 #if WEBP_PLUGIN_MAC
         image = [[NSImage alloc] initWithCGImage:newImageRef size:CGSizeZero];
 #else
-        image = [UIImage imageWithCGImage:newImageRef];
+        image = [UIImage imageWithCGImage:newImageRef
+                                    scale:UIScreen.mainScreen.scale
+                              orientation:UIImageOrientationUp];
 #endif
         CGImageRelease(newImageRef);
         CGDataProviderRelease(provider);
@@ -151,7 +153,9 @@ void free_image_data(void *info, const void *data, size_t size) {
 #if WEBP_PLUGIN_MAC
     image = [[NSImage alloc] initWithCGImage: imageRef size: CGSizeZero];
 #else
-    image = [UIImage imageWithCGImage:imageRef];
+    image = [UIImage imageWithCGImage:imageRef
+                                scale:UIScreen.mainScreen.scale
+                          orientation:UIImageOrientationUp];
 #endif
     
     CGImageRelease(imageRef);
