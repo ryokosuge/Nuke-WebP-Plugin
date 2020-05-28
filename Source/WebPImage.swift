@@ -21,7 +21,7 @@ public class WebPImageDecoder: Nuke.ImageDecoding {
     }
     
     public func decodePartiallyDownloadedData(_ data: Data) -> ImageContainer? {
-        guard let image = decoder.incrementallyDecode(data, isFinal: false) else { return nil }
+        guard let image = decoder.incrementallyDecode(data) else { return nil }
         return ImageContainer(image: image)
         
     }
