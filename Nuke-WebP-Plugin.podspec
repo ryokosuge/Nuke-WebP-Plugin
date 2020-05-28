@@ -109,7 +109,7 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  s.swift_version     = "5.0"
+  s.swift_versions    = ['5.1', '5.2']
   s.requires_arc      = true
   s.module_name       = 'NukeWebPPlugin'
 
