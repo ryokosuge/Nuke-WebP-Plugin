@@ -13,16 +13,18 @@ public class WebPImageDecoder: Nuke.ImageDecoding {
 
     private lazy var decoder: WebPDataDecoder = WebPDataDecoder()
 
-    public init() {
+    public init() {}
+
+    public func decode(_ data: Data) -> ImageContainer? {
+        guard let image = _decode(data) else { return nil }
+        return ImageContainer(image: image)
     }
-
-    public func decode(data: Data, isFinal: Bool) -> Image? {
-        guard data.isWebPFormat else { return nil }
-        guard !isFinal else { return _decode(data) }
-
-        return decoder.incrementallyDecode(data, isFinal: isFinal)
+    
+    public func decodePartiallyDownloadedData(_ data: Data) -> ImageContainer? {
+        guard let image = decoder.incrementallyDecode(data, isFinal: false) else { return nil }
+        return ImageContainer(image: image)
+        
     }
-
 }
 
 // MARK: - check webp format data.
