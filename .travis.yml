@@ -6,9 +6,6 @@ notifications:
   slack:
     secure: IbNnbJC6ZWWyTwPzXkHVopKo7qJI94+dVSBfP+5Dm7EURa0yceBg5iFTsWcsFJSajM/xVUoupaMOmaKzSjqs1pJRmVkbM3D/yd2W80/9VtNbGyfcCzrgylfC8XupUhfsJMb3igRhOKsnqYqG+lAkGjyZoMIrnQNU3zVVtIEOxcELoA2OdvuUEzDUPW4steS68Ta7ilyhqo8XG/WKuELfXvSs32+HKfMas0c8MpXgnOYg6QPpN1PUVo0iOUwXlzg5UIJmFOTLqEY8/9oEo5ppNAew0deu/g5g19L+Izr8ABxammq3R30W1HHvnQeV0XsGUtG14ZuTk3UpLBOirJbrxYrgLNUwlhr64NjNIpt1WP19AMfYfFjnZ6wh71dPey2LVeQRHYOi0KNmHAV8Bc+INesV3of53v1SU/IPzESo5LzfEW37fMxAGmb7PcdSJlKEz8BxxUlYSsQbo0ZxjMriP3257lssQeJ+WkJbgWjIxFgatVKu8SgeRbxZn0KiPONrdUpuzypLAD2D5JEFVwoy6p5c4TeM5srMxf+yeAtc7+BjU/a2NrbmGpC5/MdUiBf7h2CnhndVaQjm8mqjy3iIGKzlD/fm9ewwoKsxFoR+ZPFj2id+YOGK3HXHF2MWlCSN21Qy4aOqlFDkKOWC8Ca97jwzUr65H2TP7ArE37qJuFU=
 
-cache:
-    - bundler
-
 env:
     global:
         - IOS_SCHEME="Nuke-WebP-Plugin iOS"
@@ -45,9 +42,9 @@ before_install:
 script:
     - set -o pipefail
     - if [ $RUN_TESTS == "YES" ]; then
-        xcodebuild test -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug | bundle exec xcpretty -c;
+        xcodebuild test -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug
       else
-        xcodebuild build -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug | bundle exec xcpretty -c;
+        xcodebuild build -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug
       fi
 
 after_success:
