@@ -1,32 +1,17 @@
 PODS:
-  - libwebp (1.0.0):
-    - libwebp/core (= 1.0.0)
-    - libwebp/dec (= 1.0.0)
-    - libwebp/demux (= 1.0.0)
-    - libwebp/dsp (= 1.0.0)
-    - libwebp/enc (= 1.0.0)
-    - libwebp/mux (= 1.0.0)
-    - libwebp/utils (= 1.0.0)
-    - libwebp/webp (= 1.0.0)
-  - libwebp/core (1.0.0):
+  - libwebp (1.1.0):
+    - libwebp/demux (= 1.1.0)
+    - libwebp/mux (= 1.1.0)
+    - libwebp/webp (= 1.1.0)
+  - libwebp/demux (1.1.0):
     - libwebp/webp
-  - libwebp/dec (1.0.0):
-    - libwebp/core
-  - libwebp/demux (1.0.0):
-    - libwebp/core
-  - libwebp/dsp (1.0.0):
-    - libwebp/core
-  - libwebp/enc (1.0.0):
-    - libwebp/core
-  - libwebp/mux (1.0.0):
-    - libwebp/core
-  - libwebp/utils (1.0.0):
-    - libwebp/core
-  - libwebp/webp (1.0.0)
-  - Nuke (8.0)
-  - Nuke-WebP-Plugin (4.0.0):
-    - libwebp (= 1.0.0)
-    - Nuke (~> 8.0)
+  - libwebp/mux (1.1.0):
+    - libwebp/demux
+  - libwebp/webp (1.1.0)
+  - Nuke (9.1.1)
+  - Nuke-WebP-Plugin (5.0.0):
+    - libwebp (= 1.1.0)
+    - Nuke (~> 9.0)
 
 DEPENDENCIES:
   - Nuke-WebP-Plugin (from `../`)
@@ -41,10 +26,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  libwebp: d7e0c95fe97245c97e08101eba10702ebb0f6101
-  Nuke: 8d90f1dbf88d27a7ba6ff3934de01693812e5adb
-  Nuke-WebP-Plugin: 1d582afdee4884da4c8e5237df4e46d8468c4c4d
+  libwebp: 946cb3063cea9236285f7e9a8505d806d30e07f3
+  Nuke: af4301b154d3afd8a3b045a5194a9a773a00b7a8
+  Nuke-WebP-Plugin: a79a97be508453ce5c36b78989595cbbc19c2deb
 
-PODFILE CHECKSUM: 45f08ebfebb93cf65f76314cc9b8d0255dd7ba0e
+PODFILE CHECKSUM: a399aada90ebdbc474886a52db147a7fe8e989d1
 
 COCOAPODS: 1.9.3
