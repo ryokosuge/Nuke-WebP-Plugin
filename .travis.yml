@@ -1,4 +1,4 @@
-language: swift
+ganguage: swift
 os: osx
 osx_image: xcode11.5
 
@@ -42,9 +42,9 @@ before_install:
 script:
     - set -o pipefail
     - if [ $RUN_TESTS == "YES" ]; then
-        xcodebuild test -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug
+        xcodebuild test -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug;
       else
-        xcodebuild build -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug
+        xcodebuild build -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug;
       fi
 
 after_success:
