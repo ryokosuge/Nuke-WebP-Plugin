@@ -6,7 +6,7 @@ env:
     - MACOS_SCHEME="Nuke-WebP-Plugin macOS"
     - TVOS_SCHEME="Nuke-WebP-Plugin tvOS"
     - WATCHOS_SCHEME="Nuke-WebP-Plugin watchOS"
-  jobs:
+  matrix:
     - DESTINATION="platform=iOS Simulator,OS=13.3,name=iPhone 11"
       SCHEME="$IOS_SCHEME"      RUN_TESTS="YES"
     - DESTINATION="platform=iOS Simulator,OS=12.4,name=iPhone X"
