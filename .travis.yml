@@ -1,32 +1,5 @@
 language: swift
 
-env:
-  global:
-    - IOS_SCHEME="Nuke-WebP-Plugin iOS"
-    - MACOS_SCHEME="Nuke-WebP-Plugin macOS"
-    - TVOS_SCHEME="Nuke-WebP-Plugin tvOS"
-    - WATCHOS_SCHEME="Nuke-WebP-Plugin watchOS"
-  matrix:
-    - DESTINATION="platform=iOS Simulator,OS=13.3,name=iPhone 11"
-      SCHEME="$IOS_SCHEME"      RUN_TESTS="YES"
-    - DESTINATION="platform=iOS Simulator,OS=12.4,name=iPhone X"
-      SCHEME="$IOS_SCHEME"      RUN_TESTS="YES"
-    - DESTINATION="platform=iOS Simulator,OS=11.4,name=iPhone SE"
-      SCHEME="$IOS_SCHEME"      RUN_TESTS="YES"
-
-    - DESTINATION="arch=x86_64"
-      SCHEME="$MACOS_SCHEME"    RUN_TESTS="YES"
-
-    - DESTINATION="platform=tvOS Simulator,OS=13.3,name=Apple TV 4K"
-      SCHEME="$TVOS_SCHEME"    RUN_TESTS="YES"
-    - DESTINATION="platform=tvOS Simulator,OS=11.4,name=Apple TV 4K"
-      SCHEME="$TVOS_SCHEME"    RUN_TESTS="YES"
-
-    - DESTINATION="platform=watchOS Simulator,OS=5.3,name=Apple Watch Series 3 - 42mm"
-      SCHEME="$WATCHOS_SCHEME" RUN_TESTS="NO"
-    - DESTINATION="platform=watchOS Simulator,OS=4.2,name=Apple Watch - 42mm"
-      SCHEME="$WATCHOS_SCHEME" RUN_TESTS="NO"
-
 stages:
   - name: test
 
@@ -35,6 +8,30 @@ jobs:
     - stage: test
       if: type = pull_request
       osx_image: xcode11.5
+
+      env:
+        global:
+          - IOS_SCHEME="Nuke-WebP-Plugin iOS"
+          - MACOS_SCHEME="Nuke-WebP-Plugin macOS"
+          - TVOS_SCHEME="Nuke-WebP-Plugin tvOS"
+          - WATCHOS_SCHEME="Nuke-WebP-Plugin watchOS"
+        matrix:
+          - DESTINATION="platform=iOS Simulator,OS=13.3,name=iPhone 11"
+            SCHEME="$IOS_SCHEME"      RUN_TESTS="YES"
+          - DESTINATION="platform=iOS Simulator,OS=12.4,name=iPhone X"
+            SCHEME="$IOS_SCHEME"      RUN_TESTS="YES"
+          - DESTINATION="platform=iOS Simulator,OS=11.4,name=iPhone SE"
+            SCHEME="$IOS_SCHEME"      RUN_TESTS="YES"
+          - DESTINATION="arch=x86_64"
+            SCHEME="$MACOS_SCHEME"    RUN_TESTS="YES"
+          - DESTINATION="platform=tvOS Simulator,OS=13.3,name=Apple TV 4K"
+            SCHEME="$TVOS_SCHEME"    RUN_TESTS="YES"
+          - DESTINATION="platform=tvOS Simulator,OS=11.4,name=Apple TV 4K"
+            SCHEME="$TVOS_SCHEME"    RUN_TESTS="YES"
+          - DESTINATION="platform=watchOS Simulator,OS=5.3,name=Apple Watch Series 3 - 42mm"
+            SCHEME="$WATCHOS_SCHEME" RUN_TESTS="NO"
+          - DESTINATION="platform=watchOS Simulator,OS=4.2,name=Apple Watch - 42mm"
+            SCHEME="$WATCHOS_SCHEME" RUN_TESTS="NO"
         before_install:
           - brew update
           - brew outdated carthage || brew upgrade carthage
