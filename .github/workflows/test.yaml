@@ -27,7 +27,7 @@ jobs:
       - name: Carthage Bootstrap
         run: carthage bootstrap --platform iOS
         env:
-          - GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: set -o pipefail
         run: set -o pipefail
       - name: test
