@@ -1,6 +1,6 @@
 # Nuke-WebP-Plugin
 
-[![CI Status](http://img.shields.io/travis/ryokosuge/Nuke-WebP-Plugin.svg?style=flat)](https://travis-ci.org/ryokosuge/Nuke-WebP-Plugin)
+![Test or Build](https://github.com/ryokosuge/Nuke-WebP-Plugin/workflows/Test%20or%20Build/badge.svg)
 ![Version](https://img.shields.io/cocoapods/v/Nuke-WebP-Plugin.svg?label=version)
 ![Supoprts](https://img.shields.io/badge/supports-CocoaPods%20%7C%20Carthage-green.svg)
 ![Platform](https://img.shields.io/badge/platforms-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS-lightgrey.svg)
