@@ -26,10 +26,10 @@ jobs:
         run: carthage bootstrap --platform iOS
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: set -o pipefail
-        run: set -o pipefail
       - name: test
-        run: xcodebuild test -scheme "Nuke-WebP-Plugin iOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
+        run: |
+          set -o pipe fail && |
+          xcodebuild test -scheme "Nuke-WebP-Plugin iOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
 
   test-macos:
     strategy:
@@ -45,13 +45,13 @@ jobs:
       - name: Select Xcode Version
         run: sudo xcode-select -s '/Applications/Xcode_${{ matrix.xcode-version }}.app/Contents/Developer'
       - name: Carthage Bootstrap
-        run: carthage bootstrap --platform iOS
+        run: carthage bootstrap --platform Mac
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: set -o pipefail
-        run: set -o pipefail
       - name: test
-        run: xcodebuild test -scheme "Nuke-WebP-Plugin macOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
+        run: |
+          set -o pipe fail && |
+          xcodebuild test -scheme "Nuke-WebP-Plugin iOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
 
   test-tvos:
     strategy:
@@ -67,13 +67,13 @@ jobs:
       - name: Select Xcode Version
         run: sudo xcode-select -s '/Applications/Xcode_${{ matrix.xcode-version }}.app/Contents/Developer'
       - name: Carthage Bootstrap
-        run: carthage bootstrap --platform iOS
+        run: carthage bootstrap --platform tvOS
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: set -o pipefail
-        run: set -o pipefail
       - name: test
-        run: xcodebuild test -scheme "Nuke-WebP-Plugin tvOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
+        run: |
+          set -o pipe fail && |
+          xcodebuild test -scheme "Nuke-WebP-Plugin iOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
 
   build-watchos:
     strategy:
@@ -89,10 +89,10 @@ jobs:
       - name: Select Xcode Version
         run: sudo xcode-select -s '/Applications/Xcode_${{ matrix.xcode-version }}.app/Contents/Developer'
       - name: Carthage Bootstrap
-        run: carthage bootstrap --platform iOS
+        run: carthage bootstrap --platform watchOS
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: set -o pipefail
-        run: set -o pipefail
       - name: test
-        run: xcodebuild build -scheme "Nuke-WebP-Plugin watchOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
+        run: |
+          set -o pipe fail && |
+          xcodebuild test -scheme "Nuke-WebP-Plugin iOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
