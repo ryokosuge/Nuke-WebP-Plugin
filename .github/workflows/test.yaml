@@ -75,7 +75,7 @@ jobs:
         xcode-version: [11.5]
         include:
           - xcode-version: 11.5
-            destination: "platform=watchOS Simulator,OS=6.2,name=Apple Watch Series 5 - 44mm"
+            destination: "platform=watchOS Simulator,OS=6.2.1,name=Apple Watch Series 5 - 44mm"
     runs-on: macos-10.15
     steps:
       - name: Checkout
