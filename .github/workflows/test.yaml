@@ -12,12 +12,10 @@ jobs:
   test-ios:
     strategy:
       matrix:
-        xcode-version: [11.5, 10.3]
+        xcode-version: [11.5]
         include:
           - xcode-version: 11.5
             destination: "platform=iOS Simulator,OS=13.5,name=iPhone 11"
-          - xcode-version: 10.3
-            destination: "platform=iOS Simulator,OS=12.4,name=iPhone Xs Max"
     runs-on: macos-10.15
     steps:
       - name: Checkout
