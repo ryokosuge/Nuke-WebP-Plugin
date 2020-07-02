@@ -30,3 +30,69 @@ jobs:
         run: set -o pipefail
       - name: test
         run: xcodebuild test -scheme "Nuke-WebP-Plugin iOS" -destination "${{ matrix.destination }}" -configuration Debug;
+
+  test-macos:
+    strategy:
+      matrix:
+        xcode-version: [11.5]
+        include:
+          - xcode-version: 11.5
+            destination: "arch=x86_64"
+    runs-on: macos-10.15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Select Xcode Version
+        run: sudo xcode-select -s '/Applications/Xcode_${{ matrix.xcode-version }}.app/Contents/Developer'
+      - name: Carthage Bootstrap
+        run: carthage bootstrap --platform iOS
+        env:
+          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: set -o pipefail
+        run: set -o pipefail
+      - name: test
+        run: xcodebuild test -scheme "Nuke-WebP-Plugin iOS" -destination "${{ matrix.destination }}" -configuration Debug;
+
+  test-tvos:
+    strategy:
+      matrix:
+        xcode-version: [11.5]
+        include:
+          - xcode-version: 11.5
+            destination: "platform=tvOS Simulator,OS=13.4,name=Apple TV 4K"
+    runs-on: macos-10.15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Select Xcode Version
+        run: sudo xcode-select -s '/Applications/Xcode_${{ matrix.xcode-version }}.app/Contents/Developer'
+      - name: Carthage Bootstrap
+        run: carthage bootstrap --platform iOS
+        env:
+          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: set -o pipefail
+        run: set -o pipefail
+      - name: test
+        run: xcodebuild test -scheme "Nuke-WebP-Plugin iOS" -destination "${{ matrix.destination }}" -configuration Debug;
+
+  build-watchos:
+    strategy:
+      matrix:
+        xcode-version: [11.5]
+        include:
+          - xcode-version: 11.5
+            destination: "platform=watchOS Simulator,OS=6.2,name=Apple Watch Series 5 - 44mm"
+    runs-on: macos-10.15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Select Xcode Version
+        run: sudo xcode-select -s '/Applications/Xcode_${{ matrix.xcode-version }}.app/Contents/Developer'
+      - name: Carthage Bootstrap
+        run: carthage bootstrap --platform iOS
+        env:
+          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: set -o pipefail
+        run: set -o pipefail
+      - name: test
+        run: xcodebuild build -scheme "Nuke-WebP-Plugin iOS" -destination "${{ matrix.destination }}" -configuration Debug;
