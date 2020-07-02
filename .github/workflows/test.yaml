@@ -9,82 +9,38 @@ on:
       - goobye-travis-ci
 
 jobs:
-  test-ios:
+  test-or-build:
     strategy:
       matrix:
+        scheme: ["Nuke-WebP-Plugin iOS", "Nuke-WebP-Plugin macOS", "Nuke-WebP-Plugin tvOS", "Nuke-WebP-Plugin watchOS"]
         xcode-version: [11.5]
         include:
-          - xcode-version: 11.5
-            destination: "platform=iOS Simulator,OS=13.5,name=iPhone 11"
-    runs-on: macos-10.15
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Select Xcode Version
-        run: sudo xcode-select -s '/Applications/Xcode_${{ matrix.xcode-version }}.app/Contents/Developer'
-      - name: Carthage Bootstrap
-        run: carthage bootstrap --platform iOS
-        env:
-          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: test iOS
-        run: set -o pipefail && xcodebuild test -scheme "Nuke-WebP-Plugin iOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
+          - scheme: Nuke-WebP-Plugin iOS
+            platform: iOS
+            xcode-version: 11.5
+            destination: platform=iOS Simulator,OS=13.5,name=iPhone 11
+            command: test
+          - scheme: Nuke-WebP-Plugin macOS
+            platform: Mac
+            xcode-version: 11.5
+            destination: arch=x86_64
+            command: test
+          - scheme: Nuke-WebP-Plugin tvOS
+            platform: tvOS
+            xcode-version: 11.5
+            destination: platform=tvOS Simulator,OS=13.4,name=Apple TV 4K
+            command: test
+          - scheme: Nuke-WebP-Plugin watchOS
+            platform: watchOS
+            xcode-version: 11.5
+            destination: platform=watchOS Simulator,OS=6.2.1,name=Apple Watch Series 5 - 44mm
+            command: build
 
-  test-macos:
-    strategy:
-      matrix:
-        xcode-version: [11.5]
-        include:
-          - xcode-version: 11.5
-            destination: "arch=x86_64"
     runs-on: macos-10.15
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Select Xcode Version
-        run: sudo xcode-select -s '/Applications/Xcode_${{ matrix.xcode-version }}.app/Contents/Developer'
-      - name: Carthage Bootstrap
-        run: carthage bootstrap --platform Mac
+      - uses: actions/checkout@v2
+      - run: sudo xcode-select -s '/Applications/Xcode_${{ matrix.xcode-version }}.app/Contents/Developer'
+      - run: carthage bootstrap --platform ${{ matrix.platform }}
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: test macOS
-        run: set -o pipefail && xcodebuild test -scheme "Nuke-WebP-Plugin macOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
-
-  test-tvos:
-    strategy:
-      matrix:
-        xcode-version: [11.5]
-        include:
-          - xcode-version: 11.5
-            destination: "platform=tvOS Simulator,OS=13.4,name=Apple TV 4K"
-    runs-on: macos-10.15
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Select Xcode Version
-        run: sudo xcode-select -s '/Applications/Xcode_${{ matrix.xcode-version }}.app/Contents/Developer'
-      - name: Carthage Bootstrap
-        run: carthage bootstrap --platform tvOS
-        env:
-          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: test tvOS
-        run: set -o pipefail && xcodebuild test -scheme "Nuke-WebP-Plugin tvOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
-
-  build-watchos:
-    strategy:
-      matrix:
-        xcode-version: [11.5]
-        include:
-          - xcode-version: 11.5
-            destination: "platform=watchOS Simulator,OS=6.2.1,name=Apple Watch Series 5 - 44mm"
-    runs-on: macos-10.15
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Select Xcode Version
-        run: sudo xcode-select -s '/Applications/Xcode_${{ matrix.xcode-version }}.app/Contents/Developer'
-      - name: Carthage Bootstrap
-        run: carthage bootstrap --platform watchOS
-        env:
-          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: build watchOS
-        run: set -o pipefail && xcodebuild build -scheme "Nuke-WebP-Plugin watchOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
+      - run: set -o pipefail && xcodebuild ${{ matrix.command }} -scheme ${{ matrix.scheme }} -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
