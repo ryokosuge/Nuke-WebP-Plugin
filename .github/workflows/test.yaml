@@ -43,4 +43,4 @@ jobs:
       - run: carthage bootstrap --platform ${{ matrix.platform }}
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: set -o pipefail && xcodebuild ${{ matrix.command }} -scheme ${{ matrix.scheme }} -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
+      - run: set -o pipefail && xcodebuild ${{ matrix.command }} -scheme "${{ matrix.scheme }}" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
