@@ -1,13 +1,10 @@
 language: swift
 os: osx
-osx_image: xcode10.2
+osx_image: xcode11.5
 
 notifications:
   slack:
     secure: IbNnbJC6ZWWyTwPzXkHVopKo7qJI94+dVSBfP+5Dm7EURa0yceBg5iFTsWcsFJSajM/xVUoupaMOmaKzSjqs1pJRmVkbM3D/yd2W80/9VtNbGyfcCzrgylfC8XupUhfsJMb3igRhOKsnqYqG+lAkGjyZoMIrnQNU3zVVtIEOxcELoA2OdvuUEzDUPW4steS68Ta7ilyhqo8XG/WKuELfXvSs32+HKfMas0c8MpXgnOYg6QPpN1PUVo0iOUwXlzg5UIJmFOTLqEY8/9oEo5ppNAew0deu/g5g19L+Izr8ABxammq3R30W1HHvnQeV0XsGUtG14ZuTk3UpLBOirJbrxYrgLNUwlhr64NjNIpt1WP19AMfYfFjnZ6wh71dPey2LVeQRHYOi0KNmHAV8Bc+INesV3of53v1SU/IPzESo5LzfEW37fMxAGmb7PcdSJlKEz8BxxUlYSsQbo0ZxjMriP3257lssQeJ+WkJbgWjIxFgatVKu8SgeRbxZn0KiPONrdUpuzypLAD2D5JEFVwoy6p5c4TeM5srMxf+yeAtc7+BjU/a2NrbmGpC5/MdUiBf7h2CnhndVaQjm8mqjy3iIGKzlD/fm9ewwoKsxFoR+ZPFj2id+YOGK3HXHF2MWlCSN21Qy4aOqlFDkKOWC8Ca97jwzUr65H2TP7ArE37qJuFU=
-
-cache:
-    - bundler
 
 env:
     global:
@@ -17,43 +14,35 @@ env:
         - WATCHOS_SCHEME="Nuke-WebP-Plugin watchOS"
 
     matrix:
-        - DESTINATION="platform=iOS Simulator,OS=12.0,name=iPhone XS Max"
+        - DESTINATION="platform=iOS Simulator,OS=13.3,name=iPhone 11"
           SCHEME="$IOS_SCHEME"      RUN_TESTS="YES"
-        - DESTINATION="platform=iOS Simulator,OS=11.4,name=iPhone X"
+        - DESTINATION="platform=iOS Simulator,OS=12.4,name=iPhone X"
           SCHEME="$IOS_SCHEME"      RUN_TESTS="YES"
-        - DESTINATION="platform=iOS Simulator,OS=10.3.1,name=iPhone 7 Plus"
+        - DESTINATION="platform=iOS Simulator,OS=11.4,name=iPhone 8"
           SCHEME="$IOS_SCHEME"      RUN_TESTS="YES"
 
-        - DESTINATION="platform=macOS,arch=x86_64"
+        - DESTINATION="arch=x86_64"
           SCHEME="$MACOS_SCHEME"    RUN_TESTS="YES"
 
-        - DESTINATION="platform=tvOS Simulator,OS=12.0,name=Apple TV 4K"
+        - DESTINATION="platform=tvOS Simulator,OS=13.3,name=Apple TV 4K"
           SCHEME="$TVOS_SCHEME"    RUN_TESTS="YES"
         - DESTINATION="platform=tvOS Simulator,OS=11.4,name=Apple TV 4K"
           SCHEME="$TVOS_SCHEME"    RUN_TESTS="YES"
-        - DESTINATION="platform=tvOS Simulator,OS=10.2,name=Apple TV 1080p"
-          SCHEME="$TVOS_SCHEME"    RUN_TESTS="YES"
 
-        - DESTINATION="platform=watchOS Simulator,OS=5.0,name=Apple Watch Series 4 - 44mm"
+        - DESTINATION="platform=watchOS Simulator,OS=5.3,name=Apple Watch Series 3 - 42mm"
           SCHEME="$WATCHOS_SCHEME" RUN_TESTS="NO"
-        - DESTINATION="platform=watchOS Simulator,OS=4.2,name=Apple Watch Series 3 - 42mm"
-          SCHEME="$WATCHOS_SCHEME" RUN_TESTS="NO"
-        - DESTINATION="platform=watchOS Simulator,OS=3.2,name=Apple Watch Series 2 - 42mm"
+        - DESTINATION="platform=watchOS Simulator,OS=4.2,name=Apple Watch - 42mm"
           SCHEME="$WATCHOS_SCHEME" RUN_TESTS="NO"
 
 before_install:
     - brew update
     - brew outdated carthage || brew upgrade carthage
     - carthage bootstrap --no-use-binaries
-    - gem install bundler --version 2.0.1
 
 script:
     - set -o pipefail
     - if [ $RUN_TESTS == "YES" ]; then
-        xcodebuild test -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug | bundle exec xcpretty -c;
+        xcodebuild test -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug;
       else
-        xcodebuild build -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug | bundle exec xcpretty -c;
+        xcodebuild build -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug;
       fi
-
-after_success:
-    - bash <(curl -s https://codecov.io/bash)

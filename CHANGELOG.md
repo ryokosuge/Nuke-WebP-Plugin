@@ -1,3 +1,9 @@
+## Nuke WebP Plugin v5.0.0
+
+- Support [Nuke 9.0](https://github.com/kean/Nuke/releases/tag/9.0)
+- Support Xcode11 & Swift5.1 & Swift5.2
+- Update libwebp to v1.1.0
+
 ## Nuke WebP Plugin v4.0.0
 
 ### Feature
