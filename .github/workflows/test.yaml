@@ -1,0 +1,27 @@
+name: Test
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  test-ios:
+    strategy:
+      matrix:
+        destination:
+          - "platform=iOS Simulator,OS=12.0,name=iPhone XS Max"
+          - "platform=iOS Simulator,OS=11.4,name=iPhone X"
+          - "platform=iOS Simulator,OS=10.3.1,name=iPhone 7 Plus"
+    runs-on: macos-10.15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Select Xcode Version
+        run: sudo xcode-select -s '/Applications/Xcode_11.5.app/Contents/Developer'
+      - name: Carthage Bootstrap
+        run: carthage bootstrap --platform iOS
+      - name: set -o pipefail
+        run: set -o pipefail
+      - name: test
+        run: xcodebuild test -scheme "Nuke-WebP-Plugin iOS" -destination "${{ matrix.destination }}" -configuration Debug;
