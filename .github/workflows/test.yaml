@@ -4,6 +4,9 @@ on:
   pull_request:
     branches:
       - master
+  push:
+    branches:
+      - goobye-travis-ci
 
 jobs:
   test-ios:
