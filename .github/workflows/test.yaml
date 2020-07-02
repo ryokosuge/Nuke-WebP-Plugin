@@ -27,9 +27,7 @@ jobs:
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: test
-        run: |
-          set -o pipe fail && |
-          xcodebuild test -scheme "Nuke-WebP-Plugin iOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
+        run: set -o pipefail && xcodebuild test -scheme "Nuke-WebP-Plugin iOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
 
   test-macos:
     strategy:
@@ -49,9 +47,7 @@ jobs:
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: test
-        run: |
-          set -o pipe fail && |
-          xcodebuild test -scheme "Nuke-WebP-Plugin iOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
+        run: set -o pipefail && xcodebuild test -scheme "Nuke-WebP-Plugin macOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
 
   test-tvos:
     strategy:
@@ -71,9 +67,7 @@ jobs:
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: test
-        run: |
-          set -o pipe fail && |
-          xcodebuild test -scheme "Nuke-WebP-Plugin iOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
+        run: set -o pipefail && xcodebuild test -scheme "Nuke-WebP-Plugin tvOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
 
   build-watchos:
     strategy:
@@ -93,6 +87,4 @@ jobs:
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: test
-        run: |
-          set -o pipe fail && |
-          xcodebuild test -scheme "Nuke-WebP-Plugin iOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
+        run: set -o pipefail && xcodebuild test -scheme "Nuke-WebP-Plugin watchOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
