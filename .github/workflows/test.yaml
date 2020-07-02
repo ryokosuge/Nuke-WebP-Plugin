@@ -26,7 +26,7 @@ jobs:
         run: carthage bootstrap --platform iOS
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: test
+      - name: test iOS
         run: set -o pipefail && xcodebuild test -scheme "Nuke-WebP-Plugin iOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
 
   test-macos:
@@ -46,7 +46,7 @@ jobs:
         run: carthage bootstrap --platform Mac
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: test
+      - name: test macOS
         run: set -o pipefail && xcodebuild test -scheme "Nuke-WebP-Plugin macOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
 
   test-tvos:
@@ -66,7 +66,7 @@ jobs:
         run: carthage bootstrap --platform tvOS
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: test
+      - name: test tvOS
         run: set -o pipefail && xcodebuild test -scheme "Nuke-WebP-Plugin tvOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
 
   build-watchos:
@@ -86,5 +86,5 @@ jobs:
         run: carthage bootstrap --platform watchOS
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: test
+      - name: build watchOS
         run: set -o pipefail && xcodebuild build -scheme "Nuke-WebP-Plugin watchOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
