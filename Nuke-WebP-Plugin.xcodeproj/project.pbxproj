@@ -632,7 +632,6 @@
 		DA5942BB24ACC51600EEA2A5 /* demux.h in Headers */ = {isa = PBXBuildFile; fileRef = DA5942A124ACC51600EEA2A5 /* demux.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		DA5942BC24ACC51600EEA2A5 /* demux.h in Headers */ = {isa = PBXBuildFile; fileRef = DA5942A124ACC51600EEA2A5 /* demux.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		DA5942BD24ACC51600EEA2A5 /* demux.h in Headers */ = {isa = PBXBuildFile; fileRef = DA5942A124ACC51600EEA2A5 /* demux.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		F80A458120197DB600825C6D /* LoadWebPImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A458020197DB600825C6D /* LoadWebPImageTests.swift */; };
 		F80D73D7209FD9B10015EA10 /* WebPImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8146582200EE4D700364146 /* WebPImage.swift */; };
 		F80D73F0209FD9B10015EA10 /* Data+WebPFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60DF209719A000D056B2 /* Data+WebPFormat.swift */; };
 		F80D73FA209FD9B10015EA10 /* WebPDataDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60DB209716AB00D056B2 /* WebPDataDecoder.m */; };
@@ -642,7 +641,6 @@
 		F80D7463209FD9B10015EA10 /* WebPImageMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA784200EF85800DD0BED /* WebPImageMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F80D7464209FD9B10015EA10 /* Nuke_WebP_Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = F814657C200EE40500364146 /* Nuke_WebP_Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F80D7479209FDBF20015EA10 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80D7477209FDBE60015EA10 /* Nuke.framework */; };
-		F80D747E209FDD810015EA10 /* LoadWebPImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A458020197DB600825C6D /* LoadWebPImageTests.swift */; };
 		F80D7483209FDD810015EA10 /* NukeWebPPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E345472099337A002A0D95 /* NukeWebPPlugin.framework */; };
 		F80D7486209FDD810015EA10 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = C74750E12030E2FC00FA7FE2 /* sample.gif */; };
 		F80D7487209FDD810015EA10 /* sample.webp in Resources */ = {isa = PBXBuildFile; fileRef = F8FAA4D3200EF08400DD0BED /* sample.webp */; };
@@ -682,7 +680,6 @@
 		F8E3453C2099337A002A0D95 /* WebPDataDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = F8AD60DA209716AB00D056B2 /* WebPDataDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8E345402099337A002A0D95 /* WebPImageMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA784200EF85800DD0BED /* WebPImageMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8E345412099337A002A0D95 /* Nuke_WebP_Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = F814657C200EE40500364146 /* Nuke_WebP_Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8E3455020993551002A0D95 /* LoadWebPImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A458020197DB600825C6D /* LoadWebPImageTests.swift */; };
 		F8E3455620993551002A0D95 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = C74750E12030E2FC00FA7FE2 /* sample.gif */; };
 		F8E3455720993551002A0D95 /* sample.webp in Resources */ = {isa = PBXBuildFile; fileRef = F8FAA4D3200EF08400DD0BED /* sample.webp */; };
 		F8E345612099371C002A0D95 /* WebPDecodeTests_MacOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E345602099371C002A0D95 /* WebPDecodeTests_MacOS.swift */; };
@@ -903,7 +900,6 @@
 		DA5942A024ACC51600EEA2A5 /* mux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mux.h; path = Carthage/Checkouts/libwebp/src/webp/mux.h; sourceTree = "<group>"; };
 		DA5942A124ACC51600EEA2A5 /* demux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = demux.h; path = Carthage/Checkouts/libwebp/src/webp/demux.h; sourceTree = "<group>"; };
 		F80A457E20197CE200825C6D /* WebPDecodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPDecodeTests.swift; sourceTree = "<group>"; };
-		F80A458020197DB600825C6D /* LoadWebPImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadWebPImageTests.swift; sourceTree = "<group>"; };
 		F80D746A209FD9B10015EA10 /* NukeWebPPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeWebPPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F80D746D209FDB560015EA10 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F80D746E209FDB560015EA10 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
@@ -1016,7 +1012,6 @@
 			isa = PBXGroup;
 			children = (
 				F8146577200EE3C700364146 /* Info.plist */,
-				F80A458020197DB600825C6D /* LoadWebPImageTests.swift */,
 				F8E345602099371C002A0D95 /* WebPDecodeTests_MacOS.swift */,
 				F80A457E20197CE200825C6D /* WebPDecodeTests.swift */,
 				F8FAA4D2200EF07300DD0BED /* Resource */,
@@ -2066,7 +2061,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8CFDAEA20A1305500C87102 /* WebPImageDecoderTests.swift in Sources */,
-				F80D747E209FDD810015EA10 /* LoadWebPImageTests.swift in Sources */,
 				F8CFDAE620A12A2A00C87102 /* DataExtensionsTests.swift in Sources */,
 				F80D7490209FDF170015EA10 /* WebPDecodeTests.swift in Sources */,
 			);
@@ -2325,7 +2319,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8CFDAE820A1305500C87102 /* WebPImageDecoderTests.swift in Sources */,
-				F80A458120197DB600825C6D /* LoadWebPImageTests.swift in Sources */,
 				F8CFDAE420A12A2A00C87102 /* DataExtensionsTests.swift in Sources */,
 				F8E345622099376B002A0D95 /* WebPDecodeTests.swift in Sources */,
 			);
@@ -2460,7 +2453,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8CFDAE920A1305500C87102 /* WebPImageDecoderTests.swift in Sources */,
-				F8E3455020993551002A0D95 /* LoadWebPImageTests.swift in Sources */,
 				F8CFDAE520A12A2A00C87102 /* DataExtensionsTests.swift in Sources */,
 				F8E345612099371C002A0D95 /* WebPDecodeTests_MacOS.swift in Sources */,
 			);

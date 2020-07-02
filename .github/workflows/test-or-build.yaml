@@ -1,0 +1,44 @@
+name: Test or Build
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  test-or-build:
+    strategy:
+      matrix:
+        scheme: ["Nuke-WebP-Plugin iOS", "Nuke-WebP-Plugin macOS", "Nuke-WebP-Plugin tvOS", "Nuke-WebP-Plugin watchOS"]
+        xcode-version: [11.5]
+        include:
+          - scheme: Nuke-WebP-Plugin iOS
+            platform: iOS
+            xcode-version: 11.5
+            destination: platform=iOS Simulator,OS=13.5,name=iPhone 11
+            command: test
+          - scheme: Nuke-WebP-Plugin macOS
+            platform: Mac
+            xcode-version: 11.5
+            destination: arch=x86_64
+            command: test
+          - scheme: Nuke-WebP-Plugin tvOS
+            platform: tvOS
+            xcode-version: 11.5
+            destination: platform=tvOS Simulator,OS=13.4,name=Apple TV 4K
+            command: test
+          - scheme: Nuke-WebP-Plugin watchOS
+            platform: watchOS
+            xcode-version: 11.5
+            destination: platform=watchOS Simulator,OS=6.2.1,name=Apple Watch Series 5 - 44mm
+            command: build
+
+    runs-on: macos-10.15
+    steps:
+      - uses: actions/checkout@v2
+      - run: sudo xcode-select -s '/Applications/Xcode_${{ matrix.xcode-version }}.app/Contents/Developer'
+      - run: carthage bootstrap --platform ${{ matrix.platform }}
+        env:
+          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: ${{ matrix.command }}
+        run: set -o pipefail && xcodebuild ${{ matrix.command }} -scheme "${{ matrix.scheme }}" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
