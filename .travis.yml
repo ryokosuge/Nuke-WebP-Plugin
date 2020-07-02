@@ -1,4 +1,4 @@
-ganguage: swift
+language: swift
 os: osx
 osx_image: xcode11.5
 
