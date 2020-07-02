@@ -51,7 +51,7 @@ jobs:
       - name: set -o pipefail
         run: set -o pipefail
       - name: test
-        run: xcodebuild test -scheme "Nuke-WebP-Plugin iOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
+        run: xcodebuild test -scheme "Nuke-WebP-Plugin macOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
 
   test-tvos:
     strategy:
@@ -73,7 +73,7 @@ jobs:
       - name: set -o pipefail
         run: set -o pipefail
       - name: test
-        run: xcodebuild test -scheme "Nuke-WebP-Plugin iOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
+        run: xcodebuild test -scheme "Nuke-WebP-Plugin tvOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
 
   build-watchos:
     strategy:
@@ -95,4 +95,4 @@ jobs:
       - name: set -o pipefail
         run: set -o pipefail
       - name: test
-        run: xcodebuild build -scheme "Nuke-WebP-Plugin iOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
+        run: xcodebuild build -scheme "Nuke-WebP-Plugin watchOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
