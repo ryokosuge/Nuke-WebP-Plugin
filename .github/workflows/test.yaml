@@ -87,4 +87,4 @@ jobs:
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: test
-        run: set -o pipefail && xcodebuild test -scheme "Nuke-WebP-Plugin watchOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
+        run: set -o pipefail && xcodebuild build -scheme "Nuke-WebP-Plugin watchOS" -destination "${{ matrix.destination }}" -configuration Debug | xcpretty -c
