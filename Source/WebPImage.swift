@@ -8,6 +8,7 @@
 
 import Foundation
 import Nuke
+import NukeWebPPluginC
 
 public class WebPImageDecoder: Nuke.ImageDecoding {
 
