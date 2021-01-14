@@ -48,9 +48,11 @@ let package = Package(
             publicHeadersPath: "WebP",
             cSettings: [
                 .headerSearchPath("libwebp"),
+                .headerSearchPath("libwebp/src"),
             ],
             cxxSettings: [
                 .headerSearchPath("libwebp"),
+                .headerSearchPath("libwebp/src"),
             ]
         ),
     ]
