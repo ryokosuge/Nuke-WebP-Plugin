@@ -8,6 +8,9 @@
 
 import Foundation
 import Nuke
+#if SWIFT_PACKAGE
+import NukeWebPPluginC
+#endif
 
 public class WebPImageDecoder: Nuke.ImageDecoding {
 
