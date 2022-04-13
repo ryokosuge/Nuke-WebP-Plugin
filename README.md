@@ -46,7 +46,7 @@ github 'ryokosuge/Nuke-WebP-Plugin'
 
 | [Nuke](https://github.com/kean/Nuke) | [libwebp](https://chromium.googlesource.com/webm/libwebp) |
 |:---:|:---:|
-| >= 10.0 | v1.0.0 |
+| >= 10.0 | v1.1.0 |
 
 ## Author
 
