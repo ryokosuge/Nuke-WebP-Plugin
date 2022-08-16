@@ -8,10 +8,10 @@ PODS:
   - libwebp/mux (1.1.0):
     - libwebp/demux
   - libwebp/webp (1.1.0)
-  - Nuke (9.1.1)
-  - Nuke-WebP-Plugin (5.0.0):
+  - Nuke (11.1.0)
+  - Nuke-WebP-Plugin (6.1.0):
     - libwebp (= 1.1.0)
-    - Nuke (~> 9.0)
+    - Nuke (~> 11.0)
 
 DEPENDENCIES:
   - Nuke-WebP-Plugin (from `../`)
