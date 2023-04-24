@@ -12,7 +12,7 @@ import Nuke
 import NukeWebPPluginC
 #endif
 
-public class WebPImageDecoder: Nuke.ImageDecoding {
+public class WebPImageDecoder: Nuke.ImageDecoding, @unchecked Sendable {
 
     private lazy var decoder: WebPDataDecoder = WebPDataDecoder()
 

@@ -1,3 +1,12 @@
+## Nuke WebP Plugin v7.0.0
+
+- Support [Nuke 12.0](https://github.com/kean/Nuke/releases/tag/9.0)
+
+## Nuke WebP Plugin v6.1.1
+
+- Support [Nuke 11.0](https://github.com/kean/Nuke/releases/tag/9.0)
+
+
 ## Nuke WebP Plugin v5.0.0
 
 - Support [Nuke 9.0](https://github.com/kean/Nuke/releases/tag/9.0)

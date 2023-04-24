@@ -11,7 +11,7 @@ let package = Package(
         .library(name: "NukeWebPPlugin", targets: ["NukeWebPPlugin"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/kean/Nuke.git", .upToNextMajor(from: "11.0.0")),
+        .package(url: "https://github.com/kean/Nuke.git", .upToNextMajor(from: "12.0.0")),
     ],
     targets: [
         .target(
