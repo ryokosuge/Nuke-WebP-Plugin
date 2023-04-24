@@ -12,16 +12,16 @@ import Nuke
 import NukeWebPPluginC
 #endif
 
-public class WebPImageDecoder: Nuke.ImageDecoding {
+public class WebPImageDecoder: Nuke.ImageDecoding, @unchecked Sendable {
 
     private lazy var decoder: WebPDataDecoder = WebPDataDecoder()
 
     public init() {
     }
 
-    public func decode(_ data: Data) -> ImageContainer? {
-        guard data.isWebPFormat else { return nil }
-        guard let image = _decode(data) else { return nil }
+    public func decode(_ data: Data) throws -> Nuke.ImageContainer {
+        guard data.isWebPFormat else { throw Nuke.ImageDecodingError.unknown }
+        guard let image = _decode(data) else { throw Nuke.ImageDecodingError.unknown }
         return ImageContainer(image: image)
     }
 
